@@ -4,7 +4,7 @@ Mise en place d'un portail de métadonnées pour l'archivage des recherches sur 
 
 1. Importer le repository dans son espace de travail:
 
-   git clone https://github.com/alseny-diallo/Projet-MeetCourseAnalyzer.git
+   git clone https://github.com/Idrissa0102/projet-ird.git
   
 2. Creer une branche (ne pas travailler directement sur la branche principale **main**).
 
