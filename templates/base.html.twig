@@ -2,18 +2,104 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>{% block title %}Bonjour GGGG{% endblock %}</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+        <!-- Favicon-->
+        <link rel="icon" type="image/x-icon" href="{{asset('assets/favicon.ico')}}" />
+        <!-- Favicon-->
+
+        <!-- Bootstrap icons-->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
+        <!-- Bootstrap icons-->
+
+        <title>
+            {% block title %}
+            IRD_PORTAL
+            {% endblock %}
+        </title>
+
         {# Run `composer require symfony/webpack-encore-bundle`
            and uncomment the following Encore helpers to start using Symfony UX #}
+
         {% block stylesheets %}
             {#{{ encore_entry_link_tags('app') }}#}
+
+            <!-- Core theme CSS (includes Bootstrap)-->
+            <link href="{{ asset('css/style.css') }}" rel="stylesheet" />
+            <!-- Core theme CSS (includes Bootstrap)-->
+
+
         {% endblock %}
 
         {% block javascripts %}
             {#{{ encore_entry_script_tags('app') }}#}
+
+            <!-- Bootstrap core JS-->
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+            <!-- Core theme JS-->
+            <script src="{{asset('js/scripts.js')}}"></script>
+
         {% endblock %}
+
     </head>
-    <body>
-        {% block body %}{% endblock %}
+    <body class="d-flex flex-column h-100">
+
+        <main class="flex-shrink-0">
+
+        <!-- Navigation-->
+            <nav class="navbar navbar-expand-lg navbar-dark bg-mycolor">
+                <div class="container px-5">
+                    <a class="navbar-brand" href="index.html">UCAD-IRD-Portal</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                            <li class="nav-item"><a class="nav-link" href="index.html">Accueil</a></li>
+                            
+                            
+                            
+                            
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" id="navbarDropdownBlog" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Consultation</a>
+                                <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownBlog">
+                                    <li><a class="dropdown-item" href="blog-home.html">Derniers Dépots</a></li>
+                                    <li><a class="dropdown-item" href="blog-post.html">Par type de Publication</a></li>
+                                    <li><a class="dropdown-item" href="blog-post.html">Par discipline</a></li>
+                                    <li><a class="dropdown-item" href="blog-post.html">Par année de Publication</a></li>
+                                    <li><a class="dropdown-item" href="blog-post.html">Par cartographie</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item"><a class="nav-link" href="contact.html">Contactez-Nous</a></li>
+                            <li class="nav-item"><a class="nav-link" href="faq.html">Connexion</a></li>
+                           
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        <!-- Navigation-->
+
+
+
+        {% block body %}
+        
+        {% endblock %}
+
+        <!-- Footer-->
+        <footer class="bg-mycolor py-4 mt-auto">
+            <div class="container px-5">
+                <div class="row align-items-center justify-content-between flex-column flex-sm-row">
+                    <div class="col-auto"><div class="small m-0 text-white">Copyright &copy; IRD_PORTAL 2021</div></div>
+                    <div class="col-auto">
+                        <a class="link-light small" href="#!">Privacy</a>
+                        <span class="text-white mx-1">&middot;</span>
+                        <a class="link-light small" href="#!">Termes</a>
+                        <span class="text-white mx-1">&middot;</span>
+                        <a class="link-light small" href="#!">Contact</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- Footer-->
+
+        </main>
     </body>
 </html>
