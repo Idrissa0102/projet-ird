@@ -1,0 +1,610 @@
+{% extends "base.html.twig" %}
+
+{% block title %}Publier un Document - {{ parent() }}{% endblock %}
+
+{% block style %}
+<link href="{{ asset('css/det.css') }}" rel="stylesheet">
+    <link href='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css' rel='stylesheet'>
+    
+{% endblock %}
+
+{% block js %}
+<link href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/fontawesome.min.css' rel='stylesheet'>
+    <script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+    <script src="https://kit.fontawesome.com/92f2ca149e.js" crossorigin="anonymous"></script>
+    <script type='text/javascript' src='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js'></script>
+    <script src=" {{asset('js/det.js')}} "></script>
+{% endblock %}
+
+
+{% block body %}
+
+<div class="container-fluid">
+        <div class="row justify-content-center">
+            <div class="col-11 col-sm-9 col-md-7 col-lg-6 col-xl-5 text-center p-0 mt-3 mb-2">
+                <div class="card px-0 pt-4 pb-0 mt-3 mb-3">
+                    <h2 id="heading">Déposez votre fichier</h2>
+                    <p>Remplissez toutes les cases pour passer au suivant</p>
+                    <form id="msform" action="#">
+                        <!-- progressbar -->
+                        <ul id="progressbar">
+                            <li class="active" id="upload"><strong> Dépôt</strong></li>
+                            <li id="meta"><strong>Métadonnées</strong></li>
+                            <li id="auteur"><strong>Auteur</strong></li>
+                            <li id="confirm"><strong>Finish</strong></li>
+                        </ul>
+                        <div class="progress">
+                            <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div> <br>
+                        <!-- fieldsets -->
+                        <fieldset>
+                            <div class="form-card">
+                                <div class="row">
+                                    <div class="col-7">
+                                        <h2 class="fs-title">Dépôt fichier:</h2>
+                                    </div>
+                                    <div class="col-5">
+                                        <h2 class="steps">Etape 1 - 4</h2>
+                                    </div>
+                                </div> <label class="fieldlabels">Choisissez le fichier à déposer:</label> <input type="file" name="doc" accept="*">
+                            </div> <input type="submit" name="next" class="next action-button" value="Submit" /> <input type="button" name="previous" class="previous action-button-previous" value="Previous" />
+                        </fieldset>
+
+                        <fieldset>
+                            <div class="form-card">
+                                <div class="row">
+                                    <div class="col-7">
+                                        <h2 class="fs-title">Information Personnelle:</h2>
+                                    </div>
+                                    <div class="col-5">
+                                        <h2 class="steps">Etape 2 - 4</h2>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="fieldlabels">Type de document: *</label>
+                                    <select id="typedoc" name="typedoc">
+                                    <option value="">-----</option>
+                                    <option value="article">Article dans une revue</option>
+                                    <option value="com_congre">Communication dans un congrès</option>
+                                    <option value="poster">Poster</option>
+                                    <option value="ouvrage">Ouvrage(y compris édition critique et traduction</option>
+                                    <option value="chap_ouvrage">chapitre d'ouvrage</option>
+                                    <option value="ouv_etc">Direction d'ouvrage, Proceedings, Dossier</option>
+                                    <option value="brevet">Brevet</option>
+                                    <option value="autre">Autre publication</option>
+                                    <option value=""></option>
+                                    <option value="docs">Pré-publication, Document de travail</option>
+                                    <option value="rapport">Rapport</option>
+                                    <option value=""></option>
+                                    <option value="travaux">Thèse</option>
+                                    <option value="hdr">HDR</option>
+                                    <option value="cours">Cours</option>
+                                    <option value=""></option>
+                                    <option value="image">Image</option>
+                                    <option value="video">Vidéo</option>
+                                    <option value="son">Son</option>
+                                    <option value="carte">Carte</option>
+                                    <option value="logiciel">Logiciel</option>
+
+
+                                </select>
+                                    <br/><br/>
+
+                                    <label class="fieldlabels">Titre: *</label> <textarea name="titre" form="usrform"></textarea>
+                                    <select>
+                                    <option value="fr">Français</option>
+                                    <option value="en">Anglais</option>
+                                    <option value="wf">Wolof</option>
+                                    <option value="ci">Chinois</option>
+                                    <option value="es">Espagnol</option>
+
+                                </select>
+                                    <br/><br/>
+                                    <label class="fieldlabels">Domaine.: *</label>
+                                    <div class="col-md-9 thesaurus-element"><span class="help-block"><small>Le domaine que vous mettrez en premier, sera considéré comme la discipline principale de l'article. L'ordre des domaines peut être changé par glissé/déposé.</small></span>
+
+
+
+
+                                        <select id="typedoc" name="typedoc">
+                                        <option value="">-----</option>
+                                        <option value="ch"><strong>chimie</strong></option>
+                                        <option value="ch1">Chimie organique</option>
+                                        <option value="ch2">Traitement des eaux</option>
+                                        <option value="ch3">truc chimie</option>
+                                        <option value=""></option>
+                                        <option value="ph"><strong>Geographie</strong></option>
+                                        <option value="ph1">Cartographie</option>
+                                        <option value="ph2">Itineraire maritime</option>
+                                        <option value="ph3">Vue spatiale</option>
+                                            <option value=""></option>
+                                        <option value="inf">Informatique</option>
+                                        <option value="inf1">Systeme d'information</option>
+                                        <option value="inf2">Analyse de donnees</option>
+                                        <option value="inf3">Autres</option>
+                                        <option value=""></option>
+                                        <option value="lg"><strong>langue</strong></option>
+                                        <option value="lg1">Wolof</option>
+                                        <option value="lg2">Chinois</option>
+                                        <option value="lg3">Autres</option>
+   
+                                    </select>
+
+                                        <br/><br/>
+                                        <label class="fieldlabels">Langue: *</label>
+                                        <select id="languages" name="languages">
+                                    <option value="af">Afrikaans</option>
+                                    <option value="sq">Albanian - shqip</option>
+                                    <option value="am">Amharic - አማርኛ</option>
+                                    <option value="ar">Arabic - العربية</option>
+                                    <option value="an">Aragonese - aragonés</option>
+                                    <option value="hy">Armenian - հայերեն</option>
+                                    <option value="ast">Asturian - asturianu</option>
+                                    <option value="az">Azerbaijani - azərbaycan dili</option>
+                                    <option value="eu">Basque - euskara</option>
+                                    <option value="be">Belarusian - беларуская</option>
+                                    <option value="bn">Bengali - বাংলা</option>
+                                    <option value="bs">Bosnian - bosanski</option>
+                                    <option value="br">Breton - brezhoneg</option>
+                                    <option value="bg">Bulgarian - български</option>
+                                    <option value="ca">Catalan - català</option>
+                                    <option value="ckb">Central Kurdish - کوردی (دەستنوسی عەرەبی)</option>
+                                    <option value="zh">Chinese - 中文</option>
+                                    <option value="zh-HK">Chinese (Hong Kong) - 中文（香港）</option>
+                                    <option value="zh-CN">Chinese (Simplified) - 中文（简体）</option>
+                                    <option value="zh-TW">Chinese (Traditional) - 中文（繁體）</option>
+                                    <option value="co">Corsican</option>
+                                    <option value="hr">Croatian - hrvatski</option>
+                                    <option value="cs">Czech - čeština</option>
+                                    <option value="da">Danish - dansk</option>
+                                    <option value="nl">Dutch - Nederlands</option>
+                                    <option value="en">English</option>
+                                    <option value="en-AU">English (Australia)</option>
+                                    <option value="en-CA">English (Canada)</option>
+                                    <option value="en-IN">English (India)</option>
+                                    <option value="en-NZ">English (New Zealand)</option>
+                                    <option value="en-ZA">English (South Africa)</option>
+                                    <option value="en-GB">English (United Kingdom)</option>
+                                    <option value="en-US">English (United States)</option>
+                                    <option value="eo">Esperanto - esperanto</option>
+                                    <option value="et">Estonian - eesti</option>
+                                    <option value="fo">Faroese - føroyskt</option>
+                                    <option value="fil">Filipino</option>
+                                    <option value="fi">Finnish - suomi</option>
+                                    <option value="fr">French - français</option>
+                                    <option value="fr-CA">French (Canada) - français (Canada)</option>
+                                    <option value="fr-FR">French (France) - français (France)</option>
+                                    <option value="fr-CH">French (Switzerland) - français (Suisse)</option>
+                                    <option value="gl">Galician - galego</option>
+                                    <option value="ka">Georgian - ქართული</option>
+                                    <option value="de">German - Deutsch</option>
+                                    <option value="de-AT">German (Austria) - Deutsch (Österreich)</option>
+                                    <option value="de-DE">German (Germany) - Deutsch (Deutschland)</option>
+                                    <option value="de-LI">German (Liechtenstein) - Deutsch (Liechtenstein)</option>
+                                    <option value="de-CH">German (Switzerland) - Deutsch (Schweiz)</option>
+                                    <option value="el">Greek - Ελληνικά</option>
+                                    <option value="gn">Guarani</option>
+                                    <option value="gu">Gujarati - ગુજરાતી</option>
+                                    <option value="ha">Hausa</option>
+                                    <option value="haw">Hawaiian - ʻŌlelo Hawaiʻi</option>
+                                    <option value="he">Hebrew - עברית</option>
+                                    <option value="hi">Hindi - हिन्दी</option>
+                                    <option value="hu">Hungarian - magyar</option>
+                                    <option value="is">Icelandic - íslenska</option>
+                                    <option value="id">Indonesian - Indonesia</option>
+                                    <option value="ia">Interlingua</option>
+                                    <option value="ga">Irish - Gaeilge</option>
+                                    <option value="it">Italian - italiano</option>
+                                    <option value="it-IT">Italian (Italy) - italiano (Italia)</option>
+                                    <option value="it-CH">Italian (Switzerland) - italiano (Svizzera)</option>
+                                    <option value="ja">Japanese - 日本語</option>
+                                    <option value="kn">Kannada - ಕನ್ನಡ</option>
+                                    <option value="kk">Kazakh - қазақ тілі</option>
+                                    <option value="km">Khmer - ខ្មែរ</option>
+                                    <option value="ko">Korean - 한국어</option>
+                                    <option value="ku">Kurdish - Kurdî</option>
+                                    <option value="ky">Kyrgyz - кыргызча</option>
+                                    <option value="lo">Lao - ລາວ</option>
+                                    <option value="la">Latin</option>
+                                    <option value="lv">Latvian - latviešu</option>
+                                    <option value="ln">Lingala - lingála</option>
+                                    <option value="lt">Lithuanian - lietuvių</option>
+                                    <option value="mk">Macedonian - македонски</option>
+                                    <option value="ms">Malay - Bahasa Melayu</option>
+                                    <option value="ml">Malayalam - മലയാളം</option>
+                                    <option value="mt">Maltese - Malti</option>
+                                    <option value="mr">Marathi - मराठी</option>
+                                    <option value="mn">Mongolian - монгол</option>
+                                    <option value="ne">Nepali - नेपाली</option>
+                                    <option value="no">Norwegian - norsk</option>
+                                    <option value="nb">Norwegian Bokmål - norsk bokmål</option>
+                                    <option value="nn">Norwegian Nynorsk - nynorsk</option>
+                                    <option value="oc">Occitan</option>
+                                    <option value="or">Oriya - ଓଡ଼ିଆ</option>
+                                    <option value="om">Oromo - Oromoo</option>
+                                    <option value="ps">Pashto - پښتو</option>
+                                    <option value="fa">Persian - فارسی</option>
+                                    <option value="pl">Polish - polski</option>
+                                    <option value="pt">Portuguese - português</option>
+                                    <option value="pt-BR">Portuguese (Brazil) - português (Brasil)</option>
+                                    <option value="pt-PT">Portuguese (Portugal) - português (Portugal)</option>
+                                    <option value="pa">Punjabi - ਪੰਜਾਬੀ</option>
+                                    <option value="qu">Quechua</option>
+                                    <option value="ro">Romanian - română</option>
+                                    <option value="mo">Romanian (Moldova) - română (Moldova)</option>
+                                    <option value="rm">Romansh - rumantsch</option>
+                                    <option value="ru">Russian - русский</option>
+                                    <option value="gd">Scottish Gaelic</option>
+                                    <option value="sr">Serbian - српски</option>
+                                    <option value="sh">Serbo-Croatian - Srpskohrvatski</option>
+                                    <option value="sn">Shona - chiShona</option>
+                                    <option value="sd">Sindhi</option>
+                                    <option value="si">Sinhala - සිංහල</option>
+                                    <option value="sk">Slovak - slovenčina</option>
+                                    <option value="sl">Slovenian - slovenščina</option>
+                                    <option value="so">Somali - Soomaali</option>
+                                    <option value="st">Southern Sotho</option>
+                                    <option value="es">Spanish - español</option>
+                                    <option value="es-AR">Spanish (Argentina) - español (Argentina)</option>
+                                    <option value="es-419">Spanish (Latin America) - español (Latinoamérica)</option>
+                                    <option value="es-MX">Spanish (Mexico) - español (México)</option>
+                                    <option value="es-ES">Spanish (Spain) - español (España)</option>
+                                    <option value="es-US">Spanish (United States) - español (Estados Unidos)</option>
+                                    <option value="su">Sundanese</option>
+                                    <option value="sw">Swahili - Kiswahili</option>
+                                    <option value="sv">Swedish - svenska</option>
+                                    <option value="tg">Tajik - тоҷикӣ</option>
+                                    <option value="ta">Tamil - தமிழ்</option>
+                                    <option value="tt">Tatar</option>
+                                    <option value="te">Telugu - తెలుగు</option>
+                                    <option value="th">Thai - ไทย</option>
+                                    <option value="ti">Tigrinya - ትግርኛ</option>
+                                    <option value="to">Tongan - lea fakatonga</option>
+                                    <option value="tr">Turkish - Türkçe</option>
+                                    <option value="tk">Turkmen</option>
+                                    <option value="tw">Twi</option>
+                                    <option value="uk">Ukrainian - українська</option>
+                                    <option value="ur">Urdu - اردو</option>
+                                    <option value="ug">Uyghur</option>
+                                    <option value="uz">Uzbek - o‘zbek</option>
+                                    <option value="vi">Vietnamese - Tiếng Việt</option>
+                                    <option value="wa">Walloon - wa</option>
+                                    <option value="cy">Welsh - Cymraeg</option>
+                                    <option value="fy">Western Frisian</option>
+                                    <option value="xh">Xhosa</option>
+                                    <option value="yi">Yiddish</option>
+                                    <option value="yo">Yoruba - Èdè Yorùbá</option>
+                                    <option value="zu">Zulu - isiZulu</option>
+                                        </select>
+
+                                    </div>
+                                </div>
+                                <br/><br/>
+
+                                <!--CHANGEMENT EFFECTUE HERE-->
+
+                                <div class="form-group">
+                                    <label for="seeAnotherField">Afficher la vue détaillée?</label>
+                                    <select class="form-control" id="seeAnotherField">
+                                          <option value="no">No Way.</option>
+                                          <option value="yes">Absolutely!</option>
+                                    </select>
+                                </div>
+
+                                <br/><br/>
+                                <!--CHANGEMENT EFFECTUE HERE-->
+
+                                <div class="form-group" id="otherFieldDiv">
+                                    <label class="fieldlabels">Résumé: </label>
+                                    <small>Vous pouvez renseigner le résumé en plusieurs langues : choisir la langue et cliquer sur + pour ajouter une nouvelle langue</small>
+                                    <textarea name="resume" form="usrform"></textarea>
+                                    <select>
+                                    <option value="fr">Français</option>
+                                    <option value="en">Anglais</option>
+                                    <option value="wf">Wolof</option>
+                                    <option value="ci">Chinois</option>
+                                    <option value="es">Espagnol</option>
+
+                                </select>
+                                    <br/><br/>
+
+                                    <br/><br/>
+                                    <label class="fieldlabels">Mots-clés: </label>
+                                    <small>Vous pouvez renseigner plusieurs mots-clés en plusieurs langues : choisir la langue et cliquer sur + pour ajouter un mot-clé dans la langue sélectionnée. Les caractères "," (virgule) et ";" (point-virgule) peuvent être utilisés pour séparer une liste de mots-clés</small>
+                                    <input type="text" name="keys">
+                                    <select>
+                                    <option value="fr">Français</option>
+                                    <option value="en">Anglais</option>
+                                    <option value="wf">Wolof</option>
+                                    <option value="ci">Chinois</option>
+                                    <option value="es">Espagnol</option>
+
+                                </select>
+                                    <br/><br/>
+
+                                    <br/><br/>
+                                    <label class="fieldlabels">Mots-clés(<a href="http://mesh.inserm.fr/mesh/">Mesh</a>): </label>
+                                    <small>Vous pouvez renseigner plusieurs mots-clés en plusieurs langues : choisir la langue et cliquer sur + pour ajouter un mot-clé dans la langue sélectionnée. Les caractères "," (virgule) et ";" (point-virgule) peuvent être utilisés pour séparer une liste de mots-clés</small>
+                                    <input type="text" name="keys">
+
+                                    <br/><br/>
+
+                                    <br/><br/>
+                                    <label class="fieldlabels">Identifiants: </label>
+                                    <small>Ajoutez l'identifiant <a href="https://www.doi.org/">DOI</a>, <a href="http://fr.arxiv.org/">arXiv</a>, <a href="https://pubmed.ncbi.nlm.nih.gov/">PubMed</a>, <a href="https://ui.adsabs.harvard.edu/">ADS</a>, etc pour lier votre dépôt aux autres bases.</small>
+                                    <input type="text" name="identifiants">
+                                    <!--CHANGEMENT EFFECTUE HERE-->
+                                    <select class="form-control" id="otherField">
+                                    <option value="doi">DOI</option>
+                                    <option value="arxiv">arXiv</option>
+                                    <option value="pubmed">PubMed</option>
+                                    <option value="biorxiv">Biorxiv</option>
+                                    <option value="idex">idext_medrxiv</option>
+
+                                </select>
+                                    <br/><br/>
+
+                                    <label class="fieldlabels">Langue du document: *</label>
+                                    <select id="languages_doc" name="languages">
+                                <option value="af">Afrikaans</option>
+                                <option value="sq">Albanian - shqip</option>
+                                <option value="am">Amharic - አማርኛ</option>
+                                <option value="ar">Arabic - العربية</option>
+                                <option value="an">Aragonese - aragonés</option>
+                                <option value="hy">Armenian - հայերեն</option>
+                                <option value="ast">Asturian - asturianu</option>
+                                <option value="az">Azerbaijani - azərbaycan dili</option>
+                                <option value="eu">Basque - euskara</option>
+                                <option value="be">Belarusian - беларуская</option>
+                                <option value="bn">Bengali - বাংলা</option>
+                                <option value="bs">Bosnian - bosanski</option>
+                                <option value="br">Breton - brezhoneg</option>
+                                <option value="bg">Bulgarian - български</option>
+                                <option value="ca">Catalan - català</option>
+                                <option value="ckb">Central Kurdish - کوردی (دەستنوسی عەرەبی)</option>
+                                <option value="zh">Chinese - 中文</option>
+                                <option value="zh-HK">Chinese (Hong Kong) - 中文（香港）</option>
+                                <option value="zh-CN">Chinese (Simplified) - 中文（简体）</option>
+                                <option value="zh-TW">Chinese (Traditional) - 中文（繁體）</option>
+                                <option value="co">Corsican</option>
+                                <option value="hr">Croatian - hrvatski</option>
+                                <option value="cs">Czech - čeština</option>
+                                <option value="da">Danish - dansk</option>
+                                <option value="nl">Dutch - Nederlands</option>
+                                <option value="en">English</option>
+                                <option value="en-AU">English (Australia)</option>
+                                <option value="en-CA">English (Canada)</option>
+                                <option value="en-IN">English (India)</option>
+                                <option value="en-NZ">English (New Zealand)</option>
+                                <option value="en-ZA">English (South Africa)</option>
+                                <option value="en-GB">English (United Kingdom)</option>
+                                <option value="en-US">English (United States)</option>
+                                <option value="eo">Esperanto - esperanto</option>
+                                <option value="et">Estonian - eesti</option>
+                                <option value="fo">Faroese - føroyskt</option>
+                                <option value="fil">Filipino</option>
+                                <option value="fi">Finnish - suomi</option>
+                                <option value="fr">French - français</option>
+                                <option value="fr-CA">French (Canada) - français (Canada)</option>
+                                <option value="fr-FR">French (France) - français (France)</option>
+                                <option value="fr-CH">French (Switzerland) - français (Suisse)</option>
+                                <option value="gl">Galician - galego</option>
+                                <option value="ka">Georgian - ქართული</option>
+                                <option value="de">German - Deutsch</option>
+                                <option value="de-AT">German (Austria) - Deutsch (Österreich)</option>
+                                <option value="de-DE">German (Germany) - Deutsch (Deutschland)</option>
+                                <option value="de-LI">German (Liechtenstein) - Deutsch (Liechtenstein)</option>
+                                <option value="de-CH">German (Switzerland) - Deutsch (Schweiz)</option>
+                                <option value="el">Greek - Ελληνικά</option>
+                                <option value="gn">Guarani</option>
+                                <option value="gu">Gujarati - ગુજરાતી</option>
+                                <option value="ha">Hausa</option>
+                                <option value="haw">Hawaiian - ʻŌlelo Hawaiʻi</option>
+                                <option value="he">Hebrew - עברית</option>
+                                <option value="hi">Hindi - हिन्दी</option>
+                                <option value="hu">Hungarian - magyar</option>
+                                <option value="is">Icelandic - íslenska</option>
+                                <option value="id">Indonesian - Indonesia</option>
+                                <option value="ia">Interlingua</option>
+                                <option value="ga">Irish - Gaeilge</option>
+                                <option value="it">Italian - italiano</option>
+                                <option value="it-IT">Italian (Italy) - italiano (Italia)</option>
+                                <option value="it-CH">Italian (Switzerland) - italiano (Svizzera)</option>
+                                <option value="ja">Japanese - 日本語</option>
+                                <option value="kn">Kannada - ಕನ್ನಡ</option>
+                                <option value="kk">Kazakh - қазақ тілі</option>
+                                <option value="km">Khmer - ខ្មែរ</option>
+                                <option value="ko">Korean - 한국어</option>
+                                <option value="ku">Kurdish - Kurdî</option>
+                                <option value="ky">Kyrgyz - кыргызча</option>
+                                <option value="lo">Lao - ລາວ</option>
+                                <option value="la">Latin</option>
+                                <option value="lv">Latvian - latviešu</option>
+                                <option value="ln">Lingala - lingála</option>
+                                <option value="lt">Lithuanian - lietuvių</option>
+                                <option value="mk">Macedonian - македонски</option>
+                                <option value="ms">Malay - Bahasa Melayu</option>
+                                <option value="ml">Malayalam - മലയാളം</option>
+                                <option value="mt">Maltese - Malti</option>
+                                <option value="mr">Marathi - मराठी</option>
+                                <option value="mn">Mongolian - монгол</option>
+                                <option value="ne">Nepali - नेपाली</option>
+                                <option value="no">Norwegian - norsk</option>
+                                <option value="nb">Norwegian Bokmål - norsk bokmål</option>
+                                <option value="nn">Norwegian Nynorsk - nynorsk</option>
+                                <option value="oc">Occitan</option>
+                                <option value="or">Oriya - ଓଡ଼ିଆ</option>
+                                <option value="om">Oromo - Oromoo</option>
+                                <option value="ps">Pashto - پښتو</option>
+                                <option value="fa">Persian - فارسی</option>
+                                <option value="pl">Polish - polski</option>
+                                <option value="pt">Portuguese - português</option>
+                                <option value="pt-BR">Portuguese (Brazil) - português (Brasil)</option>
+                                <option value="pt-PT">Portuguese (Portugal) - português (Portugal)</option>
+                                <option value="pa">Punjabi - ਪੰਜਾਬੀ</option>
+                                <option value="qu">Quechua</option>
+                                <option value="ro">Romanian - română</option>
+                                <option value="mo">Romanian (Moldova) - română (Moldova)</option>
+                                <option value="rm">Romansh - rumantsch</option>
+                                <option value="ru">Russian - русский</option>
+                                <option value="gd">Scottish Gaelic</option>
+                                <option value="sr">Serbian - српски</option>
+                                <option value="sh">Serbo-Croatian - Srpskohrvatski</option>
+                                <option value="sn">Shona - chiShona</option>
+                                <option value="sd">Sindhi</option>
+                                <option value="si">Sinhala - සිංහල</option>
+                                <option value="sk">Slovak - slovenčina</option>
+                                <option value="sl">Slovenian - slovenščina</option>
+                                <option value="so">Somali - Soomaali</option>
+                                <option value="st">Southern Sotho</option>
+                                <option value="es">Spanish - español</option>
+                                <option value="es-AR">Spanish (Argentina) - español (Argentina)</option>
+                                <option value="es-419">Spanish (Latin America) - español (Latinoamérica)</option>
+                                <option value="es-MX">Spanish (Mexico) - español (México)</option>
+                                <option value="es-ES">Spanish (Spain) - español (España)</option>
+                                <option value="es-US">Spanish (United States) - español (Estados Unidos)</option>
+                                <option value="su">Sundanese</option>
+                                <option value="sw">Swahili - Kiswahili</option>
+                                <option value="sv">Swedish - svenska</option>
+                                <option value="tg">Tajik - тоҷикӣ</option>
+                                <option value="ta">Tamil - தமிழ்</option>
+                                <option value="tt">Tatar</option>
+                                <option value="te">Telugu - తెలుగు</option>
+                                <option value="th">Thai - ไทย</option>
+                                <option value="ti">Tigrinya - ትግርኛ</option>
+                                <option value="to">Tongan - lea fakatonga</option>
+                                <option value="tr">Turkish - Türkçe</option>
+                                <option value="tk">Turkmen</option>
+                                <option value="tw">Twi</option>
+                                <option value="uk">Ukrainian - українська</option>
+                                <option value="ur">Urdu - اردو</option>
+                                <option value="ug">Uyghur</option>
+                                <option value="uz">Uzbek - o‘zbek</option>
+                                <option value="vi">Vietnamese - Tiếng Việt</option>
+                                <option value="wa">Walloon - wa</option>
+                                <option value="cy">Welsh - Cymraeg</option>
+                                <option value="fy">Western Frisian</option>
+                                <option value="xh">Xhosa</option>
+                                <option value="yi">Yiddish</option>
+                                <option value="yo">Yoruba - Èdè Yorùbá</option>
+                                <option value="zu">Zulu - isiZulu</option>
+                                    </select>
+
+                                    <br/><br/>
+
+                                    <label class="fieldlabels">Données associées: </label>
+                                    <small>Ajoutez l'identifiant DOI fourni par l'entrepôt où vos données sont archivées</small>
+                                    <input type="text" name="keys">
+
+                                    <br/><br/>
+
+                                    <label class="fieldlabels">Date de production/écriture: </label>
+                                    <small> Renseignez la date au format AAAA-MM-JJ ou AAAA-MM ou AAAA</small>
+                                    <input type="date" name="date">
+
+                                    <br/><br/>
+
+                                    <label class="fieldlabels">Licence: </label>
+                                    <select id="licence" name="licence">
+                                    <option value="">-----</option>
+                                    <option value="by">CC BY - Paternité</option>
+                                    <option value="by_nc">CC BY NC- Paternité - Pas d'utilisation commerciale</option>
+                                    <option value="by_nd">CC BY ND - Paternité - Pas de modifications</option>
+                                    <option value="by_sa">CC BY SA - Paternité - Partage selon les Conditions initiales</option>
+                                    <option value="nc">NC - Marque du Domaine Public</option>
+                                    <option value="cc0">CC0 - Transfert dans le Domaine Public</option>
+                                    <option value="etalab">ETALAB - Licence Ouverte</option>
+                                    <option value="copyright">Copyright (Tous droits réservés)</option>
+                                    <option value="domaine_public">Domaine Public</option>
+                                </select>
+                                    <br/><br/>
+
+                                    <label class="fieldlabels">Classification: </label>
+                                    <small>PACS, MSC, etc.</small>
+                                    <textarea name="classification" form="usrform"></textarea>
+
+                                    <br/><br/>
+                                    <label class="fieldlabels">Commentaire: </label>
+                                    <textarea name="commentaire" form="usrform"></textarea>
+
+                                    <br/><br/>
+                                    <label class="fieldlabels">Référence interne: </label>
+                                    <input type="text" name="ref">
+
+                                    <br/><br/>
+                                    <label class="fieldlabels">Collaboration/Projet: </label>
+                                    <input type="text" name="ref">
+
+                                    <br/><br/>
+                                    <label class="fieldlabels">Voir aussi </label>
+                                    <small>URL de ressource(s) liée(s) à ce travail</small>
+                                    <input type="text" name="plus">
+
+                                    <br/><br/>
+                                    <label class="fieldlabels">Projet(s) ANR </label>
+                                    <small>Veuillez saisir le code décision (ANR-19-ASMA-0007), l’acronyme du projet ou le titre du projet. Vous pouvez indiquer plusieurs projets ANR.</small>
+                                    <input type="text" name="anr">
+
+                                    <br/><br/>
+                                    <label class="fieldlabels">Projet(s) Européen(s) </label>
+                                    <small>Indiquez le ou les projets Européens liés à ce travail</small>
+                                    <input type="text" name="projet_europeen">
+
+                                    <br/><br/>
+                                    <label class="fieldlabels">Financement </label>
+                                    <small>Origine du financement lié à ce travail</small>
+                                    <input type="text" name="anr">
+
+                                    <br/><br/>
+                                </div>
+                            </div>
+                            <input type="button" name="next" class="next action-button" value="Submit" /> <input type="button" name="previous" class="previous action-button-previous" value="Previous" />
+                        </fieldset>
+                        <fieldset>
+                            <div class="form-card">
+                                <div class="row">
+                                    <div class="col-7">
+                                        <h2 class="fs-title">Compléter les données auteur(s):</h2>
+                                    </div>
+                                    <div class="col-5">
+                                        <h2 class="steps">Etape 3 - 4</h2>
+                                    </div>
+                                </div> <label class="fieldlabels">Ajouter auteur: </label> <input type="text" name="auteur" placeholder="Moussa Ndiaye" />
+                                <label class="fieldlabels">Options: *</label> <input type="button" name="uname" value="Ajouter affiliation" />
+                                <input type="button" name="uname" value="Supprimer toutes les affiliations" />
+                            </div> <input type="button" name="next" class="next action-button" value="Next" /><input type="button" name="previous" class="previous action-button-previous" value="Previous" />
+                        </fieldset>
+                        <fieldset>
+                            <div class="form-card">
+                                <div class="row">
+                                    <div class="col-7">
+                                        <h2 class="fs-title">Finish:</h2>
+                                    </div>
+                                    <div class="col-5">
+                                        <h2 class="steps">Etape 4 - 4</h2>
+                                    </div>
+                                </div> <br><br>
+                                <h2 class="blue-text text-center"><strong>REUSSI !</strong></h2> <br>
+                                <div class="row justify-content-center">
+                                    <div class="col-3"> <img src="https://i.imgur.com/GwStPmg.png" class="fit-image"> </div>
+                                </div> <br><br>
+                                <div class="row justify-content-center">
+                                    <div class="col-7 text-center">
+                                        <h5 class="blue-text text-center">Le fichier a bien été ajouté</h5>
+                                    </div>
+                                </div>
+                            </div>
+                        </fieldset>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</body>
+
+
+
+
+{% endblock %}
+

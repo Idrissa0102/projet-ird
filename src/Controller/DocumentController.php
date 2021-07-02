@@ -16,7 +16,7 @@ use Cocur\Slugify\Slugify;
 class DocumentController extends AbstractController
 {
     /**
-     * @Route("/index", name="homepage")
+     * @Route("/index", name="document_index", methods={"GET"})
      */
     public function index(): Response
     {
@@ -24,6 +24,11 @@ class DocumentController extends AbstractController
             'controller_name' => 'DocumentController',
         ]);
     }
+
+
+
+     
+    
 
     /**
 	 * @Route("/view", name="view_document")
@@ -37,15 +42,15 @@ class DocumentController extends AbstractController
 	 * @Route("/add", name="add_document")
 	*/
 
-    public function add(Request $request){
-
+    public function add(){
+        return $this->render('document/add.html.twig');
     }
 
     /**
 	 * @Route("/edit", name="edit_document")
 	*/
 
-    public function edit($id, Request $request){
+    public function edit($id){
 
     }
 
@@ -53,8 +58,10 @@ class DocumentController extends AbstractController
 	 * @Route("/delete", name="delete_document")
 	*/
 
-    public function delete($id, Request $request){
+    public function delete($id){
 
     }
+
+    
 
 }
