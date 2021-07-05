@@ -7,6 +7,9 @@ use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\HttpFoundation\Request;
 use Cocur\Slugify\Slugify;
+use App\Entity\Document;
+use App\Form\DocumentType;
+
 
 
 /**
@@ -43,7 +46,13 @@ class DocumentController extends AbstractController
 	*/
 
     public function add(){
-        return $this->render('document/add.html.twig');
+
+        $document  = new Document();
+        $form = $this->createForm(DocumentType::class, $document);
+        return $this->render('document/form.html.twig', [
+            'form' => $form->createView()
+        ]);
+        
     }
 
     /**
