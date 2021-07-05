@@ -3,127 +3,651 @@
 {% block title %}Accueil - {{ parent() }} {% endblock %}
 
 {% block body %}
-    {{ include("layout.html.twig") }}
 
+    <!-- ======= Hero Section ======= -->
+    <section id="hero" class="hero d-flex align-items-center">
 
-     <!-- Features section-->
-            <section class="py-5" id="features">
-                <div class="container px-5 my-5">
-                    <div class="row gx-5">
-                        <div class="col-lg-4 mb-5 mb-lg-0"><h2 class="fw-bolder mb-0">UCAD-IRD-PORTAL, un portail qui vous propose bien des ressources   </h2></div>
-                        <div class="col-lg-8">
-                            <div class="row gx-5 row-cols-1 row-cols-md-2">
-                                <div class="col mb-5 h-100">
-                                    <div class="feature bg-primary bg-gradient text-white rounded-3 mb-3"><i class="bi bi-collection"></i></div>
-                                    <h2 class="h5">Recherches et plein de ressources scientifiques</h2>
-                                    <p class="mb-0">Paragraph of text beneath the heading to explain the heading. Here is just a bit more text.</p>
-                                </div>
-                                <div class="col mb-5 h-100">
-                                    <div class="feature bg-primary bg-gradient text-white rounded-3 mb-3"><i class="bi bi-building"></i></div>
-                                    <h2 class="h5">Multiples de Références</h2>
-                                    <p class="mb-0">Paragraph of text beneath the heading to explain the heading. Here is just a bit more text.</p>
-                                </div>
-                                <div class="col mb-5 mb-md-0 h-100">
-                                    <div class="feature bg-primary bg-gradient text-white rounded-3 mb-3"><i class="bi bi-toggles2"></i></div>
-                                    <h2 class="h5">Publier votre propre Document</h2>
-                                    <p class="mb-0">Paragraph of text beneath the heading to explain the heading. Here is just a bit more text.</p>
-                                </div>
-                                <div class="col h-100">
-                                    <div class="feature bg-primary bg-gradient text-white rounded-3 mb-3"><i class="bi bi-toggles2"></i></div>
-                                    <h2 class="h5">Recherche Approfondie et Cartographique</h2>
-                                    <p class="mb-0">Paragraph of text beneath the heading to explain the heading. Here is just a bit more text.</p>
-                                </div>
-                            </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 d-flex flex-column justify-content-center">
+                    <h1 data-aos="fade-up">Institut de Recherche pour le Développement</h1>
+                    <h2 data-aos="fade-up" data-aos-delay="400">Portail de métadonnées pour les ressources halieutiques</h2>
+                    <div data-aos="fade-up" data-aos-delay="600">
+                        <div class="text-center text-lg-start">
+                            <a href="#about"
+                                class="btn-get-started scrollto d-inline-flex align-items-center justify-content-center align-self-center">
+                                <span>Commencer</span>
+                                <i class="bi bi-arrow-right"></i>
+                            </a>
                         </div>
                     </div>
                 </div>
-            </section>
-    <!-- Features section-->
+                <div class="col-lg-6 hero-img" data-aos="zoom-out" data-aos-delay="200">
+                    <img src="{{asset('/img/hero-img.png')}}" class="img-fluid')}}" alt="">
+                </div>
+            </div>
+        </div>
 
+    </section>
+    <!-- End Hero -->
 
+    <main id="main">
+        <!-- ======= About Section ======= -->
+        <section id="about" class="about">
 
+            <div class="container" data-aos="fade-up">
+                <div class="row gx-0">
 
-    <!-- Blog preview section-->
-            <section class="py-5">
-                <div class="container px-5 my-5">
-                    <div class="row gx-5 justify-content-center">
-                        <div class="col-lg-8 col-xl-6">
-                            <div class="text-center">
-                                <h2 class="fw-bolder">Derniers Documents publiés</h2>
-                                <p class="lead fw-normal text-muted mb-5">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eaque fugit ratione dicta mollitia. Officiis ad.</p>
+                    <div class="col-lg-6 d-flex flex-column justify-content-center" data-aos="fade-up"
+                        data-aos-delay="200">
+                        <div class="content">
+                            <h3>Qui sommes nous ?</h3>
+                            <h2>Établissement public à caractère scientifique et technologique (EPST), l’Institut de
+                                recherche
+                                pour le développement est placé sous la double tutelle du ministère de <a
+                                    href="http://www.enseignementsup-recherche.gouv.fr/">l’Enseignement supérieur,
+                                    de la Recherche et de l’Innovation</a> et de celui de <a
+                                    href="https://www.diplomatie.gouv.fr/fr/">l’Europe et des Affaires Étrangères</a>.
+                            </h2>
+                            <p>Créé en 1944, l’Institut a célébré ses 75 ans en 2019. Depuis 2008, son siège se situe à
+                                Marseille, en France. Retrouvez l’évolution de ses missions <a
+                                    href="https://www.ird.fr/historique">ici</a>.
+                                L’IRD est présent en France métropolitaine, en Outre-mer, auprès des organisations
+                                internationales et européennes à Bruxelles et surtout et avant tout, dans les régions
+                                intertropicales et l’espace méditerranéen. Il s’appuie sur un réseau de <a
+                                    href="https://www.ird.fr/lird-en-france-et-dans-le-monde">36 représentations</a>
+                                pour
+                                organiser ses collaborations. Par son réseau et sa présence dans une cinquantaine de
+                                pays, l’IRD
+                                défend un modèle original de partenariat scientifique équitable avec les pays du Sud.
+                                Science du
+                                développement durable, innovation et interdisciplinarité constituent les piliers de sa
+                                recherche, engagée pour la réalisation des Objectifs de développement durable.
+                                Pour plus d'informations sur L'IRD Sénegal, veuillez cliquer sur Lire Plus.
+                            </p>
+                            <div class="text-center text-lg-start">
+                                <a href="https://www.ird.fr/senegal"
+                                    class="btn-read-more d-inline-flex align-items-center justify-content-center align-self-center">
+                                    <span>Lire Plus</span>
+                                    <i class="bi bi-arrow-right"></i>
+                                </a>
                             </div>
                         </div>
                     </div>
-                    <div class="row gx-5">
-                        <div class="col-lg-4 mb-5">
-                            <div class="card h-100 shadow border-0">
-                                <img class="card-img-top" src="https://dummyimage.com/600x350/ced4da/6c757d" alt="..." />
 
-                                <div class="card-footer p-4 pt-0 bg-transparent border-top-0 mt-3">
-                                    <div class="d-flex align-items-end justify-content-between">
-                                        <div class="d-flex align-items-center">
-                                            <img class="rounded-circle me-3" src="https://dummyimage.com/40x40/ced4da/6c757d" alt="..." />
-                                            <div class="small">
-                                                <div class="fw-bold">L'Auteur</div>
-                                                <div class="text-muted">La Date</div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="card-body p-4 mt-0">
-                                    
-                                    <a class="text-decoration-none link-dark stretched-link" href="#!"><h5 class="card-title mb-3">Titre du Document</h5></a>
-                                    <p class="card-text mb-0">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                    <div class="badge bg-primary bg-gradient rounded-pill mb-2 mt-5">Voir plus</div>
-                                </div>
-                                
-                            </div>
-                        </div>
-                        <div class="col-lg-4 mb-5">
-                            <div class="card h-100 shadow border-0">
-                                <img class="card-img-top" src="https://dummyimage.com/600x350/adb5bd/495057" alt="..." />
-                                <div class="card-footer p-4 pt-0 bg-transparent border-top-0 mt-3">
-                                    <div class="d-flex align-items-end justify-content-between">
-                                        <div class="d-flex align-items-center">
-                                            <img class="rounded-circle me-3" src="https://dummyimage.com/40x40/ced4da/6c757d" alt="..." />
-                                            <div class="small">
-                                                <div class="fw-bold">L'Auteur</div>
-                                                <div class="text-muted">Date</div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="card-body p-4">
-                                    
-                                    <a class="text-decoration-none link-dark stretched-link" href="#!"><h5 class="card-title mb-3">Titre d'un autre Document</h5></a>
-                                    <p class="card-text mb-0">This text is a bit longer to illustrate the adaptive height of each card. Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                    <div class="badge bg-primary bg-gradient rounded-pill mb-2 mt-5">Voir Plus</div>
-                                </div>
-                                
-                            </div>
-                        </div>
-                        <div class="col-lg-4 mb-5">
-                            <div class="card h-100 shadow border-0">
-                                <img class="card-img-top" src="https://dummyimage.com/600x350/6c757d/343a40" alt="..." />
-                                <div class="card-body p-4">
-                                    <div class="badge bg-primary bg-gradient rounded-pill mb-2">Voir Plus</div>
-                                    <a class="text-decoration-none link-dark stretched-link" href="#!"><h5 class="card-title mb-3">Titre du Document</h5></a>
-                                    <p class="card-text mb-0">Some more quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                </div>
-                                <div class="card-footer p-4 pt-0 bg-transparent border-top-0">
-                                    <div class="d-flex align-items-end justify-content-between">
-                                        <div class="d-flex align-items-center">
-                                            <img class="rounded-circle me-3" src="https://dummyimage.com/40x40/ced4da/6c757d" alt="..." />
-                                            <div class="small">
-                                                <div class="fw-bold">L'Auteur</div>
-                                                <div class="text-muted">Date</div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+                    <div class="col-lg-6 d-flex align-items-center" data-aos="zoom-out" data-aos-delay="200">
+                        <img src="{{asset('/img/about.jfif')}}" width="100%" height="100%" class="img-fluid" alt="">
+                    </div>
+
+                </div>
+            </div>
+
+        </section>
+        <!-- End About Section -->
+
+
+
+        <!-- ======= Counts Section ======= -->
+        <section id="counts" class="counts">
+            <div class="container" data-aos="fade-up">
+
+                <div class="row gy-4">
+
+                    <div class="col-lg-3 col-md-6">
+                        <div class="count-box">
+                            <i class="bi bi-emoji-smile"></i>
+                            <div>
+                                <span data-purecounter-start="0" data-purecounter-end="232"
+                                    data-purecounter-duration="1" class="purecounter"></span>
+                                <p>Happy Clients</p>
                             </div>
                         </div>
                     </div>
-            </section>
+
+                    <div class="col-lg-3 col-md-6">
+                        <div class="count-box">
+                            <i class="bi bi-journal-richtext" style="color: #ee6c20;"></i>
+                            <div>
+                                <span data-purecounter-start="0" data-purecounter-end="521"
+                                    data-purecounter-duration="1" class="purecounter"></span>
+                                <p>Projects</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6">
+                        <div class="count-box">
+                            <i class="bi bi-headset" style="color: #15be56;"></i>
+                            <div>
+                                <span data-purecounter-start="0" data-purecounter-end="1463"
+                                    data-purecounter-duration="1" class="purecounter"></span>
+                                <p>Hours Of Support</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6">
+                        <div class="count-box">
+                            <i class="bi bi-people" style="color: #bb0852;"></i>
+                            <div>
+                                <span data-purecounter-start="0" data-purecounter-end="15" data-purecounter-duration="1"
+                                    class="purecounter"></span>
+                                <p>Hard Workers</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+        <!-- End Counts Section -->
+
+
+        <!-- ======= Services Section ======= -->
+        <section id="services" class="services">
+
+            <div class="container" data-aos="fade-up">
+
+                <header class="section-header">
+                    <h2>Domaines</h2>
+                    <p>Les domaines sur lesquels nous travaillons</p>
+                </header>
+
+                <div class="row gy-4">
+
+                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                        <div class="service-box blue">
+                            <i class="ri-discuss-line icon"></i>
+                            <h3>Géographie Maritime</h3>
+                            <p>Provident nihil minus qui consequatur non omnis maiores. Eos accusantium minus dolores
+                                iure perferendis tempore et consequatur.</p>
+                            <a href="#" class="read-more"><span>Read More</span> <i class="bi bi-arrow-right"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+                        <div class="service-box orange">
+                            <i class="ri-discuss-line icon"></i>
+                            <h3>Ressources halieutiques</h3>
+                            <p>Ut autem aut autem non a. Sint sint sit facilis nam iusto sint. Libero corrupti neque eum
+                                hic non ut nesciunt dolorem.</p>
+                            <a href="#" class="read-more"><span>Read More</span> <i class="bi bi-arrow-right"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
+                        <div class="service-box green">
+                            <i class="ri-discuss-line icon"></i>
+                            <h3>Chimie</h3>
+                            <p>Ut excepturi voluptatem nisi sed. Quidem fuga consequatur. Minus ea aut. Vel qui id
+                                voluptas adipisci eos earum corrupti.</p>
+                            <a href="#" class="read-more"><span>Read More</span> <i class="bi bi-arrow-right"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="500">
+                        <div class="service-box red">
+                            <i class="ri-discuss-line icon"></i>
+                            <h3>Pisciculture</h3>
+                            <p>Non et temporibus minus omnis sed dolor esse consequatur. Cupiditate sed error ea fuga
+                                sit provident adipisci neque.</p>
+                            <a href="#" class="read-more"><span>Read More</span> <i class="bi bi-arrow-right"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="600">
+                        <div class="service-box purple">
+                            <i class="ri-discuss-line icon"></i>
+                            <h3>Gestion du litoral</h3>
+                            <p>Cumque et suscipit saepe. Est maiores autem enim facilis ut aut ipsam corporis aut. Sed
+                                animi at autem alias eius labore.</p>
+                            <a href="#" class="read-more"><span>Read More</span> <i class="bi bi-arrow-right"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="700">
+                        <div class="service-box pink">
+                            <i class="ri-discuss-line icon"></i>
+                            <h3>Informations</h3>
+                            <p>Hic molestias ea quibusdam eos. Fugiat enim doloremque aut neque non et debitis iure.
+                                Corrupti recusandae ducimus enim.</p>
+                            <a href="#" class="read-more"><span>Read More</span> <i class="bi bi-arrow-right"></i></a>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+        <!-- End Services Section -->
+
+
+        <!-- ======= F.A.Q Section ======= -->
+        <section id="faq" class="faq">
+
+            <div class="container" data-aos="fade-up">
+
+                <header class="section-header">
+                    <h2>F.A.Q</h2>
+                    <p>Questions fréquement posées</p>
+                </header>
+
+                <div class="row">
+                    <div class="col-lg-6">
+                        <!-- F.A.Q List 1-->
+                        <div class="accordion accordion-flush" id="faqlist1">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#faq-content-1">
+                                        À quoi sert ce portail ?
+                                    </button>
+                                </h2>
+                                <div id="faq-content-1" class="accordion-collapse collapse" data-bs-parent="#faqlist1">
+                                    <div class="accordion-body">
+                                        Feugiat pretium nibh ipsum consequat. Tempus iaculis urna id volutpat lacus
+                                        laoreet non curabitur gravida. Venenatis lectus magna fringilla urna porttitor
+                                        rhoncus dolor purus non.
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#faq-content-2">
+                                        Quels est son but ?
+                                    </button>
+                                </h2>
+                                <div id="faq-content-2" class="accordion-collapse collapse" data-bs-parent="#faqlist1">
+                                    <div class="accordion-body">
+                                        Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi. Id
+                                        interdum velit laoreet id donec ultrices. Fringilla phasellus faucibus
+                                        scelerisque eleifend donec pretium. Est pellentesque elit ullamcorper dignissim.
+                                        Mauris ultrices eros in
+                                        cursus turpis massa tincidunt dui.
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#faq-content-3">
+                                        Comment fonctionne t-elle ?
+                                    </button>
+                                </h2>
+                                <div id="faq-content-3" class="accordion-collapse collapse" data-bs-parent="#faqlist1">
+                                    <div class="accordion-body">
+                                        Eleifend mi in nulla posuere sollicitudin aliquam ultrices sagittis orci.
+                                        Faucibus pulvinar elementum integer enim. Sem nulla pharetra diam sit amet nisl
+                                        suscipit. Rutrum tellus pellentesque eu tincidunt. Lectus urna duis convallis
+                                        convallis tellus. Urna
+                                        molestie at elementum eu facilisis sed odio morbi quis
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6">
+
+                        <!-- F.A.Q List 2-->
+                        <div class="accordion accordion-flush" id="faqlist2">
+
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#faq2-content-1">
+                                        Serait-il accessible à tout le monde ?
+                                    </button>
+                                </h2>
+                                <div id="faq2-content-1" class="accordion-collapse collapse" data-bs-parent="#faqlist2">
+                                    <div class="accordion-body">
+                                        Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi. Id
+                                        interdum velit laoreet id donec ultrices. Fringilla phasellus faucibus
+                                        scelerisque eleifend donec pretium. Est pellentesque elit ullamcorper dignissim.
+                                        Mauris ultrices eros in
+                                        cursus turpis massa tincidunt dui.
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#faq2-content-2">
+                                        Les articles postés seront-ils examinés ?
+                                    </button>
+                                </h2>
+                                <div id="faq2-content-2" class="accordion-collapse collapse" data-bs-parent="#faqlist2">
+                                    <div class="accordion-body">
+                                        Molestie a iaculis at erat pellentesque adipiscing commodo. Dignissim
+                                        suspendisse in est ante in. Nunc vel risus commodo viverra maecenas accumsan.
+                                        Sit amet nisl suscipit adipiscing bibendum est. Purus gravida quis blandit
+                                        turpis cursus in
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#faq2-content-3">
+                                        Vous avez combien de visiteur ?
+                                    </button>
+                                </h2>
+                                <div id="faq2-content-3" class="accordion-collapse collapse" data-bs-parent="#faqlist2">
+                                    <div class="accordion-body">
+                                        Laoreet sit amet cursus sit amet dictum sit amet justo. Mauris vitae ultricies
+                                        leo integer malesuada nunc vel. Tincidunt eget nullam non nisi est sit amet.
+                                        Turpis nunc eget lorem dolor sed. Ut venenatis tellus in metus vulputate eu
+                                        scelerisque. Pellentesque
+                                        diam volutpat commodo sed egestas egestas fringilla phasellus faucibus. Nibh
+                                        tellus molestie nunc non blandit massa enim nec.
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+        <!-- End F.A.Q Section -->
+
+
+
+
+        <!-- ======= Team Section ======= -->
+        <section id="team" class="team">
+
+            <div class="container" data-aos="fade-up">
+
+                <header class="section-header">
+                    <h2>Equipe</h2>
+                    <p>Nos modérateurs phares</p>
+                </header>
+
+                <div class="row gy-4">
+
+                    <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
+                        <div class="member">
+                            <div class="member-img">
+                                <img src="{{asset('/img/team/blank.jpg" class="img-fluid')}}" alt="">
+                                <div class="social">
+                                    <a href=""><i class="bi bi-twitter"></i></a>
+                                    <a href=""><i class="bi bi-facebook"></i></a>
+                                    <a href=""><i class="bi bi-instagram"></i></a>
+                                    <a href=""><i class="bi bi-linkedin"></i></a>
+                                </div>
+                            </div>
+                            <div class="member-info">
+                                <h4>Idrissa Sow</h4>
+                                <span>Chief Executive Officer</span>
+                                <p>Velit aut quia fugit et et. Dolorum ea voluptate vel tempore tenetur ipsa quae aut.
+                                    Ipsum exercitationem iure minima enim corporis et voluptate.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="200">
+                        <div class="member">
+                            <div class="member-img">
+                                <img src="{{asset('/img/team/blank.jpg')}}" class="img-fluid" alt="">
+                                <div class="social">
+                                    <a href=""><i class="bi bi-twitter"></i></a>
+                                    <a href=""><i class="bi bi-facebook"></i></a>
+                                    <a href=""><i class="bi bi-instagram"></i></a>
+                                    <a href=""><i class="bi bi-linkedin"></i></a>
+                                </div>
+                            </div>
+                            <div class="member-info">
+                                <h4>Gnagna Diop</h4>
+                                <span>Product Manager</span>
+                                <p>Quo esse repellendus quia id. Est eum et accusantium pariatur fugit nihil minima
+                                    suscipit corporis. Voluptate sed quas reiciendis animi neque sapiente.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="300">
+                        <div class="member">
+                            <div class="member-img">
+                                <img src="{{asset('/img/team/blank.jpg')}}" class="img-fluid" alt="">
+                                <div class="social">
+                                    <a href=""><i class="bi bi-twitter"></i></a>
+                                    <a href=""><i class="bi bi-facebook"></i></a>
+                                    <a href=""><i class="bi bi-instagram"></i></a>
+                                    <a href=""><i class="bi bi-linkedin"></i></a>
+                                </div>
+                            </div>
+                            <div class="member-info">
+                                <h4>Oumar Sonko</h4>
+                                <span>CTO</span>
+                                <p>Vero omnis enim consequatur. Voluptas consectetur unde qui molestiae deserunt.
+                                    Voluptates enim aut architecto porro aspernatur molestiae modi.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="400">
+                        <div class="member">
+                            <div class="member-img">
+                                <img src="{{asset('/img/team/blank.jpg')}}" class="img-fluid" alt="">
+                                <div class="social">
+                                    <a href=""><i class="bi bi-twitter"></i></a>
+                                    <a href=""><i class="bi bi-facebook"></i></a>
+                                    <a href=""><i class="bi bi-instagram"></i></a>
+                                    <a href=""><i class="bi bi-linkedin"></i></a>
+                                </div>
+                            </div>
+                            <div class="member-info">
+                                <h4>Ndeye Ndiaye</h4>
+                                <span>Accountant</span>
+                                <p>Rerum voluptate non adipisci animi distinctio et deserunt amet voluptas. Quia aut
+                                    aliquid doloremque ut possimus ipsum officia.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+        <!-- End Team Section -->
+
+        <!-- ======= Clients Section ======= -->
+        <section id="clients" class="clients">
+
+            <div class="container" data-aos="fade-up">
+
+                <header class="section-header">
+                    <h2>Nos partenaires</h2>
+                    <p>Temporibus omnis officia</p>
+                </header>
+
+                <div class="clients-slider swiper-container">
+                    <div class="swiper-wrapper align-items-center">
+                        <div class="swiper-slide"><img src="{{asset('/img/clients/ird.png')}}" class="img-fluid" alt="">
+                        </div>
+                        <div class="swiper-slide"><img src="{{asset('/img/clients/ucad.png')}}" class="img-fluid" alt="">
+                        </div>
+                        <div class="swiper-slide"><img src="{{asset('/img/clients/esp.png')}}" class="img-fluid" alt="">
+                        </div>
+                        <div class="swiper-slide"><img src="{{asset('/img/clients/client-4.png')}}" class="img-fluid" alt="">
+                        </div>
+                        <div class="swiper-slide"><img src="{{asset('/img/clients/client-5.png')}}" class="img-fluid" alt="">
+                        </div>
+                        <div class="swiper-slide"><img src="{{asset('/img/clients/client-6.png')}}" class="img-fluid" alt="">
+                        </div>
+                        <div class="swiper-slide"><img src="{{asset('/img/clients/client-7.png')}}" class="img-fluid" alt="">
+                        </div>
+                        <div class="swiper-slide"><img src="{{asset('/img/clients/client-8.png')}}" class="img-fluid" alt="">
+                        </div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                </div>
+            </div>
+
+        </section>
+        <!-- End Clients Section -->
+
+        <!-- ======= Recent Blog Posts Section ======= -->
+        <section id="recent-blog-posts" class="recent-blog-posts">
+
+            <div class="container" data-aos="fade-up">
+
+                <header class="section-header">
+                    <h2>Blog</h2>
+                    <p>Recent posts form our Blog</p>
+                </header>
+
+                <div class="row">
+
+                    <div class="col-lg-4">
+                        <div class="post-box">
+                            <div class="post-img"><img src="assets/img/blog/blog-1.jpg" class="img-fluid" alt=""></div>
+                            <span class="post-date">Tue, September 15</span>
+                            <h3 class="post-title">Eum ad dolor et. Autem aut fugiat debitis voluptatem consequuntur sit
+                            </h3>
+                            <a href="blog-singe.html" class="readmore stretched-link mt-auto"><span>Read More</span><i
+                                    class="bi bi-arrow-right"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4">
+                        <div class="post-box">
+                            <div class="post-img"><img src="assets/img/blog/blog-2.jpg" class="img-fluid" alt=""></div>
+                            <span class="post-date">Fri, August 28</span>
+                            <h3 class="post-title">Et repellendus molestiae qui est sed omnis voluptates magnam</h3>
+                            <a href="blog-singe.html" class="readmore stretched-link mt-auto"><span>Read More</span><i
+                                    class="bi bi-arrow-right"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4">
+                        <div class="post-box">
+                            <div class="post-img"><img src="assets/img/blog/blog-3.jpg" class="img-fluid" alt=""></div>
+                            <span class="post-date">Mon, July 11</span>
+                            <h3 class="post-title">Quia assumenda est et veritatis aut quae</h3>
+                            <a href="blog-singe.html" class="readmore stretched-link mt-auto"><span>Read More</span><i
+                                    class="bi bi-arrow-right"></i></a>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+        <!-- End Recent Blog Posts Section -->
+
+        <!-- ======= Contact Section ======= -->
+        <section id="contact" class="contact">
+
+            <div class="container" data-aos="fade-up">
+
+                <header class="section-header">
+                    <h2>Contact</h2>
+                    <p>Contactez Nous</p>
+                </header>
+
+                <div class="row gy-4">
+
+                    <div class="col-lg-6">
+
+                        <div class="row gy-4">
+                            <div class="col-md-6">
+                                <div class="info-box">
+                                    <i class="bi bi-geo-alt"></i>
+                                    <h3>Adresse</h3>
+                                    <p>BP 1386 - CP 18524 Dakar - Sénégal,<br>Campus International IRD/UCAD de Hann</p>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="info-box">
+                                    <i class="bi bi-telephone"></i>
+                                    <h3>Téléphone</h3>
+                                    <p>+(221) 33 849 34 02<br>+(221) 77 000 00 00</p>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="info-box">
+                                    <i class="bi bi-envelope"></i>
+                                    <h3>Email</h3>
+                                    <p>senegal@ird.fr<br>qlqchose@ird.fr</p>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="info-box">
+                                    <i class="bi bi-clock"></i>
+                                    <h3>Horaire d'ouverture</h3>
+                                    <p>Lundi - Jeudi<br>7H30 - 16H15</p>
+                                    <p>Vendredi<br>08H00 - 13H00</p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="col-lg-6">
+                        <form action="forms/contact.php" method="post" class="php-email-form">
+                            <div class="row gy-4">
+
+                                <div class="col-md-6">
+                                    <input type="text" name="name" class="form-control" placeholder="Votre nom"
+                                        required>
+                                </div>
+
+                                <div class="col-md-6 ">
+                                    <input type="email" class="form-control" name="email"
+                                        placeholder="Votre adresse mail" required>
+                                </div>
+
+                                <div class="col-md-12">
+                                    <input type="text" class="form-control" name="subject" placeholder="Sujet" required>
+                                </div>
+
+                                <div class="col-md-12">
+                                    <textarea class="form-control" name="message" rows="6" placeholder="Message"
+                                        required></textarea>
+                                </div>
+
+                                <div class="col-md-12 text-center">
+                                    <div class="loading">Loading</div>
+                                    <div class="error-message"></div>
+                                    <div class="sent-message">Votre message a bien été envoyer. Merci!</div>
+
+                                    <button type="submit">Envoyer</button>
+                                </div>
+
+                            </div>
+                        </form>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+        <!-- End Contact Section -->
+
+    </main>
+    <!-- End #main -->
+
+
+    
+
+
+     
  
 {% endblock %}
