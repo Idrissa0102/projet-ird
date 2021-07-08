@@ -6,7 +6,7 @@ use App\Repository\DocumentRepository;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
-
+use Cocur\Slugify\Slugify;
 /**
  * @ORM\Entity(repositoryClass=DocumentRepository::class)
  */
@@ -122,10 +122,26 @@ class Document
      */
     private $langue;
 
+    /**
+     * @ORM\Column(type="datetime")
+     */
+    private $datePublication;
+
+    /**
+     * @ORM\ManyToOne(targetEntity=User::class, inversedBy="documents")
+     * @ORM\JoinColumn(nullable=false)
+     */
+    private $author;
+
+    
+
     public function __construct()
     {
         $this->motClef = new ArrayCollection();
+        $this->datePublication = new \DateTime();
     }
+
+    
 
     
 
@@ -385,6 +401,32 @@ class Document
 
         return $this;
     }
+
+    public function getDatePublication(): ?\DateTimeInterface
+    {
+        return $this->datePublication;
+    }
+
+    public function setDatePublication(\DateTimeInterface $datePublication): self
+    {
+        $this->datePublication = $datePublication;
+
+        return $this;
+    }
+
+    public function getAuthor(): ?User
+    {
+        return $this->author;
+    }
+
+    public function setAuthor(?User $author): self
+    {
+        $this->author = $author;
+
+        return $this;
+    }
+
+    
 
     
 }

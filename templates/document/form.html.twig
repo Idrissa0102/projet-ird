@@ -6,16 +6,47 @@
 
 {% endblock %}
 
-{% block js %}
 
-{% endblock %}
 
 
 {% block body %}
 
-    {{form(form)}}
+    {{form_start(form)}}
+
+    
+
+    
+   
+
+{{ form_widget(form.motClef) }}
+        <input type="hidden" id="widget-counters" value="0">
+        <div class="form-group col-md-12 text-center">
+            <button type="button" id="add-motClef" class="btn btn-info mt-2">Ajouter un Mot clef</button>
+        </div>
+
+    <button type="submit" class="btn btn-primary"> Publier le Document</button>
+
+
+    {{form_end(form)}}
 
 
 
 
 {% endblock %}
+
+    
+
+
+        
+   
+
+{% block js %}
+    <script>
+
+        
+
+
+
+    </script>
+{% endblock %}
+

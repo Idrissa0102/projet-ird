@@ -1,0 +1,103 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Register{% endblock %}
+
+{% block style %}
+<link rel="stylesheet" href="{{asset('css/register.css')}}">
+    <style>
+        img {
+            border-top-left-radius: 30px;
+            border-bottom-left-radius: 30px;
+            border-top-right-radius: 30px;
+            border-bottom-right-radius: 30px;
+        }
+
+        .btn1 {
+            border: none;
+            outline: none;
+            height: 50px;
+            width: 100%;
+            background-color: rgb(89, 105, 243);
+            color: white;
+            border-radius: 4px;
+            font-weight: bold;
+        }
+
+        .btn1:hover {
+            background: white;
+            border: 1px solid;
+            color: black;
+        }
+    </style>
+
+
+{% endblock %}
+
+{% block body %}
+
+    {% for flashError in app.flashes('verify_email_error') %}
+        <div class="alert alert-danger" role="alert">{{ flashError }}</div>
+    {% endfor %}
+<section class="Form my-4 mx-5">
+        <div class="container">
+            <div class="container">
+                <div class="title">Formulaire d'inscription</div>
+                <div class="content">
+                    
+    {{ form_start(registrationForm) }}
+                        <form action="">
+                        <div class="user-details">
+    
+                
+        <div class="input-box">
+        {{ form_label(registrationForm.nom, "Nom : ", {'label_attr': {'class': 'details'}})}}
+        {{ form_widget(registrationForm.nom, {'attr': {'class': 'form-control'}}) }}
+       
+        </div>
+        
+        <div class="input-box">
+        {{ form_label(registrationForm.prenom, "Prenom  : ", {'label_attr': {'class': 'details'}})}}
+        {{ form_widget(registrationForm.prenom, {'attr': {'class': 'form-control'}}) }}
+       
+        </div>
+
+        <div class="input-box">
+        {{ form_label(registrationForm.domaine, "Domaine d'Activités : ", {'label_attr': {'class': 'details'}})}}
+        {{ form_widget(registrationForm.domaine, {'attr': {'class': 'form-control'}}) }}
+       
+        </div>
+        <div class="input-box">
+        {{ form_label(registrationForm.fonction, "Fonction Occupée : ", {'label_attr': {'class': 'details'}})}}
+        {{ form_widget(registrationForm.fonction, {'attr': {'class': 'form-control'}}) }}
+       
+        </div>
+        <div class="input-box">
+        {{ form_label(registrationForm.telephone, " Numéro de Telephone : ", {'label_attr': {'class': 'details'}})}}
+        {{ form_widget(registrationForm.telephone, {'attr': {'class': 'form-control'}}) }}
+       
+        </div>
+        <div class="input-box">
+        {{ form_label(registrationForm.email, "Votre Email : ", {'label_attr': {'class': 'details'}})}}
+        {{ form_widget(registrationForm.email, {'attr': {'class': 'form-control'}}) }}
+       
+        </div>
+        <div class="input-box">
+        {{ form_label(registrationForm.password, "Mot de passe : ", {'label_attr': {'class': 'details'}})}}
+        {{ form_widget(registrationForm.password, {'attr': {'class': 'form-control'}}) }}
+       
+        </div>
+        
+
+        </div>
+
+        <button type="submit" class="btn">Register</button>
+        
+
+
+        {{ form_end(registrationForm) }}
+            </form>
+            </div>
+        </div>
+        </div>
+
+{% endblock %}

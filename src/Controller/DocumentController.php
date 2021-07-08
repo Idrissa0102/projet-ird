@@ -48,6 +48,11 @@ class DocumentController extends AbstractController
     public function add(){
 
         $document  = new Document();
+       foreach ($document->getMotClef() as $motclet) {
+           # code...
+           $document->addMotClef($motclet);
+           $motclet->addDocument($document);
+       }
         $form = $this->createForm(DocumentType::class, $document);
         return $this->render('document/form.html.twig', [
             'form' => $form->createView()

@@ -47,4 +47,12 @@ class DocumentRepository extends ServiceEntityRepository
         ;
     }
     */
+
+   public function getDocumentWithKeyWords(){
+
+        $query = $this->createQueryBuilder('d');
+        $query->leftJoin('d.motClef', 'm')->addSelect('m')->orderBy('d.datePublication', 'DESC')->getQuery();
+
+        return $query;
+    }
 }
