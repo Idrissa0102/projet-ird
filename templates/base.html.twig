@@ -68,14 +68,14 @@
         <header id="header" class="header fixed-top">
             <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
 
-                <a href="index.html" class="logo d-flex align-items-center">
+                <a href="{{path('document_controllerdocument_index')}}" class="logo d-flex align-items-center">
                     <img src="{{asset('/img/logo2.png')}}" alt="">
                     <span>IRD-UCAD</span>
                 </a>
 
                 <nav id="navbar" class="navbar">
                     <ul>
-                        <li><a class="nav-link scrollto active" href="#hero">Accueil</a></li>
+                        <li><a class="nav-link scrollto active" href=" {{path('document_controllerdocument_index')}} ">Accueil</a></li>
                         <li><a class="nav-link scrollto" href="#about">À propos de nous </a></li>
                         <li><a class="nav-link scrollto" href="#services">Domaines</a></li>
                        
@@ -91,7 +91,16 @@
                             </ul>
                         </li>
                         <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
-                        <li><a class="getstarted scrollto" href="authentification.html">Se Connecter</a></li>
+
+                        {% if app.user %}
+                            <li><a class="nav-link scrollto" href="#">Espace Chercheur</a></li>
+                            <li><a class="nav-link scrollto" href=" {{path('app_logout')}} ">Se Déconnecter</a></li>
+                        {% else %}
+                            <li><a class="getstarted scrollto" href=" {{path('app_login')}} ">Se Connecter</a></li>
+                        {% endif %}
+                            
+                        
+                        
                     </ul>
                     <i class="bi bi-list mobile-nav-toggle"></i>
                 </nav>
