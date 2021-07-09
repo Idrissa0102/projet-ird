@@ -58,7 +58,7 @@
                         <div class="form-row">
                             <div class="col-lg-7">
                                 <label for="inputEmail"></label>
-                                <input type="email" value="{{ last_username }}" placeholder="Adresse mail" name="email" id="inputEmail" class="form-control my-3 p-4 " autocomplete="email" required autofocus >
+                                <input type="email" value="{{ last_username }}" placeholder="Adresse mail" name="username" id="inputEmail" class="form-control my-3 p-4 " autocomplete="email" required autofocus >
                             </div>
                         </div>
                         <div class="form-row">
@@ -87,7 +87,7 @@
                         <input type="hidden" name="_csrf_token"
                             value="{{ csrf_token('authenticate') }}">
                         <a href="#">Mot de passe oublié ?</a>
-                        <p>Vous n'avez pas de compte <a href="form-inscription.html">S'inscrire ici</a></p>
+                        <p>Vous n'avez pas de compte <a href=" {{path('app_register')}} ">S'inscrire ici</a></p>
                     </form>
 
                     

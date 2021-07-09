@@ -86,6 +86,12 @@
         {{ form_widget(registrationForm.password, {'attr': {'class': 'form-control'}}) }}
        
         </div>
+
+        <div class="input-box">
+        {{ form_label(registrationForm.passwordConfirm, "Confirmez votre Mot de Passe : ", {'label_attr': {'class': 'details'}})}}
+        {{ form_widget(registrationForm.passwordConfirm, {'attr': {'class': 'form-control'}}) }}
+       
+        </div>
         
 
         </div>

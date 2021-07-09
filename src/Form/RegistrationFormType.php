@@ -27,6 +27,7 @@ class RegistrationFormType extends AbstractType
         ->add('domaine')
         ->add('fonction')
         ->add('telephone')
+        
             
             ->add('password', PasswordType::class, [
                 // instead of being set onto the object directly,
@@ -45,6 +46,7 @@ class RegistrationFormType extends AbstractType
                     ]),
                 ],
             ])
+            ->add('passwordConfirm', PasswordType::class)
         ;
 
         $builder->addEventListener(
