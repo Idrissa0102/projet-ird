@@ -40,7 +40,7 @@ class DocumentController extends AbstractController
 
 
     /**
-     * @Route("/show/{page}", name="document_show", methods={"GET"}, requirements={"page" = "\d+"}, defaults={"page"= 1})
+     * @Route("/show/", name="document_show", methods={"GET"}, requirements={"page" = "\d+"}, defaults={"page"= 1})
      */
     public function showAll($page): Response
     {

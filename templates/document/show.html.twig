@@ -40,7 +40,7 @@
                 <ul>
                   <li class="d-flex align-items-center"><i class="bi bi-person"></i> <a href="blog-single.html"> {{document.author.prenom}} {{document.author.nom}} </a></li>
                   <li class="d-flex align-items-center"><i class="bi bi-clock"></i> <a href="blog-single.html"><time
-                        datetime="2020-01-01"> Le {{ document.datePublication|date('d/m/Y') }} {{nbpages}} </time></a></li>
+                        datetime="2020-01-01"> Le {{ document.datePublication|date('d/m/Y') }}  </time></a></li>
                 </ul>
               </div>
 
@@ -70,16 +70,7 @@
               {% endfor %}#}
               
 
-              <ul class="justify-content-center">
-
-              {% for p in nbpages %}
-                  <li {% if page == 1%} class=" active" {% endif %}>
-                    <a href="{{ path('annonce', {'page': p}) }}" >{{p}}</a>
-                    </li>
-              {% endfor %}
-              
-                
-              </ul>
+               
             </div>
             
 
