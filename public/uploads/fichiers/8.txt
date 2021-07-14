@@ -1,0 +1,42 @@
+GDP
+1- Entreprise
+2-Gestion et Managment de Projets
+3-Projet & Cycle de Vie
+4-Acteurs ou Parties Prenantes du Projet
+5-Découpage du Projet (Phasage)
+6-Gestion de la qualité et des risques d'un projet
+=============================================================================================================
+
+											ENTREPRISE
+
+1. Définition : organisation juridiquement indépendante qui combine les facteurs de productionafin d'obtenir des biens et des services qui sont vzndus sur le marché dans le but de réaliser un bénéfice. L'un des premiers buts de l'entreprise résultant de la raison même de son existence est le service des clients, la satisfaction de leurs besoins.
+ Son écolution repse donc sur : 
+  * des facteurs externes(croissance économmique, progrès technique, politique monétaire, politique fiscale, etc)
+  * des facteurs internes (orga de l'entreprise, nature du produit, processus technologique, financement de la croissance, productivité, etc......)
+Une entrreprise a besoin de ressources (mâtières premières, travail, capitaux, services, etc) qu'elle achète ou qu'elle lue afin de les transformer et de  vendre ce qu'elle produit. Cette trans permet à l'entreprise de créer une richesse (la diff entrre ce qu'elle dépense et ce qu'on lui paye) :  on appelle cette nouvelle richesse la valeur ajoutée.
+Aujourd'hui la valeur d'une entrreprise réside plus dans sa capacité d'adaptation dans son agilité pour affronter des marchés à venir que dans l'évaluation de sa capacitéà reproduire à l'identique les cashs flow de trésorerie qu'elle a su générer dans le passé.
+Le cash-flow est un indicateur qui permert de mesurer le flux de trésorerie que dispose une entreprise. Pour les analystes et les créanciers, il constitue un bon môyen la solvabilité et la pérénité d'une entreprise
+
+1.1 Partenaires de l'entreprise : 
+-Fournisseurs :  l'entreprise lui achète des biens(mârchandises, mâtières première), des biens durables et services
+- Banque : finance les projets de l'entreprise
+-Client :  lui vends des biens et services
+-Salariés : fournit un travail, créent de la richesse en contre partie, perçoirnt un salaire
+-Actionnaires :  aporte le capital et reçoit des dividendes
+-Administration  : fournit des services (routes, justices, écoles, etc), en contre partie l'entreprise paye des impots, des taxes et côtisations sociales
+
+Les partenairs de l'entreprise sont variés, ils se situent sur les diff marchés de l'entre : 
+
+- Marchés des Biens et Services
+- Marchés des capitaux
+- Marchés du Travail
+
+L'air où nous nous trouvons est donc celle d'une immense opportunité. Dans ce monde dynamique, les entreprises on l'pportunité de concevoir un futue où l'humain seras au centre de l'équation et dont le travail seras grandement facilité par la technologie lui permettant de se focaliser sur des problématiques plus complexes et approfondies.
+
+Cette organe autonome qui est l'entreprise est doté de plusieurs fonctions à la différentes et interdépendantes. Ces fonctions sont des expertises ou des compétences. De la qualité de ses fonctions et de leur synergie dépendent la réalisation des objectifs de l'entreprise 
+
+L'organisation de l'entreprise consiste à  : 
+ - définir la composition des grpes de travail 
+ - coordonner leurs activités
+Elle entraîne la création de lien organisationnels et dans les individus et les groupes à travailler de concert à l'atteinte d'objectif commun. L'entreprise ne peut fonctionnner que si les tâches à accomplir sont réparties de façon précises et si le rôle de chacun est clairement determiné.
+L'organigramme est un représentation schèmatique des liens et des relations fonctionnels, organisationnels et hièrarchique qui existe entre les éléments et les individus d'une organisation. C'est un instrument d'information permet de se situer dans la hiérarchie. Il reflète l'imagede l'entreprise. C'est un outil de clarificationmais aussi un outil d'observation pour améliorer l'orga future.

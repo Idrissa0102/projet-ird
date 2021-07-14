@@ -2,15 +2,15 @@
 
 namespace App\Entity;
 
-use App\Repository\MotClefRepository;
+use App\Repository\LicenceRepository;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * @ORM\Entity(repositoryClass=MotClefRepository::class)
+ * @ORM\Entity(repositoryClass=LicenceRepository::class)
  */
-class MotClef
+class Licence
 {
     /**
      * @ORM\Id
@@ -25,7 +25,7 @@ class MotClef
     private $nom;
 
     /**
-     * @ORM\ManyToMany(targetEntity=Document::class, mappedBy="motClef")
+     * @ORM\OneToMany(targetEntity=Document::class, mappedBy="licence")
      */
     private $documents;
 
@@ -63,7 +63,7 @@ class MotClef
     {
         if (!$this->documents->contains($document)) {
             $this->documents[] = $document;
-            $document->addMotClef($this);
+            $document->setLicence($this);
         }
 
         return $this;
@@ -72,7 +72,10 @@ class MotClef
     public function removeDocument(Document $document): self
     {
         if ($this->documents->removeElement($document)) {
-            $document->removeMotClef($this);
+            // set the owning side to null (unless already changed)
+            if ($document->getLicence() === $this) {
+                $document->setLicence(null);
+            }
         }
 
         return $this;

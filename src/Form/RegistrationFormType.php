@@ -46,7 +46,7 @@ class RegistrationFormType extends AbstractType
                     ]),
                 ],
             ])
-            ->add('passwordConfirm', PasswordType::class)
+            
         ;
 
         $builder->addEventListener(

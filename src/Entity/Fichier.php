@@ -7,8 +7,10 @@ use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\HttpFoundation\File\UploadedFile;
 
 
+
 /**
  * @ORM\Entity(repositoryClass=FichierRepository::class)
+ * @ORM\HasLifecycleCallbacks()
  */
 class Fichier
 {

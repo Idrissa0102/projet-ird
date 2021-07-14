@@ -1,0 +1,76 @@
+1)
+	a) la signature:
+		nbOccurence : liste x Etudiant -> entier
+		// fonction nbOccurence(liste l, Etudiant e): entier
+
+	b)
+	fonction nbOccurence(liste* l, Etudiant e): entier
+	variable
+		entier nbOccu
+		liste* nouv
+	debut
+		nbOccu <-- 0
+		nouv <-- l
+		tant que nouv != null faire
+			SI nouv->etudiant.ine = e.ine ALORS
+				nbOccu <-- nbOccu + 1
+			FSI
+			nouv <-- nouv->suivant
+		Fin tant que
+		retourner nbOccu
+	fin
+2)
+	a) signature:
+		fonction renverser(liste l): liste
+	b) 
+	fonction renverser(liste l): liste
+	variable
+		Etudiant ech
+		entier i
+	debut
+		Pour i allant de 0 a l.longueur/2 pas 1 faire
+			ech <-- l.etudiant[i]
+			l.etudiant[i] <-- l.etudiant[l.longueur-i-1]
+			l.etudiant[l.longueur-i-1] <-- ech
+		FPour
+		retourner l
+	fin
+
+3)	a) signature:
+	fonction concatener(liste l1, liste l2): liste
+	variable
+		liste l3
+		entier i
+	debut
+		POUR i allant de 0 a l1.longueur+l2.longueur -1
+			SI i < l1.longueur ALORS
+				l3.etudiant[i] <-- l1.etudiant[i]
+			SINON
+				l3.etudiant[i] <-- l2.etudiant[i-l1.longueur] 
+		FPOUR
+	fin
+
+		/* 2 ème methode
+
+		POUR i allant de 0 a l1.longueur -1 
+				l3.etudiant[i] <-- l1.etudiant[i]
+		FPOUR
+		POUR i allant de 0 a l2.longueur - 1 
+				l3.etudiant[i+l1.longueur] <-- l2.etudiant[i]
+		FPOUR
+
+		*/
+
+	fonction listD* concatener(liste* l, liste* l2): liste
+	variable
+		liste nouv
+	debut
+		nouv <-- l
+		tant que nouv->suiv != null faire
+			nouv <-- nouv->suiv
+		fin tant que
+		nouv->suiv <-- l2
+		returner l
+	fin
+
+

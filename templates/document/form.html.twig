@@ -1,52 +1,212 @@
-{% extends "base.html.twig" %}
 
-{% block title %}Ajouter un Document - {{ parent() }}{% endblock %}
-
-{% block style %}
-
-{% endblock %}
-
-
-
-
-{% block body %}
-
-    {{form_start(form)}}
 
     
 
-    
-   
+    <section class="Form my-4 mx-5">
+    <div class="container">
 
-{{ form_widget(form.motClef) }}
-        <input type="hidden" id="widget-counters" value="0">
-        <div class="form-group col-md-12 text-center">
-            <button type="button" id="add-motClef" class="btn btn-info mt-2">Ajouter un Mot clef</button>
+        {{form_start(form, {'attr': {'class': 'form-horizontal'}})}} {# Les erreurs générales du formulaire. #} {{ form_errors(form) }} {# Génération du label + error + widget pour un champ. #} {# Génération manuelle et éclatée : #}
+
+      <form action="" class="row g-3 ">
+        <!--<section class="py-5">
+          <div class="container px-5 my-4">-->
+        <div class="text-center mb-5">
+          <h1 class="fw-bolder">Déposer vos documents</h1>
         </div>
 
-    <button type="submit" class="btn btn-primary"> Publier le Document</button>
+        <div class="row gx-3">
+          <div class="col-xl-8" id="id1">
+            <!-- FAQ Accordion 1-->
+            
+            <div class="accordion mb-5" id="accordionExample">
+
+              <div class="accordion-item">
+                <h3 class="accordion-header" id="headingOne"><button class="accordion-button btn-primary" type="button"
+                    data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true"
+                    aria-controls="collapseOne">Dépôt Fichier</button></h3>
+                <div class="accordion-collapse collapse show" id="collapseOne" aria-labelledby="headingOne"
+                  data-bs-parent="#accordionExample">
+                  <div class="accordion-body">
+                    <div>
+                      
+                            {{ form_label(form.fichier, "Veuillez choisir le fichier à déposer", {'label_attr': {'class': 'form-label'}}) }} 
+                            {{ form_widget(form.fichier, {'attr': {'class': 'form-control form-control-lg'}}) }}
+
+                      
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item">
+                <h3 class="accordion-header" id="headingThree">
+                <button class="accordion-button collapsed btn-primary"
+                    type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false"
+                    aria-controls="collapseThree">Auteur(s)</button></h3>
+
+                <div class="accordion-collapse collapse" id="collapseThree" aria-labelledby="headingThree"
+                  data-bs-parent="#accordionExample">
+                  <div class="accordion-body">
+                    
+                    <div class="mb-3">
 
 
-    {{form_end(form)}}
+                      {{ form_label(form.auteurAjoute, "Ajouter un auteur:", {'label_attr': {'class': 'form-label'}}) }} {{ form_errors(form.auteurAjoute) }}
+
+                       <br>
+
+                      {{ form_widget(form.auteurAjoute, {'attr': {'class': 'form-control'}}) }}
+
+                      
+                      
+                    </div>
+
+                    <div class="mb-3">
+                    {{ form_label(form.participants, "Participant(s):", {'label_attr': {'class': 'form-label'}}) }} {{ form_errors(form.participants) }}
+
+                       <br>
+                    {{ form_widget(form.participants, {'attr': {'class': 'form-control'}}) }}
+                      
+                      
+                    </div>
+                    <div class="mb-3">
+
+                      {{ form_label(form.affiliation, "Affiliation:", {'label_attr': {'class': 'form-label'}}) }} {{ form_errors(form.affiliation) }}
+
+                       <br>
+                      {{ form_widget(form.affiliation, {'attr': {'class': 'form-control'}}) }}
+                      
+                    </div>
+                    
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h3 class="accordion-header" id="headingTwo"><button class="accordion-button collapsed btn-primary"
+                    type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false"
+                    aria-controls="collapseTwo">Métadonnées du document</button></h3>
+                <div class="accordion-collapse collapse" id="collapseTwo" aria-labelledby="headingTwo"
+                  data-bs-parent="#accordionExample">
+                  <div class="accordion-body">
+                    <div class="mb-3">
+                      
+                      
+
+                      {{ form_label(form.typeDocument, "Type du Document:", {'label_attr': {'class': 'form-label'}}) }} {{ form_errors(form.typeDocument) }}
+
+                       <br>
+                      {{ form_widget(form.typeDocument, {'attr': {'class': 'form-select'}}) }}
+                    </div>
+
+                    <div class="mb-3">
+
+                      {{ form_label(form.langue, "Langue Document:", {'label_attr': {'class': 'form-label'}}) }} {{ form_errors(form.langue) }}
+
+                       <br>
+                      {{ form_widget(form.langue, {'attr': {'class': 'form-select'}}) }}
 
 
+                      
+
+                    </div>
+                    <div class="mb-3">
+                      {{ form_label(form.titre, "Titre:", {'label_attr': {'class': 'form-label'}}) }} {{ form_errors(form.titre) }}
+
+                       <br>
+                      {{ form_widget(form.titre, {'attr': {'class': 'form-control'}}) }}
+                      
+
+                    </div>
+                    <div class="mb-3">
+                      {{ form_label(form.domaine, "Domaine:", {'label_attr': {'class': 'form-label'}}) }} {{ form_errors(form.domaine) }}
+
+                       <br>
+                      {{ form_widget(form.domaine, {'attr': {'class': 'form-select'}}) }}
+
+                    </div>
+                    <div class="mb-3">
+                      {{ form_label(form.resume, "Description du Document :", {'label_attr': {'class': 'form-label'}}) }} {{ form_errors(form.resume) }}
+
+                      {{ form_widget(form.resume, {'attr': {'class': 'form-control'}}) }}
+                      
+                    </div>
+                    <div class="mb-3">
 
 
-{% endblock %}
+                    {{ form_label(form.keywords, "Mot clé", {'label_attr': {'class': 'form-label'}}) }} {{ form_errors(form.keywords) }}
+
+                    {{ form_widget(form.keywords, {'attr': {'class': 'form-control'}}) }}
+                      <br>
+                    </div>
+                    
+
+                    
+                    <div class="mb-3">
+                      {{ form_label(form.dateProduction, "Date de production/écriture:", {'label_attr': {'class': 'form-label'}}) }} {{ form_errors(form.dateProduction) }}
+
+                      {{ form_widget(form.dateProduction, {'attr': {'class': 'form-control'}}) }}
+                    </div>
+                    <div class="mb-3">
+                      {{ form_label(form.licence, "Licence:", {'label_attr': {'class': 'form-label'}}) }} 
+
+                       <br>
+                      {{ form_widget(form.licence, {'attr': {'class': 'form-select'}}) }}
+
+                    </div>
+                    
+                    <div class="mb-3">
+                      {{ form_label(form.commentaire, "Commentaire :", {'label_attr': {'class': 'form-label'}}) }} 
+
+                      {{ form_widget(form.commentaire, {'attr': {'class': 'form-control'}}) }}
+                    </div>
+                    <div class="mb-3">
+                      {{ form_label(form.refInterne, "Reference :", {'label_attr': {'class': 'form-label'}}) }} 
+
+                      {{ form_widget(form.refInterne, {'attr': {'class': 'form-control'}}) }}
+
+                    </div>
+                    <div class="mb-3">
+                      {{ form_label(form.collaboration, "Collaboration/Projet: :", {'label_attr': {'class': 'form-label'}}) }} 
+
+                      {{ form_widget(form.collaboration, {'attr': {'class': 'form-control'}}) }}
+                    </div>
+                    <div class="mb-3">
+                      {{ form_label(form.doi, "Voir aussi URL de ressource(s) liée(s) à ce travail (DOI):", {'label_attr': {'class': 'form-label'}}) }} 
+
+                      {{ form_widget(form.doi, {'attr': {'class': 'form-control'}}) }}
+                    </div>
+                    <div class="mb-3">
+                      {{ form_label(form.financement, "Financement (Origine du financement lié à ce travail):", {'label_attr': {'class': 'form-label'}}) }} 
+
+                      {{ form_widget(form.financement, {'attr': {'class': 'form-control'}}) }}
+                    </div>
+                    {{ form_row(form._token) }}
+                  </div>
+                </div>
+              </div>
+            </div>
+            <button type="submit" class="btn btn-success col-3" id="id2">Envoyer</button>
+          </div>
+        </div>
+        <!--</div>
+        </section>-->
+      </form>
+      
+      {{ form_end(form) }}
+    </div>
+
+  </section>
+  
 
     
-
-
-        
    
 
-{% block js %}
-    <script>
-
-        
 
 
 
-    </script>
-{% endblock %}
+
+
+
+
+
 

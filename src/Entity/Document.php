@@ -9,6 +9,7 @@ use Doctrine\ORM\Mapping as ORM;
 use Cocur\Slugify\Slugify;
 /**
  * @ORM\Entity(repositoryClass=DocumentRepository::class)
+ * @ORM\HasLifecycleCallbacks()
  */
 class Document
 {
@@ -30,7 +31,7 @@ class Document
     private $resume;
 
     /**
-     * @ORM\Column(type="integer", nullable=true)
+     * @ORM\Column(type="string", length=255, nullable=true)
      */
     private $doi;
 
@@ -39,10 +40,7 @@ class Document
      */
     private $dateProduction;
 
-    /**
-     * @ORM\Column(type="string", length=255)
-     */
-    private $licence;
+    
 
     /**
      * @ORM\Column(type="text", nullable=true)
@@ -59,15 +57,7 @@ class Document
      */
     private $collaboration;
 
-    /**
-     * @ORM\Column(type="string", length=255, nullable=true)
-     */
-    private $urlLie;
-
-    /**
-     * @ORM\Column(type="string", length=255, nullable=true)
-     */
-    private $codeAnr;
+    
 
     /**
      * @ORM\Column(type="string", length=255, nullable=true)
@@ -111,10 +101,7 @@ class Document
      */
     private $domaine;
 
-    /**
-     * @ORM\ManyToMany(targetEntity=MotClef::class, inversedBy="documents")
-     */
-    private $motClef;
+    
 
     /**
      * @ORM\ManyToOne(targetEntity=Langue::class, inversedBy="documents")
@@ -127,6 +114,33 @@ class Document
      */
     private $datePublication;
 
+    
+
+    /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     */
+    private $participants;
+
+    
+
+    /**
+     * @ORM\ManyToOne(targetEntity=Licence::class, inversedBy="documents")
+     * @ORM\JoinColumn(nullable=false)
+     */
+    private $licence;
+
+   
+
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $slug;
+
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $keywords;
+
     /**
      * @ORM\ManyToOne(targetEntity=User::class, inversedBy="documents")
      * @ORM\JoinColumn(nullable=false)
@@ -135,10 +149,27 @@ class Document
 
     
 
+    
+
+    
+
+    
+
     public function __construct()
     {
-        $this->motClef = new ArrayCollection();
+        
         $this->datePublication = new \DateTime();
+        $this->motClefs = new ArrayCollection();
+        $this->keywords = new ArrayCollection();
+        
+    }
+
+    /**
+     * @ORM\PreUpdate
+     */
+
+    public function UpdateAt(){
+        $this->setDatePublication(new \DateTime());
     }
 
     
@@ -174,17 +205,7 @@ class Document
         return $this;
     }
 
-    public function getDoi(): ?int
-    {
-        return $this->doi;
-    }
-
-    public function setDoi(?int $doi): self
-    {
-        $this->doi = $doi;
-
-        return $this;
-    }
+    
 
     public function getDateProduction(): ?\DateTimeInterface
     {
@@ -198,18 +219,7 @@ class Document
         return $this;
     }
 
-    public function getLicence(): ?string
-    {
-        return $this->licence;
-    }
-
-    public function setLicence(string $licence): self
-    {
-        $this->licence = $licence;
-
-        return $this;
-    }
-
+   
     public function getClassification(): ?string
     {
         return $this->classification;
@@ -246,30 +256,7 @@ class Document
         return $this;
     }
 
-    public function getUrlLie(): ?string
-    {
-        return $this->urlLie;
-    }
-
-    public function setUrlLie(?string $urlLie): self
-    {
-        $this->urlLie = $urlLie;
-
-        return $this;
-    }
-
-    public function getCodeAnr(): ?string
-    {
-        return $this->codeAnr;
-    }
-
-    public function setCodeAnr(?string $codeAnr): self
-    {
-        $this->codeAnr = $codeAnr;
-
-        return $this;
-    }
-
+   
     public function getRefInterne(): ?string
     {
         return $this->refInterne;
@@ -366,29 +353,9 @@ class Document
         return $this;
     }
 
-    /**
-     * @return Collection|MotClef[]
-     */
-    public function getMotClef(): Collection
-    {
-        return $this->motClef;
-    }
+    
 
-    public function addMotClef(MotClef $motClef): self
-    {
-        if (!$this->motClef->contains($motClef)) {
-            $this->motClef[] = $motClef;
-        }
-
-        return $this;
-    }
-
-    public function removeMotClef(MotClef $motClef): self
-    {
-        $this->motClef->removeElement($motClef);
-
-        return $this;
-    }
+    
 
     public function getLangue(): ?Langue
     {
@@ -414,6 +381,72 @@ class Document
         return $this;
     }
 
+    
+
+    public function getParticipants(): ?string
+    {
+        return $this->participants;
+    }
+
+    public function setParticipants(?string $participants): self
+    {
+        $this->participants = $participants;
+
+        return $this;
+    }
+
+   
+
+    public function getLicence(): ?Licence
+    {
+        return $this->licence;
+    }
+
+    public function setLicence(?Licence $licence): self
+    {
+        $this->licence = $licence;
+
+        return $this;
+    }
+
+    
+
+    public function getSlug(): ?string
+    {
+        return $this->slug;
+    }
+
+    public function setSlug(string $slug): self
+    {
+        $this->slug = $slug;
+
+        return $this;
+    }
+
+    public function getKeywords(): ?string
+    {
+        return $this->keywords;
+    }
+
+    public function setKeywords(string $keywords): self
+    {
+        $this->keywords = $keywords;
+
+        return $this;
+    }
+
+    public function getDoi(): ?string
+    {
+        return $this->doi;
+    }
+
+    public function setDoi(?string $doi): self
+    {
+        $this->doi = $doi;
+
+        return $this;
+    }
+
     public function getAuthor(): ?User
     {
         return $this->author;
@@ -426,6 +459,10 @@ class Document
         return $this;
     }
 
+    
+
+    
+    
     
 
     

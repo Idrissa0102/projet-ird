@@ -1,0 +1,151 @@
+{% extends "base.html.twig" %}
+
+{% block title %}Visualiser un docum€nt - {{ parent() }}{% endblock %}
+
+
+{% block body %}
+<main id="main">
+<!-- ======= Breadcrumbs ======= -->
+    <section class="breadcrumbs">
+      <div class="container">
+
+        
+        <h2>Information sur les métadonnées du Document {{document.titre}} </h2>
+
+      </div>
+    </section><!-- End Breadcrumbs -->
+
+
+<!-- ======= Blog Single Section ======= -->
+    <section id="blog" class="blog">
+      <div class="container" data-aos="fade-up">
+
+        <div class="row">
+
+          <div class="col-lg-8 entries">
+
+            <article class="entry entry-single">
+            <div >
+                
+              </div>
+
+
+              <h2 class="entry-title">
+                <a href="blog-single.html">Liste complète des métadonnées</a>
+              </h2>
+
+              <div class="entry-meta">
+                <ul>
+                  <li class="d-flex align-items-center"><i class="bi bi-person"></i> <a href="blog-single.html"> {{document.author.prenom}} {{document.author.nom}}</a></li>
+                  <li class="d-flex align-items-center"><i class="bi bi-clock"></i> <a href="blog-single.html"><time datetime="2020-01-01">Le {{ document.datePublication|date('d/m/Y') }}</time></a></li>
+                  
+                </ul>
+                
+            
+              <div class="container px-3 my-3">
+                  <div class="row gx-3">
+                      <div class="col-xl-8">
+                          <!-- FAQ Accordion 1-->
+                          <div class="accordion mb-5" id="accordionExample">
+                              <div class="accordion-item">
+                                  <h3 class="accordion-header" id="headingOne"><button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">Auteur (s) : </button></h3>
+                                  <div class="accordion-collapse collapse show" id="collapseOne" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                                      <div class="accordion-body">
+                                          <strong> {{document.auteurAjoute}} </strong>
+                                          
+                                      </div>
+                                  </div>
+                              </div>
+                              <div class="accordion-item">
+                                  <h3 class="accordion-header" id="headingTwo"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">Descriptif : </button></h3>
+                                  <div class="accordion-collapse collapse" id="collapseTwo" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                                      <div class="accordion-body">
+                                          
+                                          {{document.resume}}
+                                      </div>
+                                  </div>
+                              </div>
+                              <div class="accordion-item">
+                                  <h3 class="accordion-header" id="headingThree"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">Commentaire</button></h3>
+                                  <div class="accordion-collapse collapse" id="collapseThree" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                                      <div class="accordion-body">
+                                          {{document.commentaire}}
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+              </div>
+              <div class="col-xl-6">
+                <div class="card border-0  mt-xl-4">
+                    <div class="card-body p-6 py-lg-6">
+                        <div class="d-flex align-items-center justify-content-center">
+                            <div class="text-center">
+
+                                <table class="table table-bordered">
+                                      <tr>
+                                        <th scope="row"> Participants :</th>
+                                        <td>{{document.participants}}</td>
+                                      </tr>
+                                      <tr>
+                                        <th scope="row">Format du dépôt</th>
+                                        <td> {{document.fichier.url}} </td>
+                                      </tr>
+                                      <tr>
+                                        <th scope="row">Type de document</th>
+                                        <td> {{document.typeDocument.nom}} </td>
+                                      </tr>
+                                      <tr>
+                                        <th scope="row">Date de Production	</th>
+                                        <td> {{ document.dateProduction|date('d/m/Y') }}</td>
+                                      </tr>
+                                      <tr>
+                                        <th scope="row">Domaine</th>
+                                        <td>{{document.domaine.nom}}</td>
+                                      </tr>
+                                      <tr>
+                                        <th scope="row">Langue du document</th>
+                                        <td>{{document.langue.nom}}</td>
+                                      </tr>
+                                      <tr>
+                                        <th scope="row">Nom du Document</th>
+                                        <td>{{document.titre}}</td>
+                                      </tr>
+                                      <tr>
+                                        <th scope="row"> DOI :</th>
+                                        <td>{{document.doi}}</td>
+                                      </tr>
+                                      <tr>
+                                        <th scope="row"> Affiliation :</th>
+                                        <td>{{document.affiliation}}</td>
+                                      </tr>
+                                      <tr>
+                                        <th scope="row"> Licence :</th>
+                                        <td>{{document.licence.nom}}</td>
+                                      </tr>
+                                      <tr>
+                                        <th scope="row"> Financement :</th>
+                                        <td>{{document.financement}}</td>
+                                      </tr>
+                                      <tr>
+                                        <th scope="row"> Référence :</th>
+                                        <td>{{document.refInterne}}</td>
+                                      </tr>
+                                  </table>
+                      
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </article><!-- End blog entry -->
+         
+            <a class="btn btn-danger me-4 " href="{{path('document_controllerdocument_index')}}"  role="button"> <i class="fas fa-caret-left"></i> &nbsp;&nbsp;Retour</a>
+            <button type="button" class="btn btn-success me-4" id="ouvrir" >Visualiser <i class="fas fa-eye"></i></button>
+            <a class="btn btn-primary me-4"  href="./doc/Biblio_mobilite/UEMOA_2014.pdf" download>Télécharger &nbsp; <i class="fas fa-file-download"></i></a>
+          </div><!-- End blog entries list -->
+        </main><!-- End #main -->
+
+
+
+{% endblock %}

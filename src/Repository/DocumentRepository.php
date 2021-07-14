@@ -5,6 +5,8 @@ namespace App\Repository;
 use App\Entity\Document;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Doctrine\Persistence\ManagerRegistry;
+use Doctrine\ORM\Tools\Pagination\Paginator;
+
 
 /**
  * @method Document|null find($id, $lockMode = null, $lockVersion = null)
@@ -47,6 +49,16 @@ class DocumentRepository extends ServiceEntityRepository
         ;
     }
     */
+
+    public function getDocuments($page, $nbpages){
+        $query=$this->createQueryBuilder('d');//alias
+    
+        $query->orderBy('d.datePublication', 'DESC')->getQuery();
+    
+        $query->setFirstResult(($page-1) * $nbpages)->setMaxResults($nbpages);
+    
+        return new Paginator($query, true);
+       }
 
    public function getDocumentWithKeyWords(){
 
