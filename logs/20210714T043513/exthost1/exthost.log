@@ -1,0 +1,75 @@
+[2021-07-14 04:35:43.347] [exthost] [info] extension host started
+[2021-07-14 04:35:43.553] [exthost] [info] ExtensionService#_doActivateExtension vscode.microsoft-authentication {"startup":false,"extensionId":{"value":"vscode.microsoft-authentication","_lower":"vscode.microsoft-authentication"},"activationEvent":"onAuthenticationRequest:microsoft"}
+[2021-07-14 04:35:43.553] [exthost] [info] ExtensionService#loadCommonJSModule file:///snap/code/68/usr/share/code/resources/app/extensions/microsoft-authentication/dist/extension.js
+[2021-07-14 04:35:43.642] [exthost] [info] ExtensionService#_doActivateExtension vscode.debug-auto-launch {"startup":true,"extensionId":{"value":"vscode.debug-auto-launch","_lower":"vscode.debug-auto-launch"},"activationEvent":"*"}
+[2021-07-14 04:35:43.642] [exthost] [info] ExtensionService#loadCommonJSModule file:///snap/code/68/usr/share/code/resources/app/extensions/debug-auto-launch/dist/extension
+[2021-07-14 04:35:43.752] [exthost] [info] ExtensionService#_doActivateExtension vscode.git {"startup":true,"extensionId":{"value":"vscode.github","_lower":"vscode.github"},"activationEvent":"*"}
+[2021-07-14 04:35:43.752] [exthost] [info] ExtensionService#loadCommonJSModule file:///snap/code/68/usr/share/code/resources/app/extensions/git/dist/main
+[2021-07-14 04:35:44.583] [exthost] [info] ExtensionService#_doActivateExtension adobe.xd {"startup":true,"extensionId":{"value":"adobe.xd","_lower":"adobe.xd"},"activationEvent":"*"}
+[2021-07-14 04:35:44.583] [exthost] [info] ExtensionService#loadCommonJSModule file:///root/.vscode/extensions/adobe.xd-1.2.3/build/extension-bundle.js
+[2021-07-14 04:35:44.950] [exthost] [info] ExtensionService#_doActivateExtension alefragnani.project-manager {"startup":true,"extensionId":{"value":"alefragnani.project-manager","_lower":"alefragnani.project-manager"},"activationEvent":"*"}
+[2021-07-14 04:35:44.950] [exthost] [info] ExtensionService#loadCommonJSModule file:///root/.vscode/extensions/alefragnani.project-manager-12.2.0/dist/extension
+[2021-07-14 04:35:45.069] [exthost] [info] ExtensionService#_doActivateExtension anweber.statusbar-commands {"startup":true,"extensionId":{"value":"anweber.statusbar-commands","_lower":"anweber.statusbar-commands"},"activationEvent":"*"}
+[2021-07-14 04:35:45.069] [exthost] [info] ExtensionService#loadCommonJSModule file:///root/.vscode/extensions/anweber.statusbar-commands-1.8.0/dist/extension.js
+[2021-07-14 04:35:45.183] [exthost] [info] ExtensionService#_doActivateExtension bajdzis.vscode-database {"startup":true,"extensionId":{"value":"bajdzis.vscode-database","_lower":"bajdzis.vscode-database"},"activationEvent":"*"}
+[2021-07-14 04:35:45.183] [exthost] [info] ExtensionService#loadCommonJSModule file:///root/.vscode/extensions/bajdzis.vscode-database-2.2.3/out/extension.js
+[2021-07-14 04:35:45.419] [exthost] [info] ExtensionService#_doActivateExtension bajdzis.vscode-twig-pack {"startup":true,"extensionId":{"value":"bajdzis.vscode-twig-pack","_lower":"bajdzis.vscode-twig-pack"},"activationEvent":"*"}
+[2021-07-14 04:35:45.419] [exthost] [info] ExtensionService#loadCommonJSModule file:///root/.vscode/extensions/bajdzis.vscode-twig-pack-1.1.0/extension
+[2021-07-14 04:35:45.481] [exthost] [info] ExtensionService#_doActivateExtension Cardinal90.multi-cursor-case-preserve {"startup":true,"extensionId":{"value":"Cardinal90.multi-cursor-case-preserve","_lower":"cardinal90.multi-cursor-case-preserve"},"activationEvent":"*"}
+[2021-07-14 04:35:45.481] [exthost] [info] ExtensionService#loadCommonJSModule file:///root/.vscode/extensions/cardinal90.multi-cursor-case-preserve-1.0.5/src/extension
+[2021-07-14 04:35:45.507] [exthost] [info] ExtensionService#_doActivateExtension christian-kohler.path-intellisense {"startup":true,"extensionId":{"value":"christian-kohler.path-intellisense","_lower":"christian-kohler.path-intellisense"},"activationEvent":"*"}
+[2021-07-14 04:35:45.507] [exthost] [info] ExtensionService#loadCommonJSModule file:///root/.vscode/extensions/christian-kohler.path-intellisense-2.3.0/out/extension.js
+[2021-07-14 04:35:45.594] [exthost] [info] ExtensionService#_doActivateExtension cweijan.vscode-mysql-client2 {"startup":true,"extensionId":{"value":"cweijan.vscode-mysql-client2","_lower":"cweijan.vscode-mysql-client2"},"activationEvent":"*"}
+[2021-07-14 04:35:45.594] [exthost] [info] ExtensionService#loadCommonJSModule file:///root/.vscode/extensions/cweijan.vscode-mysql-client2-3.9.4/out/extension
+[2021-07-14 04:35:46.371] [exthost] [info] ExtensionService#_doActivateExtension danileao.css-variables-autocomplete {"startup":true,"extensionId":{"value":"danileao.css-variables-autocomplete","_lower":"danileao.css-variables-autocomplete"},"activationEvent":"*"}
+[2021-07-14 04:35:46.371] [exthost] [info] ExtensionService#loadCommonJSModule file:///root/.vscode/extensions/danileao.css-variables-autocomplete-0.0.3/out/extension.js
+[2021-07-14 04:35:46.413] [exthost] [info] ExtensionService#_doActivateExtension donjayamanne.githistory {"startup":true,"extensionId":{"value":"donjayamanne.githistory","_lower":"donjayamanne.githistory"},"activationEvent":"*"}
+[2021-07-14 04:35:46.414] [exthost] [info] ExtensionService#loadCommonJSModule file:///root/.vscode/extensions/donjayamanne.githistory-0.6.17/dist/src/extension
+[2021-07-14 04:35:46.518] [exthost] [info] ExtensionService#_doActivateExtension ecmel.vscode-html-css {"startup":true,"extensionId":{"value":"ecmel.vscode-html-css","_lower":"ecmel.vscode-html-css"},"activationEvent":"*"}
+[2021-07-14 04:35:46.518] [exthost] [info] ExtensionService#loadCommonJSModule file:///root/.vscode/extensions/ecmel.vscode-html-css-1.10.2/dist/extension.js
+[2021-07-14 04:35:46.595] [exthost] [info] ExtensionService#_doActivateExtension EditorConfig.EditorConfig {"startup":true,"extensionId":{"value":"EditorConfig.EditorConfig","_lower":"editorconfig.editorconfig"},"activationEvent":"*"}
+[2021-07-14 04:35:46.595] [exthost] [info] ExtensionService#loadCommonJSModule file:///root/.vscode/extensions/editorconfig.editorconfig-0.16.4/out/editorConfigMain.js
+[2021-07-14 04:35:46.773] [exthost] [info] ExtensionService#_doActivateExtension formulahendry.auto-rename-tag {"startup":true,"extensionId":{"value":"formulahendry.auto-rename-tag","_lower":"formulahendry.auto-rename-tag"},"activationEvent":"*"}
+[2021-07-14 04:35:46.773] [exthost] [info] ExtensionService#loadCommonJSModule file:///root/.vscode/extensions/formulahendry.auto-rename-tag-0.1.6/packages/extension/dist/extensionMain.js
+[2021-07-14 04:35:46.866] [exthost] [info] ExtensionService#_doActivateExtension GitHub.vscode-pull-request-github {"startup":true,"extensionId":{"value":"GitHub.vscode-pull-request-github","_lower":"github.vscode-pull-request-github"},"activationEvent":"*"}
+[2021-07-14 04:35:46.866] [exthost] [info] ExtensionService#loadCommonJSModule file:///root/.vscode/extensions/github.vscode-pull-request-github-0.27.1/dist/extension
+[2021-07-14 04:35:47.332] [exthost] [info] ExtensionService#_doActivateExtension Glavin001.unibeautify-vscode {"startup":true,"extensionId":{"value":"Glavin001.unibeautify-vscode","_lower":"glavin001.unibeautify-vscode"},"activationEvent":"*"}
+[2021-07-14 04:35:47.332] [exthost] [info] ExtensionService#loadCommonJSModule file:///root/.vscode/extensions/glavin001.unibeautify-vscode-0.8.2/index.js
+[2021-07-14 04:35:56.965] [exthost] [info] ExtensionService#_doActivateExtension ms-vscode.test-adapter-converter {"startup":true,"extensionId":{"value":"hbenl.vscode-test-explorer","_lower":"hbenl.vscode-test-explorer"},"activationEvent":"*"}
+[2021-07-14 04:35:56.966] [exthost] [info] ExtensionService#loadCommonJSModule file:///root/.vscode/extensions/ms-vscode.test-adapter-converter-0.0.10/out/extension.js
+[2021-07-14 04:35:57.005] [exthost] [info] ExtensionService#_doActivateExtension HookyQR.beautify {"startup":true,"extensionId":{"value":"HookyQR.beautify","_lower":"hookyqr.beautify"},"activationEvent":"*"}
+[2021-07-14 04:35:57.005] [exthost] [info] ExtensionService#loadCommonJSModule file:///root/.vscode/extensions/hookyqr.beautify-1.5.0/extension
+[2021-07-14 04:35:57.251] [exthost] [info] ExtensionService#_doActivateExtension huizhou.githd {"startup":true,"extensionId":{"value":"huizhou.githd","_lower":"huizhou.githd"},"activationEvent":"*"}
+[2021-07-14 04:35:57.251] [exthost] [info] ExtensionService#loadCommonJSModule file:///root/.vscode/extensions/huizhou.githd-2.2.4/out/src/extension
+[2021-07-14 04:35:57.330] [exthost] [info] ExtensionService#_doActivateExtension immament.vscode-ngrx-uml {"startup":true,"extensionId":{"value":"immament.vscode-ngrx-uml","_lower":"immament.vscode-ngrx-uml"},"activationEvent":"*"}
+[2021-07-14 04:35:57.330] [exthost] [info] ExtensionService#loadCommonJSModule file:///root/.vscode/extensions/immament.vscode-ngrx-uml-1.0.2/dist/extension.js
+[2021-07-14 04:35:57.363] [exthost] [info] ExtensionService#_doActivateExtension kevinkyang.auto-comment-blocks {"startup":true,"extensionId":{"value":"kevinkyang.auto-comment-blocks","_lower":"kevinkyang.auto-comment-blocks"},"activationEvent":"*"}
+[2021-07-14 04:35:57.363] [exthost] [info] ExtensionService#loadCommonJSModule file:///root/.vscode/extensions/kevinkyang.auto-comment-blocks-1.0.1/out/src/extension
+[2021-07-14 04:35:57.450] [exthost] [info] ExtensionService#_doActivateExtension kiteco.kite {"startup":true,"extensionId":{"value":"kiteco.kite","_lower":"kiteco.kite"},"activationEvent":"*"}
+[2021-07-14 04:35:57.450] [exthost] [info] ExtensionService#loadCommonJSModule file:///root/.vscode/extensions/kiteco.kite-0.147.0/dist/kite-extension
+[2021-07-14 04:35:57.556] [exthost] [info] ExtensionService#_doActivateExtension KnisterPeter.vscode-github {"startup":true,"extensionId":{"value":"KnisterPeter.vscode-github","_lower":"knisterpeter.vscode-github"},"activationEvent":"*"}
+[2021-07-14 04:35:57.556] [exthost] [info] ExtensionService#loadCommonJSModule file:///root/.vscode/extensions/knisterpeter.vscode-github-0.30.6/out/src/main
+[2021-07-14 04:35:59.645] [exthost] [info] ExtensionService#_doActivateExtension mblode.twig-language {"startup":true,"extensionId":{"value":"mblode.twig-language","_lower":"mblode.twig-language"},"activationEvent":"*"}
+[2021-07-14 04:35:59.645] [exthost] [info] ExtensionService#loadCommonJSModule file:///root/.vscode/extensions/mblode.twig-language-0.9.2/extension/index
+[2021-07-14 04:35:59.794] [exthost] [info] ExtensionService#_doActivateExtension mhutchie.git-graph {"startup":true,"extensionId":{"value":"mhutchie.git-graph","_lower":"mhutchie.git-graph"},"activationEvent":"*"}
+[2021-07-14 04:35:59.794] [exthost] [info] ExtensionService#loadCommonJSModule file:///root/.vscode/extensions/mhutchie.git-graph-1.30.0/out/extension.js
+[2021-07-14 04:35:59.891] [exthost] [info] ExtensionService#_doActivateExtension michelemelluso.gitignore {"startup":true,"extensionId":{"value":"michelemelluso.gitignore","_lower":"michelemelluso.gitignore"},"activationEvent":"*"}
+[2021-07-14 04:35:59.891] [exthost] [info] ExtensionService#loadCommonJSModule file:///root/.vscode/extensions/michelemelluso.gitignore-1.0.1/out/src/extension
+[2021-07-14 04:35:59.916] [exthost] [info] ExtensionService#_doActivateExtension mkxml.vscode-filesize {"startup":true,"extensionId":{"value":"mkxml.vscode-filesize","_lower":"mkxml.vscode-filesize"},"activationEvent":"*"}
+[2021-07-14 04:35:59.916] [exthost] [info] ExtensionService#loadCommonJSModule file:///root/.vscode/extensions/mkxml.vscode-filesize-3.1.0/dist/extension
+[2021-07-14 04:35:59.962] [exthost] [info] ExtensionService#_doActivateExtension ms-vscode.cpptools {"startup":true,"extensionId":{"value":"ms-vscode.cpptools","_lower":"ms-vscode.cpptools"},"activationEvent":"*"}
+[2021-07-14 04:35:59.962] [exthost] [info] ExtensionService#loadCommonJSModule file:///root/.vscode/extensions/ms-vscode.cpptools-1.5.1/dist/main
+[2021-07-14 04:36:00.207] [exthost] [info] ExtensionService#_doActivateExtension ms-vsliveshare.vsliveshare {"startup":true,"extensionId":{"value":"ms-vsliveshare.vsliveshare-audio","_lower":"ms-vsliveshare.vsliveshare-audio"},"activationEvent":"*"}
+[2021-07-14 04:36:00.207] [exthost] [info] ExtensionService#loadCommonJSModule file:///root/.vscode/extensions/ms-vsliveshare.vsliveshare-1.0.4531/out/prod/extension-prod
+[2021-07-14 04:36:02.208] [exthost] [info] ExtensionService#_doActivateExtension ms-vsonline.vsonline {"startup":true,"extensionId":{"value":"ms-vsonline.vsonline","_lower":"ms-vsonline.vsonline"},"activationEvent":"*"}
+[2021-07-14 04:36:02.208] [exthost] [info] ExtensionService#loadCommonJSModule file:///root/.vscode/extensions/ms-vsonline.vsonline-1.0.3076/out/bundle/extension-bundle.js
+[2021-07-14 04:36:02.951] [exthost] [info] ExtensionService#_doActivateExtension mtxr.sqltools {"startup":true,"extensionId":{"value":"mtxr.sqltools-driver-mysql","_lower":"mtxr.sqltools-driver-mysql"},"activationEvent":"*"}
+[2021-07-14 04:36:02.951] [exthost] [info] ExtensionService#loadCommonJSModule file:///root/.vscode/extensions/mtxr.sqltools-0.23.0/dist/extension.js
+[2021-07-14 04:36:03.111] [exthost] [info] ExtensionService#_doActivateExtension nadim-vscode.symfony-code-snippets {"startup":true,"extensionId":{"value":"nadim-vscode.symfony-code-snippets","_lower":"nadim-vscode.symfony-code-snippets"},"activationEvent":"*"}
+[2021-07-14 04:36:03.111] [exthost] [info] ExtensionService#loadCommonJSModule file:///root/.vscode/extensions/nadim-vscode.symfony-code-snippets-1.2.7/extension
+[2021-07-14 04:36:03.112] [exthost] [info] ExtensionService#_doActivateExtension nadim-vscode.symfony-super-console {"startup":true,"extensionId":{"value":"nadim-vscode.symfony-super-console","_lower":"nadim-vscode.symfony-super-console"},"activationEvent":"*"}
+[2021-07-14 04:36:03.112] [exthost] [info] ExtensionService#loadCommonJSModule file:///root/.vscode/extensions/nadim-vscode.symfony-super-console-1.1.1/extension.js
+[2021-07-14 04:36:03.122] [exthost] [info] ExtensionService#_doActivateExtension PKief.material-icon-theme {"startup":true,"extensionId":{"value":"PKief.material-icon-theme","_lower":"pkief.material-icon-theme"},"activationEvent":"*"}
+[2021-07-14 04:36:03.122] [exthost] [info] ExtensionService#loadCommonJSModule file:///root/.vscode/extensions/pkief.material-icon-theme-4.8.0/dist/extension
+[2021-07-14 04:36:03.167] [exthost] [info] ExtensionService#_doActivateExtension ritwickdey.LiveServer {"startup":true,"extensionId":{"value":"ritwickdey.LiveServer","_lower":"ritwickdey.liveserver"},"activationEvent":"*"}
+[2021-07-14 04:36:03.167] [exthost] [info] ExtensionService#loadCommonJSModule file:///root/.vscode/extensions/ritwickdey.liveserver-5.6.1/out/src/extension

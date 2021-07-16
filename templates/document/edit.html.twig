@@ -1,0 +1,61 @@
+{% extends "base.html.twig" %}
+
+{% block title %}Publier un Document - {{ parent() }}{% endblock %}
+
+{% block style %}
+<style>
+    #id1 {
+      width: 85%;
+      background: rgb(231, 235, 235);
+      border-radius: 6px;
+      padding: 20px 60px 30px 40px;
+      box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    #id2 {
+      
+      display: block;
+      position: relative;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  </style>
+
+
+    
+
+
+
+
+
+
+
+{% endblock %}
+
+
+
+
+{% block body %}
+ <!-- End Header -->
+  <!-- ======= Breadcrumbs ======= -->
+  <section class="breadcrumbs">
+    <div class="container">
+
+      
+      <h2>Mettre à Jour les informations liés au Document</h2>
+
+    </div>
+  </section><!-- End Breadcrumbs -->
+
+  {{ include("document/form.html.twig") }}
+
+  {% block mainjs %}
+  <script src="{{asset('/js/formvalidaate.js')}}"></script>
+  {% endblock %}
+
+
+
+{% endblock %}
+

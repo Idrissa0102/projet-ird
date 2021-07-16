@@ -113,18 +113,55 @@ class DocumentController extends AbstractController
     }
 
     /**
-	 * @Route("/edit", name="edit_document")
+	 * @Route("/edit/{id}", name="edit_document", requirements={"id" = "\d+"})
 	*/
 
-    public function edit($id){
+    public function edit($id, Request $request){
+
+        $em = $this->getDoctrine()->getManager();
+
+        
+        $document = $em->getRepository(Document::class)->find($id);
+
+        $form = $this->get('form.factory')->create(DocumentEditType::class, $document);
+
+        if ($request->isMethod('POST') && $form->handleRequest($request)->isValid()) {//Requête soumis en POST 
+            # code...création et gestion de formulaire
+            $em->flush();
+
+            return $this->redirectToRoute('document_controllerview_document', array('id' =>$document->getId()));
+        }
+        return $this->render('document/edit.html.twig', array(
+            'annonce' => $document, 'form'=>$form->createView()
+        ));
 
     }
 
     /**
-	 * @Route("/delete", name="delete_document")
+	 * @Route("/delete", name="delete_document",  requirements={"id" = "\d+"})
 	*/
 
-    public function delete($id){
+    public function delete($id, Request $request){
+
+        $em = $this->getDoctrine()->getManager();
+
+		    
+		$document = $em->getRepository(Document::class)->find($id);
+
+        $form = $this->get('form.factory')->create();
+
+        if ($request->isMethod('POST') && $form->handleRequest($request)->isValid()) {
+             $em->remove($document);
+             $em->flush();
+
+             
+             return $this->redirectToRoute('document_controllerview_document');
+         }
+
+         return $this->render('document/delete.html.twig', array(
+			'annonce' => $document, 'form'=>$form->createView(),
+		  ));
+
 
     }
 

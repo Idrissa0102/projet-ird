@@ -1,0 +1,9 @@
+{
+    "editor.defaultFormatter": "HookyQR.beautify",
+    "editor.inlineSuggest.enabled": true,
+    "twig-language.bracePadding": true,
+    "twig-language.correct": true,
+    "twig-language.cssInsertLines": true,
+    "twig-language.forceIndent": true,
+    "twig-language-2.correct": true
+}
