@@ -19,10 +19,7 @@ class DocumentEditType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->remove('fichier')
-            
-            
-        ;
+            ->remove('fichier');
     }
 
     

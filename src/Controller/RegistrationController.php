@@ -13,7 +13,7 @@ use Symfony\Component\Mime\Address;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\Security\Core\Encoder\UserPasswordEncoderInterface;
 use SymfonyCasts\Bundle\VerifyEmail\Exception\VerifyEmailExceptionInterface;
-
+use Cocur\Slugify\Slugify;
 class RegistrationController extends AbstractController
 {
     private $emailVerifier;
@@ -42,6 +42,9 @@ class RegistrationController extends AbstractController
             );
 
             $entityManager = $this->getDoctrine()->getManager();
+            $slugger = new Slugify();
+                $email = $slugger->slugify($user->getEmail());
+                $user->setSlug($email);
             $entityManager->persist($user);
             $entityManager->flush();
 
@@ -83,5 +86,18 @@ class RegistrationController extends AbstractController
         $this->addFlash('success', 'Your email address has been verified.');
 
         return $this->redirectToRoute('app_login');
+    }
+
+    /**
+ 	* @Route("/show/{slug}", name="app_show")
+     */
+    public function show(User $user){
+
+       
+
+        return $this->render('security/show.html.twig', [
+            'user'=>$user
+        ]);
+
     }
 }

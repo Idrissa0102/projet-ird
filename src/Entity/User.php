@@ -10,9 +10,10 @@ use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
 use Symfony\Component\Security\Core\User\PasswordAuthenticatedUserInterface;
 use Symfony\Component\Security\Core\User\UserInterface;
 use Symfony\Component\Validator\Constraints as Assert;
+
 /**
  * @ORM\Entity(repositoryClass=UserRepository::class)
- * @UniqueEntity(fields={"email"}, message="There is already an account with this email")
+ * @UniqueEntity(fields={"email"}, message="Un compte a déjà été enregistré avec cet email")
  * @ORM\HasLifecycleCallbacks
  */
 class User implements UserInterface, PasswordAuthenticatedUserInterface
@@ -26,6 +27,9 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
 
     /**
      * @ORM\Column(type="string", length=180, unique=true)
+     * @Assert\NotNull
+     * @Assert\Email(message="Votre email {{value}} n'est pas valide ")
+     * 
      */
     private $email;
 
@@ -37,31 +41,54 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     /**
      * @var string The hashed password
      * @ORM\Column(type="string")
+     * @Assert\NotNull(message="Veuillez renseignez votre mot de passe")
+     * @Assert\Length(
+     *  min= 6,
+     *  max = 12,
+     *  minMessage= "Votre mot de passe doit au moins contenir six caractères !",
+     *  maxMessage= "Votre mot de passe ne doit pas dépasser 12 caractères ! "
+     * )
+     * 
      */
     private $password;
 
     /**
      * @ORM\Column(type="string", length=255)
+     * @Assert\NotNull(message="Veuillez renseignez votre nom")
+     * @Assert\Regex(
+     *     pattern="/\d/",
+     *     match=false,
+     *     message="Votre nom ne doit pas contenir de chiffres"
+     * )
      */
     private $nom;
 
     /**
      * @ORM\Column(type="string", length=255)
+     * @Assert\NotNull(message="Veuillez renseignez votre prenom")
+     * @Assert\Regex(
+     *     pattern="/\d/",
+     *     match=false,
+     *     message="Votre prenom ne doit pas contenir de chiffres"
+     * )
      */
     private $prenom;
 
     /**
      * @ORM\Column(type="string", length=255)
+     * @Assert\NotNull(message="Veuillez renseignez votre domaine")
      */
     private $domaine;
 
     /**
      * @ORM\Column(type="string", length=255)
+     * @Assert\NotNull(message="Veuillez renseignez votre fonction")
      */
     private $fonction;
 
     /**
      * @ORM\Column(type="string", length=255, nullable=true)
+     * Assert\Positive
      */
     private $telephone;
 
@@ -76,6 +103,17 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
      * @ORM\OneToMany(targetEntity=Document::class, mappedBy="author")
      */
     private $documents;
+
+    /**
+     * @Assert\EqualTo(propertyPath="password", message="Les mots de passes ne sont pas identiques")
+     */
+    
+    public $passwordConfirm;
+
+    /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     */
+    private $slug;
 
 
     
@@ -279,6 +317,18 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
                 $document->setAuthor(null);
             }
         }
+
+        return $this;
+    }
+
+    public function getSlug(): ?string
+    {
+        return $this->slug;
+    }
+
+    public function setSlug(?string $slug): self
+    {
+        $this->slug = $slug;
 
         return $this;
     }

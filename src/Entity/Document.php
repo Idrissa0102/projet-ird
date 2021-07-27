@@ -7,9 +7,15 @@ use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 use Cocur\Slugify\Slugify;
+use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
+use Symfony\Component\Validator\Constraints as Assert;
 /**
  * @ORM\Entity(repositoryClass=DocumentRepository::class)
  * @ORM\HasLifecycleCallbacks()
+ * @UniqueEntity(
+ *  fields={"title"},
+ *  message="Un autre Document déjà avec ve titre est dejà publié."
+ * )
  */
 class Document
 {
@@ -22,11 +28,13 @@ class Document
 
     /**
      * @ORM\Column(type="string", length=255)
+     * @Assert\NotNull(message="Veuillez renseignez ce champ")
      */
     private $titre;
 
     /**
      * @ORM\Column(type="text")
+     * @Assert\NotNull(message="Veuillez renseignez ce champ")
      */
     private $resume;
 
@@ -37,6 +45,7 @@ class Document
 
     /**
      * @ORM\Column(type="date")
+     * @Assert\NotNull(message="Veuillez renseignez ce champ")
      */
     private $dateProduction;
 
@@ -86,18 +95,21 @@ class Document
 
     /**
      * @ORM\OneToOne(targetEntity=Fichier::class, cascade={"persist", "remove"})
+     * @Assert\File()
      */
     private $fichier;
 
     /**
      * @ORM\ManyToOne(targetEntity=TypeDocument::class, inversedBy="documents")
      * @ORM\JoinColumn(nullable=false)
+     * @Assert\NotNull(message="Veuillez renseignez ce champ")
      */
     private $typeDocument;
 
     /**
      * @ORM\ManyToOne(targetEntity=Domaine::class, inversedBy="documents")
      * @ORM\JoinColumn(nullable=false)
+     * @Assert\NotNull(message="Veuillez renseignez ce champ")
      */
     private $domaine;
 
@@ -106,6 +118,7 @@ class Document
     /**
      * @ORM\ManyToOne(targetEntity=Langue::class, inversedBy="documents")
      * @ORM\JoinColumn(nullable=false)
+     * @Assert\NotNull(message="Veuillez renseignez ce champ")
      */
     private $langue;
 
@@ -126,6 +139,7 @@ class Document
     /**
      * @ORM\ManyToOne(targetEntity=Licence::class, inversedBy="documents")
      * @ORM\JoinColumn(nullable=false)
+     * @Assert\NotNull(message="Veuillez renseignez ce champ")
      */
     private $licence;
 
@@ -138,6 +152,7 @@ class Document
 
     /**
      * @ORM\Column(type="string", length=255)
+     * @Assert\NotNull(message="Veuillez renseignez ce champ")
      */
     private $keywords;
 
@@ -147,11 +162,7 @@ class Document
      */
     private $author;
 
-    
 
-    
-
-    
 
     
 

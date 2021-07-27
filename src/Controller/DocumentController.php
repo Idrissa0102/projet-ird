@@ -9,9 +9,7 @@ use Symfony\Component\HttpFoundation\Request;
 use Cocur\Slugify\Slugify;
 use App\Entity\Document;
 use App\Form\DocumentType;
-use Doctrine\DBAL\Types\Type;
-
-use function PHPSTORM_META\type;
+use App\Form\DocumentEditType;
 
 /**
      * @Route("/document", name="document_controller")
@@ -60,9 +58,6 @@ class DocumentController extends AbstractController
         ]);
     }
 
-
-
-     
     
 
     /**
@@ -154,13 +149,13 @@ class DocumentController extends AbstractController
              $em->remove($document);
              $em->flush();
 
-             
+    
              return $this->redirectToRoute('document_controllerview_document');
-         }
+        }
 
-         return $this->render('document/delete.html.twig', array(
+        return $this->render('document/delete.html.twig', array(
 			'annonce' => $document, 'form'=>$form->createView(),
-		  ));
+		));
 
 
     }

@@ -21,6 +21,7 @@ class UserType extends AbstractType
             ->add('fonction')
             ->add('telephone')
             ->add('isVerified')
+            ->add('passwordConfirm')
         ;
     }
 
