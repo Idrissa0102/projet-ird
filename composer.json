@@ -88,22 +88,22 @@
             "compile": [
                 "php bin/console doctrine:migrations:migrate"
             ]
-        }
+
+        },
+        "post-install-cmd": [
+            "@auto-scripts"
+        ],
+        "post-update-cmd": [
+            "@auto-scripts"
+        ]
     },
-    "post-install-cmd": [
-        "@auto-scripts"
-    ],
-    "post-update-cmd": [
-        "@auto-scripts"
-    ]
-},
-"conflict": {
-    "symfony/symfony": "*"
-},
-"extra": {
-    "symfony": {
-        "allow-contrib": false,
-        "require": "5.3.*"
+    "conflict": {
+        "symfony/symfony": "*"
+    },
+    "extra": {
+        "symfony": {
+            "allow-contrib": false,
+            "require": "5.3.*"
+        }
     }
-}
 }
