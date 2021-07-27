@@ -163,7 +163,6 @@ class Document
     private $author;
 
 
-
     
 
     public function __construct()
