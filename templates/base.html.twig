@@ -86,6 +86,12 @@
         #id3:hover {
             opacity:0.5;
         }
+
+        .filter{
+            display: block;
+            position: sticky;
+            top: 20px;
+        }
     </style>
             {% endblock %}
 
@@ -111,15 +117,12 @@
                         <li><a class="nav-link scrollto active" href=" {{path('document_controllerdocument_index')}} ">Accueil</a></li>
                         <li><a class="nav-link scrollto" href="#about">À propos de nous </a></li>
                         <li><a class="nav-link scrollto" href="#services">Domaines</a></li>
-                       
-                        
-                        <li class="dropdown"><a href="#"><span>Consultation</span> <i class="bi bi-chevron-down"></i></a>
+                        <li class="dropdown"><a href="{{path('document_controllerdocument_show')}}"><span>Consultation</span> <i class="bi bi-chevron-down"></i></a>
                             <ul>
                                 <li><a href="{{path('document_controllerdocument_show')}}">Derniers Dépôts</a></li>
-                                
-                                <li><a href="#">Par Type de Document</a></li>
-                                <li><a href="#">Par Domaine</a></li>
-                                <li><a href="#">Par Année de Publication</a></li>
+                                <li><a href="{{path('document_controllerview_type')}}">Par Type de Document</a></li>
+                                <li><a href="{{path('document_controllerview_domaine')}}">Par Domaine</a></li>
+                                <li><a href="{{path('document_controllerview_date')}}">Par Année de Publication</a></li>
                                 <li><a href="#">Par Cartographie</a></li>
                             </ul>
                         </li>
@@ -131,17 +134,12 @@
                                 <li><a href="#">Profil-Chercheur</a></li>
                                 <li><a href=" {{path('document_controlleradd_document')}} ">Publier un Document</a></li>
                                 <li><a href="#">Consulter mes Documents</a></li>
-                                
-                                
                             </ul>
                         </li>
                             <li><a class="nav-link scrollto" href=" {{path('app_logout')}} ">Se Déconnecter</a></>
                         {% else %}
                             <li><a class="getstarted scrollto" href=" {{path('app_login')}} ">Se Connecter</a></li>
                         {% endif %}
-                            
-                        
-                        
                     </ul>
                     <i class="bi bi-list mobile-nav-toggle"></i>
                 </nav>
@@ -154,7 +152,7 @@
 
        
 
-
+        
 
         {% block body %}
         
@@ -163,6 +161,7 @@
 
             <!-- ======= Footer ======= -->
         <footer id="footer" class="footer">
+        
 
             <div class="footer-newsletter">
                 <div class="container">

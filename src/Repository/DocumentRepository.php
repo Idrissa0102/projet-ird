@@ -2,6 +2,10 @@
 
 namespace App\Repository;
 
+use App\Data\SearchData;
+use App\Data\SearchDate;
+use App\Data\SearchDomaine;
+use App\Data\SearchType;
 use App\Entity\Document;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Doctrine\Persistence\ManagerRegistry;
@@ -50,6 +54,93 @@ class DocumentRepository extends ServiceEntityRepository
     }
     */
 
+    public function findSearch(SearchData $search): array
+    {
+       $query = $this
+            ->createQueryBuilder('d');
+
+        if(!empty($search->q))
+        {
+            $query = $query
+                ->where('d.keywords LIKE :q OR d.titre LIKE :q')
+                ->setParameter('q', "%{$search->q}%");
+        }
+        //dd($query->getQuery()->getResult());
+        
+        return $query->getQuery()->getResult();
+        
+    }
+
+    public function searchDomaine(SearchDomaine $search): array
+    {
+        $query = $this
+        ->createQueryBuilder('d')
+        ;
+
+        if(!empty($search->q))
+        {
+            $query = $query
+                    ->where('d.keywords LIKE :q OR d.titre LIKE :q')
+                    ->setParameter('q', "%{$search->q}%");
+        }
+
+        if(!empty($search->documents))
+        {
+            $query = $query
+                        ->where('d.domaine IN (:documents)')
+                        ->setParameter('documents', $search->documents);
+        
+        }
+
+        if(!empty($search->q) and !empty($search->documents))
+        {
+            $query = $query
+                    ->andWhere('(d.keywords LIKE :q OR d.titre LIKE :q) and (d.domaine IN (:documents))')
+                    ->setParameters([
+                        'q' => "%{$search->q}%",
+                        'documents' => $search->documents
+                    ]);
+        }
+            //dd($query->getQuery()->getResult());
+            
+        return $query->getQuery()->getResult();
+        
+    }
+
+    public function searchType(SearchType $search): array
+    {
+        $query = $this
+        ->createQueryBuilder('d')
+        ;
+
+        if(!empty($search->typeDocuments))
+        {
+            $query = $query
+                        ->where('d.typeDocument IN (:typeDocuments)')
+                        ->setParameter('typeDocuments', $search->typeDocuments);
+        }
+    
+        //dd($query->getQuery()->getResult());
+        return $query->getQuery()->getResult();
+    }
+
+    public function searchDate(SearchDate $search): array
+    {
+        $query = $this
+        ->createQueryBuilder('d')
+        ;
+
+        if(!empty($search->date))
+        {
+            $query = $query
+                        ->where('d.dateProduction LIKE :date')
+                        ->setParameter('date', "%{$search->date}%");
+        }
+    
+        //dd($query->getQuery()->getResult());
+        return $query->getQuery()->getResult();
+    }
+
     public function getDocuments($page, $nbpages){
         $query=$this->createQueryBuilder('d');//alias
     
@@ -57,7 +148,8 @@ class DocumentRepository extends ServiceEntityRepository
     
         $query->setFirstResult(($page-1) * $nbpages)->setMaxResults($nbpages);
     
-        return new Paginator($query, true);
+        return $query->getQuery()->getResult();
+    
        }
 
    public function getDocumentWithKeyWords(){
@@ -65,6 +157,9 @@ class DocumentRepository extends ServiceEntityRepository
         $query = $this->createQueryBuilder('d');
         $query->leftJoin('d.motClef', 'm')->addSelect('m')->orderBy('d.datePublication', 'DESC')->getQuery();
 
-        return $query;
+        return $query->getQuery()->getResult();
+    
     }
+
+
 }
