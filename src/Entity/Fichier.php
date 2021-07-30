@@ -156,7 +156,13 @@ class Fichier
         protected function getUploadRootDir()
         {
           // On retourne le chemin relatif vers l'image pour notre code PHP
-          return '/var/www/html/TestApp/public/'.$this->getUploadDir();
+          return 'C:/xampp/htdocs/testFusion/projet-ird/public/'.$this->getUploadDir();
         }
+
+        public function __toString()
+        {
+          return $this->url;
+        }
+  
   
 }

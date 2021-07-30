@@ -80,7 +80,7 @@ class Document
     private $auteurAjoute;
 
     /**
-     * @ORM\Column(type="string", length=255, nullable=true)
+     * @ORM\Column(type="string", length=255)
      */
     private $affiliation;
 
@@ -147,21 +147,12 @@ class Document
      */
     private $author;
 
-    
-
-    
-
-    
-
-    
 
     public function __construct()
     {
-        
         $this->datePublication = new \DateTime();
         $this->motClefs = new ArrayCollection();
         $this->keywords = new ArrayCollection();
-        
     }
 
     /**

@@ -1,0 +1,333 @@
+[2021-07-14 04:59:03.482] [exthost] [info] extension host started
+[2021-07-14 04:59:03.641] [exthost] [info] ExtensionService#_doActivateExtension vscode.microsoft-authentication {"startup":false,"extensionId":{"value":"vscode.microsoft-authentication","_lower":"vscode.microsoft-authentication"},"activationEvent":"onAuthenticationRequest:microsoft"}
+[2021-07-14 04:59:03.641] [exthost] [info] ExtensionService#loadCommonJSModule file:///snap/code/68/usr/share/code/resources/app/extensions/microsoft-authentication/dist/extension.js
+[2021-07-14 04:59:03.657] [exthost] [info] ExtensionService#_doActivateExtension vscode.debug-auto-launch {"startup":true,"extensionId":{"value":"vscode.debug-auto-launch","_lower":"vscode.debug-auto-launch"},"activationEvent":"*"}
+[2021-07-14 04:59:03.658] [exthost] [info] ExtensionService#loadCommonJSModule file:///snap/code/68/usr/share/code/resources/app/extensions/debug-auto-launch/dist/extension
+[2021-07-14 04:59:03.662] [exthost] [info] ExtensionService#_doActivateExtension vscode.git {"startup":true,"extensionId":{"value":"vscode.github","_lower":"vscode.github"},"activationEvent":"*"}
+[2021-07-14 04:59:03.662] [exthost] [info] ExtensionService#loadCommonJSModule file:///snap/code/68/usr/share/code/resources/app/extensions/git/dist/main
+[2021-07-14 04:59:03.776] [exthost] [info] ExtensionService#_doActivateExtension adobe.xd {"startup":true,"extensionId":{"value":"adobe.xd","_lower":"adobe.xd"},"activationEvent":"*"}
+[2021-07-14 04:59:03.776] [exthost] [info] ExtensionService#loadCommonJSModule file:///root/.vscode/extensions/adobe.xd-1.2.3/build/extension-bundle.js
+[2021-07-14 04:59:03.873] [exthost] [info] ExtensionService#_doActivateExtension alefragnani.project-manager {"startup":true,"extensionId":{"value":"alefragnani.project-manager","_lower":"alefragnani.project-manager"},"activationEvent":"*"}
+[2021-07-14 04:59:03.874] [exthost] [info] ExtensionService#loadCommonJSModule file:///root/.vscode/extensions/alefragnani.project-manager-12.2.0/dist/extension
+[2021-07-14 04:59:03.893] [exthost] [info] ExtensionService#_doActivateExtension anweber.statusbar-commands {"startup":true,"extensionId":{"value":"anweber.statusbar-commands","_lower":"anweber.statusbar-commands"},"activationEvent":"*"}
+[2021-07-14 04:59:03.893] [exthost] [info] ExtensionService#loadCommonJSModule file:///root/.vscode/extensions/anweber.statusbar-commands-1.8.0/dist/extension.js
+[2021-07-14 04:59:03.895] [exthost] [info] ExtensionService#_doActivateExtension bajdzis.vscode-database {"startup":true,"extensionId":{"value":"bajdzis.vscode-database","_lower":"bajdzis.vscode-database"},"activationEvent":"*"}
+[2021-07-14 04:59:03.895] [exthost] [info] ExtensionService#loadCommonJSModule file:///root/.vscode/extensions/bajdzis.vscode-database-2.2.3/out/extension.js
+[2021-07-14 04:59:03.923] [exthost] [info] ExtensionService#_doActivateExtension bajdzis.vscode-twig-pack {"startup":true,"extensionId":{"value":"bajdzis.vscode-twig-pack","_lower":"bajdzis.vscode-twig-pack"},"activationEvent":"*"}
+[2021-07-14 04:59:03.923] [exthost] [info] ExtensionService#loadCommonJSModule file:///root/.vscode/extensions/bajdzis.vscode-twig-pack-1.1.0/extension
+[2021-07-14 04:59:03.926] [exthost] [info] ExtensionService#_doActivateExtension Cardinal90.multi-cursor-case-preserve {"startup":true,"extensionId":{"value":"Cardinal90.multi-cursor-case-preserve","_lower":"cardinal90.multi-cursor-case-preserve"},"activationEvent":"*"}
+[2021-07-14 04:59:03.926] [exthost] [info] ExtensionService#loadCommonJSModule file:///root/.vscode/extensions/cardinal90.multi-cursor-case-preserve-1.0.5/src/extension
+[2021-07-14 04:59:03.927] [exthost] [info] ExtensionService#_doActivateExtension christian-kohler.path-intellisense {"startup":true,"extensionId":{"value":"christian-kohler.path-intellisense","_lower":"christian-kohler.path-intellisense"},"activationEvent":"*"}
+[2021-07-14 04:59:03.927] [exthost] [info] ExtensionService#loadCommonJSModule file:///root/.vscode/extensions/christian-kohler.path-intellisense-2.3.0/out/extension.js
+[2021-07-14 04:59:03.951] [exthost] [info] ExtensionService#_doActivateExtension cweijan.vscode-mysql-client2 {"startup":true,"extensionId":{"value":"cweijan.vscode-mysql-client2","_lower":"cweijan.vscode-mysql-client2"},"activationEvent":"*"}
+[2021-07-14 04:59:03.951] [exthost] [info] ExtensionService#loadCommonJSModule file:///root/.vscode/extensions/cweijan.vscode-mysql-client2-3.9.4/out/extension
+[2021-07-14 04:59:04.181] [exthost] [info] ExtensionService#_doActivateExtension danileao.css-variables-autocomplete {"startup":true,"extensionId":{"value":"danileao.css-variables-autocomplete","_lower":"danileao.css-variables-autocomplete"},"activationEvent":"*"}
+[2021-07-14 04:59:04.181] [exthost] [info] ExtensionService#loadCommonJSModule file:///root/.vscode/extensions/danileao.css-variables-autocomplete-0.0.3/out/extension.js
+[2021-07-14 04:59:04.186] [exthost] [info] ExtensionService#_doActivateExtension donjayamanne.githistory {"startup":true,"extensionId":{"value":"donjayamanne.githistory","_lower":"donjayamanne.githistory"},"activationEvent":"*"}
+[2021-07-14 04:59:04.186] [exthost] [info] ExtensionService#loadCommonJSModule file:///root/.vscode/extensions/donjayamanne.githistory-0.6.17/dist/src/extension
+[2021-07-14 04:59:04.291] [exthost] [info] ExtensionService#_doActivateExtension ecmel.vscode-html-css {"startup":true,"extensionId":{"value":"ecmel.vscode-html-css","_lower":"ecmel.vscode-html-css"},"activationEvent":"*"}
+[2021-07-14 04:59:04.291] [exthost] [info] ExtensionService#loadCommonJSModule file:///root/.vscode/extensions/ecmel.vscode-html-css-1.10.2/dist/extension.js
+[2021-07-14 04:59:04.367] [exthost] [info] ExtensionService#_doActivateExtension EditorConfig.EditorConfig {"startup":true,"extensionId":{"value":"EditorConfig.EditorConfig","_lower":"editorconfig.editorconfig"},"activationEvent":"*"}
+[2021-07-14 04:59:04.367] [exthost] [info] ExtensionService#loadCommonJSModule file:///root/.vscode/extensions/editorconfig.editorconfig-0.16.4/out/editorConfigMain.js
+[2021-07-14 04:59:04.393] [exthost] [info] ExtensionService#_doActivateExtension formulahendry.auto-rename-tag {"startup":true,"extensionId":{"value":"formulahendry.auto-rename-tag","_lower":"formulahendry.auto-rename-tag"},"activationEvent":"*"}
+[2021-07-14 04:59:04.393] [exthost] [info] ExtensionService#loadCommonJSModule file:///root/.vscode/extensions/formulahendry.auto-rename-tag-0.1.6/packages/extension/dist/extensionMain.js
+[2021-07-14 04:59:04.426] [exthost] [info] ExtensionService#_doActivateExtension GitHub.vscode-pull-request-github {"startup":true,"extensionId":{"value":"GitHub.vscode-pull-request-github","_lower":"github.vscode-pull-request-github"},"activationEvent":"*"}
+[2021-07-14 04:59:04.426] [exthost] [info] ExtensionService#loadCommonJSModule file:///root/.vscode/extensions/github.vscode-pull-request-github-0.27.1/dist/extension
+[2021-07-14 04:59:04.503] [exthost] [info] ExtensionService#_doActivateExtension Glavin001.unibeautify-vscode {"startup":true,"extensionId":{"value":"Glavin001.unibeautify-vscode","_lower":"glavin001.unibeautify-vscode"},"activationEvent":"*"}
+[2021-07-14 04:59:04.504] [exthost] [info] ExtensionService#loadCommonJSModule file:///root/.vscode/extensions/glavin001.unibeautify-vscode-0.8.2/index.js
+[2021-07-14 04:59:05.685] [exthost] [info] ExtensionService#_doActivateExtension ms-vscode.test-adapter-converter {"startup":true,"extensionId":{"value":"hbenl.vscode-test-explorer","_lower":"hbenl.vscode-test-explorer"},"activationEvent":"*"}
+[2021-07-14 04:59:05.685] [exthost] [info] ExtensionService#loadCommonJSModule file:///root/.vscode/extensions/ms-vscode.test-adapter-converter-0.0.10/out/extension.js
+[2021-07-14 04:59:05.688] [exthost] [info] ExtensionService#_doActivateExtension HookyQR.beautify {"startup":true,"extensionId":{"value":"HookyQR.beautify","_lower":"hookyqr.beautify"},"activationEvent":"*"}
+[2021-07-14 04:59:05.688] [exthost] [info] ExtensionService#loadCommonJSModule file:///root/.vscode/extensions/hookyqr.beautify-1.5.0/extension
+[2021-07-14 04:59:05.725] [exthost] [info] ExtensionService#_doActivateExtension huizhou.githd {"startup":true,"extensionId":{"value":"huizhou.githd","_lower":"huizhou.githd"},"activationEvent":"*"}
+[2021-07-14 04:59:05.725] [exthost] [info] ExtensionService#loadCommonJSModule file:///root/.vscode/extensions/huizhou.githd-2.2.4/out/src/extension
+[2021-07-14 04:59:05.737] [exthost] [info] ExtensionService#_doActivateExtension immament.vscode-ngrx-uml {"startup":true,"extensionId":{"value":"immament.vscode-ngrx-uml","_lower":"immament.vscode-ngrx-uml"},"activationEvent":"*"}
+[2021-07-14 04:59:05.737] [exthost] [info] ExtensionService#loadCommonJSModule file:///root/.vscode/extensions/immament.vscode-ngrx-uml-1.0.2/dist/extension.js
+[2021-07-14 04:59:05.746] [exthost] [info] ExtensionService#_doActivateExtension kevinkyang.auto-comment-blocks {"startup":true,"extensionId":{"value":"kevinkyang.auto-comment-blocks","_lower":"kevinkyang.auto-comment-blocks"},"activationEvent":"*"}
+[2021-07-14 04:59:05.746] [exthost] [info] ExtensionService#loadCommonJSModule file:///root/.vscode/extensions/kevinkyang.auto-comment-blocks-1.0.1/out/src/extension
+[2021-07-14 04:59:05.748] [exthost] [info] ExtensionService#_doActivateExtension kiteco.kite {"startup":true,"extensionId":{"value":"kiteco.kite","_lower":"kiteco.kite"},"activationEvent":"*"}
+[2021-07-14 04:59:05.749] [exthost] [info] ExtensionService#loadCommonJSModule file:///root/.vscode/extensions/kiteco.kite-0.147.0/dist/kite-extension
+[2021-07-14 04:59:05.786] [exthost] [info] ExtensionService#_doActivateExtension KnisterPeter.vscode-github {"startup":true,"extensionId":{"value":"KnisterPeter.vscode-github","_lower":"knisterpeter.vscode-github"},"activationEvent":"*"}
+[2021-07-14 04:59:05.786] [exthost] [info] ExtensionService#loadCommonJSModule file:///root/.vscode/extensions/knisterpeter.vscode-github-0.30.6/out/src/main
+[2021-07-14 04:59:05.943] [exthost] [info] ExtensionService#_doActivateExtension mblode.twig-language {"startup":true,"extensionId":{"value":"mblode.twig-language","_lower":"mblode.twig-language"},"activationEvent":"*"}
+[2021-07-14 04:59:05.943] [exthost] [info] ExtensionService#loadCommonJSModule file:///root/.vscode/extensions/mblode.twig-language-0.9.2/extension/index
+[2021-07-14 04:59:05.966] [exthost] [info] ExtensionService#_doActivateExtension mhutchie.git-graph {"startup":true,"extensionId":{"value":"mhutchie.git-graph","_lower":"mhutchie.git-graph"},"activationEvent":"*"}
+[2021-07-14 04:59:05.966] [exthost] [info] ExtensionService#loadCommonJSModule file:///root/.vscode/extensions/mhutchie.git-graph-1.30.0/out/extension.js
+[2021-07-14 04:59:05.990] [exthost] [info] ExtensionService#_doActivateExtension michelemelluso.gitignore {"startup":true,"extensionId":{"value":"michelemelluso.gitignore","_lower":"michelemelluso.gitignore"},"activationEvent":"*"}
+[2021-07-14 04:59:05.990] [exthost] [info] ExtensionService#loadCommonJSModule file:///root/.vscode/extensions/michelemelluso.gitignore-1.0.1/out/src/extension
+[2021-07-14 04:59:05.991] [exthost] [info] ExtensionService#_doActivateExtension mkxml.vscode-filesize {"startup":true,"extensionId":{"value":"mkxml.vscode-filesize","_lower":"mkxml.vscode-filesize"},"activationEvent":"*"}
+[2021-07-14 04:59:05.991] [exthost] [info] ExtensionService#loadCommonJSModule file:///root/.vscode/extensions/mkxml.vscode-filesize-3.1.0/dist/extension
+[2021-07-14 04:59:05.996] [exthost] [info] ExtensionService#_doActivateExtension ms-vscode.cpptools {"startup":true,"extensionId":{"value":"ms-vscode.cpptools","_lower":"ms-vscode.cpptools"},"activationEvent":"*"}
+[2021-07-14 04:59:05.996] [exthost] [info] ExtensionService#loadCommonJSModule file:///root/.vscode/extensions/ms-vscode.cpptools-1.5.1/dist/main
+[2021-07-14 04:59:06.131] [exthost] [info] ExtensionService#_doActivateExtension ms-vsliveshare.vsliveshare {"startup":true,"extensionId":{"value":"ms-vsliveshare.vsliveshare-audio","_lower":"ms-vsliveshare.vsliveshare-audio"},"activationEvent":"*"}
+[2021-07-14 04:59:06.131] [exthost] [info] ExtensionService#loadCommonJSModule file:///root/.vscode/extensions/ms-vsliveshare.vsliveshare-1.0.4531/out/prod/extension-prod
+[2021-07-14 04:59:08.701] [exthost] [info] ExtensionService#_doActivateExtension ms-vsonline.vsonline {"startup":true,"extensionId":{"value":"ms-vsonline.vsonline","_lower":"ms-vsonline.vsonline"},"activationEvent":"*"}
+[2021-07-14 04:59:08.701] [exthost] [info] ExtensionService#loadCommonJSModule file:///root/.vscode/extensions/ms-vsonline.vsonline-1.0.3076/out/bundle/extension-bundle.js
+[2021-07-14 04:59:09.470] [exthost] [info] ExtensionService#_doActivateExtension mtxr.sqltools {"startup":true,"extensionId":{"value":"mtxr.sqltools-driver-mysql","_lower":"mtxr.sqltools-driver-mysql"},"activationEvent":"*"}
+[2021-07-14 04:59:09.471] [exthost] [info] ExtensionService#loadCommonJSModule file:///root/.vscode/extensions/mtxr.sqltools-0.23.0/dist/extension.js
+[2021-07-14 04:59:09.610] [exthost] [info] ExtensionService#_doActivateExtension nadim-vscode.symfony-code-snippets {"startup":true,"extensionId":{"value":"nadim-vscode.symfony-code-snippets","_lower":"nadim-vscode.symfony-code-snippets"},"activationEvent":"*"}
+[2021-07-14 04:59:09.610] [exthost] [info] ExtensionService#loadCommonJSModule file:///root/.vscode/extensions/nadim-vscode.symfony-code-snippets-1.2.7/extension
+[2021-07-14 04:59:09.612] [exthost] [info] ExtensionService#_doActivateExtension nadim-vscode.symfony-super-console {"startup":true,"extensionId":{"value":"nadim-vscode.symfony-super-console","_lower":"nadim-vscode.symfony-super-console"},"activationEvent":"*"}
+[2021-07-14 04:59:09.612] [exthost] [info] ExtensionService#loadCommonJSModule file:///root/.vscode/extensions/nadim-vscode.symfony-super-console-1.1.1/extension.js
+[2021-07-14 04:59:09.614] [exthost] [info] ExtensionService#_doActivateExtension PKief.material-icon-theme {"startup":true,"extensionId":{"value":"PKief.material-icon-theme","_lower":"pkief.material-icon-theme"},"activationEvent":"*"}
+[2021-07-14 04:59:09.615] [exthost] [info] ExtensionService#loadCommonJSModule file:///root/.vscode/extensions/pkief.material-icon-theme-4.8.0/dist/extension
+[2021-07-14 04:59:09.663] [exthost] [info] ExtensionService#_doActivateExtension ritwickdey.LiveServer {"startup":true,"extensionId":{"value":"ritwickdey.LiveServer","_lower":"ritwickdey.liveserver"},"activationEvent":"*"}
+[2021-07-14 04:59:09.663] [exthost] [info] ExtensionService#loadCommonJSModule file:///root/.vscode/extensions/ritwickdey.liveserver-5.6.1/out/src/extension
+[2021-07-14 04:59:10.334] [exthost] [info] ExtensionService#_doActivateExtension ryu1kn.text-marker {"startup":true,"extensionId":{"value":"ryu1kn.text-marker","_lower":"ryu1kn.text-marker"},"activationEvent":"*"}
+[2021-07-14 04:59:10.334] [exthost] [info] ExtensionService#loadCommonJSModule file:///root/.vscode/extensions/ryu1kn.text-marker-1.11.0/out/extension
+[2021-07-14 04:59:10.557] [exthost] [info] ExtensionService#_doActivateExtension shardulm94.trailing-spaces {"startup":true,"extensionId":{"value":"shardulm94.trailing-spaces","_lower":"shardulm94.trailing-spaces"},"activationEvent":"*"}
+[2021-07-14 04:59:10.557] [exthost] [info] ExtensionService#loadCommonJSModule file:///root/.vscode/extensions/shardulm94.trailing-spaces-0.3.1/out/src/extension
+[2021-07-14 04:59:10.609] [exthost] [info] ExtensionService#_doActivateExtension shyykoserhiy.git-autoconfig {"startup":true,"extensionId":{"value":"shyykoserhiy.git-autoconfig","_lower":"shyykoserhiy.git-autoconfig"},"activationEvent":"*"}
+[2021-07-14 04:59:10.609] [exthost] [info] ExtensionService#loadCommonJSModule file:///root/.vscode/extensions/shyykoserhiy.git-autoconfig-0.0.2/out/src/extension
+[2021-07-14 04:59:10.616] [exthost] [info] ExtensionService#_doActivateExtension Sophisticode.php-formatter {"startup":true,"extensionId":{"value":"Sophisticode.php-formatter","_lower":"sophisticode.php-formatter"},"activationEvent":"*"}
+[2021-07-14 04:59:10.616] [exthost] [info] ExtensionService#loadCommonJSModule file:///root/.vscode/extensions/sophisticode.php-formatter-0.2.4/out/extension
+[2021-07-14 04:59:10.629] [exthost] [info] ExtensionService#_doActivateExtension vincaslt.highlight-matching-tag {"startup":true,"extensionId":{"value":"vincaslt.highlight-matching-tag","_lower":"vincaslt.highlight-matching-tag"},"activationEvent":"*"}
+[2021-07-14 04:59:10.630] [exthost] [info] ExtensionService#loadCommonJSModule file:///root/.vscode/extensions/vincaslt.highlight-matching-tag-0.10.1/out/src/extension
+[2021-07-14 04:59:10.664] [exthost] [info] ExtensionService#_doActivateExtension wayou.vscode-todo-highlight {"startup":true,"extensionId":{"value":"wayou.vscode-todo-highlight","_lower":"wayou.vscode-todo-highlight"},"activationEvent":"*"}
+[2021-07-14 04:59:10.664] [exthost] [info] ExtensionService#loadCommonJSModule file:///root/.vscode/extensions/wayou.vscode-todo-highlight-1.0.4/src/extension
+[2021-07-14 04:59:10.669] [exthost] [info] ExtensionService#_doActivateExtension Zignd.html-css-class-completion {"startup":true,"extensionId":{"value":"Zignd.html-css-class-completion","_lower":"zignd.html-css-class-completion"},"activationEvent":"*"}
+[2021-07-14 04:59:10.669] [exthost] [info] ExtensionService#loadCommonJSModule file:///root/.vscode/extensions/zignd.html-css-class-completion-1.20.0/dist/extension.js
+[2021-07-14 04:59:13.740] [exthost] [info] ExtensionService#_doActivateExtension vscode.github-authentication {"startup":false,"extensionId":{"value":"vscode.github-authentication","_lower":"vscode.github-authentication"},"activationEvent":"onAuthenticationRequest:github"}
+[2021-07-14 04:59:13.741] [exthost] [info] ExtensionService#loadCommonJSModule file:///snap/code/68/usr/share/code/resources/app/extensions/github-authentication/dist/extension.js
+[2021-07-14 04:59:13.986] [exthost] [info] ExtensionService#_doActivateExtension vscode.emmet {"startup":false,"extensionId":{"value":"vscode.emmet","_lower":"vscode.emmet"},"activationEvent":"onStartupFinished"}
+[2021-07-14 04:59:13.986] [exthost] [info] ExtensionService#loadCommonJSModule file:///snap/code/68/usr/share/code/resources/app/extensions/emmet/dist/node/emmetNodeMain
+[2021-07-14 04:59:14.086] [exthost] [info] ExtensionService#_doActivateExtension vscode.merge-conflict {"startup":false,"extensionId":{"value":"vscode.merge-conflict","_lower":"vscode.merge-conflict"},"activationEvent":"onStartupFinished"}
+[2021-07-14 04:59:14.086] [exthost] [info] ExtensionService#loadCommonJSModule file:///snap/code/68/usr/share/code/resources/app/extensions/merge-conflict/dist/mergeConflictMain
+[2021-07-14 04:59:14.093] [exthost] [info] ExtensionService#_doActivateExtension vscode.testing-editor-contributions {"startup":false,"extensionId":{"value":"vscode.testing-editor-contributions","_lower":"vscode.testing-editor-contributions"},"activationEvent":"onStartupFinished"}
+[2021-07-14 04:59:14.093] [exthost] [info] ExtensionService#loadCommonJSModule file:///snap/code/68/usr/share/code/resources/app/extensions/testing-editor-contributions/dist/extension.js
+[2021-07-14 04:59:14.139] [exthost] [info] ExtensionService#_doActivateExtension akiramiyakoda.cppincludeguard {"startup":false,"extensionId":{"value":"akiramiyakoda.cppincludeguard","_lower":"akiramiyakoda.cppincludeguard"},"activationEvent":"onStartupFinished"}
+[2021-07-14 04:59:14.139] [exthost] [info] ExtensionService#loadCommonJSModule file:///root/.vscode/extensions/akiramiyakoda.cppincludeguard-1.4.0/out/extension.js
+[2021-07-14 04:59:14.638] [exthost] [info] ExtensionService#_doActivateExtension CoenraadS.bracket-pair-colorizer-2 {"startup":false,"extensionId":{"value":"CoenraadS.bracket-pair-colorizer-2","_lower":"coenraads.bracket-pair-colorizer-2"},"activationEvent":"onStartupFinished"}
+[2021-07-14 04:59:14.638] [exthost] [info] ExtensionService#loadCommonJSModule file:///root/.vscode/extensions/coenraads.bracket-pair-colorizer-2-0.2.1/out/src/extension
+[2021-07-14 04:59:15.042] [exthost] [info] ExtensionService#_doActivateExtension dbaeumer.vscode-eslint {"startup":false,"extensionId":{"value":"dbaeumer.vscode-eslint","_lower":"dbaeumer.vscode-eslint"},"activationEvent":"onStartupFinished"}
+[2021-07-14 04:59:15.042] [exthost] [info] ExtensionService#loadCommonJSModule file:///root/.vscode/extensions/dbaeumer.vscode-eslint-2.1.23/client/out/extension
+[2021-07-14 04:59:15.166] [exthost] [info] ExtensionService#_doActivateExtension eamodio.gitlens {"startup":false,"extensionId":{"value":"eamodio.gitlens","_lower":"eamodio.gitlens"},"activationEvent":"onStartupFinished"}
+[2021-07-14 04:59:15.166] [exthost] [info] ExtensionService#loadCommonJSModule file:///root/.vscode/extensions/eamodio.gitlens-11.5.1/dist/gitlens
+[2021-07-14 04:59:15.430] [exthost] [info] ExtensionService#_doActivateExtension esbenp.prettier-vscode {"startup":false,"extensionId":{"value":"esbenp.prettier-vscode","_lower":"esbenp.prettier-vscode"},"activationEvent":"onStartupFinished"}
+[2021-07-14 04:59:15.430] [exthost] [info] ExtensionService#loadCommonJSModule file:///root/.vscode/extensions/esbenp.prettier-vscode-8.0.1/dist/extension
+[2021-07-14 04:59:15.735] [exthost] [info] ExtensionService#_doActivateExtension formulahendry.code-runner {"startup":false,"extensionId":{"value":"formulahendry.code-runner","_lower":"formulahendry.code-runner"},"activationEvent":"onStartupFinished"}
+[2021-07-14 04:59:15.735] [exthost] [info] ExtensionService#loadCommonJSModule file:///root/.vscode/extensions/formulahendry.code-runner-0.11.4/out/src/extension
+[2021-07-14 04:59:15.991] [exthost] [info] ExtensionService#_doActivateExtension Gruntfuggly.todo-tree {"startup":false,"extensionId":{"value":"Gruntfuggly.todo-tree","_lower":"gruntfuggly.todo-tree"},"activationEvent":"onStartupFinished"}
+[2021-07-14 04:59:15.991] [exthost] [info] ExtensionService#loadCommonJSModule file:///root/.vscode/extensions/gruntfuggly.todo-tree-0.0.213/dist/extension
+[2021-07-14 04:59:16.053] [exthost] [info] ExtensionService#_doActivateExtension ms-vscode-remote.remote-containers {"startup":false,"extensionId":{"value":"ms-vscode-remote.remote-containers","_lower":"ms-vscode-remote.remote-containers"},"activationEvent":"onStartupFinished"}
+[2021-07-14 04:59:16.053] [exthost] [info] ExtensionService#loadCommonJSModule file:///root/.vscode/extensions/ms-vscode-remote.remote-containers-0.183.0/dist/extension/extension
+[2021-07-14 04:59:16.184] [exthost] [info] ExtensionService#_doActivateExtension ms-vscode-remote.remote-wsl {"startup":false,"extensionId":{"value":"ms-vscode-remote.remote-wsl","_lower":"ms-vscode-remote.remote-wsl"},"activationEvent":"onStartupFinished"}
+[2021-07-14 04:59:16.185] [exthost] [info] ExtensionService#loadCommonJSModule file:///root/.vscode/extensions/ms-vscode-remote.remote-wsl-0.56.5/dist/extension
+[2021-07-14 04:59:16.235] [exthost] [info] ExtensionService#_doActivateExtension ryu1kn.partial-diff {"startup":false,"extensionId":{"value":"ryu1kn.partial-diff","_lower":"ryu1kn.partial-diff"},"activationEvent":"onStartupFinished"}
+[2021-07-14 04:59:16.235] [exthost] [info] ExtensionService#loadCommonJSModule file:///root/.vscode/extensions/ryu1kn.partial-diff-1.4.3/dist/extension
+[2021-07-14 04:59:16.317] [exthost] [info] extension host terminating: renderer closed the socket
+[2021-07-14 04:59:16.343] [exthost] [error] Activating extension ms-vscode.js-debug failed due to an error:
+[2021-07-14 04:59:16.343] [exthost] [error] Canceled: Canceled
+    at Object.i [as canceled] (/snap/code/68/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:5:1157)
+    at /snap/code/68/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:88:8146
+    at Array.forEach (<anonymous>)
+    at u.dispose (/snap/code/68/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:88:8094)
+    at b.terminate (/snap/code/68/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:93:682)
+    at h (/snap/code/68/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:103:31703)
+    at Socket.<anonymous> (/snap/code/68/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:103:29468)
+    at Socket.emit (events.js:327:22)
+    at Socket.EventEmitter.emit (domain.js:467:12)
+    at Pipe.<anonymous> (net.js:673:12)
+[2021-07-14 04:59:16.344] [exthost] [error] Activating extension hbenl.vscode-test-explorer failed due to an error:
+[2021-07-14 04:59:16.344] [exthost] [error] Canceled: Canceled
+    at Object.i [as canceled] (/snap/code/68/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:5:1157)
+    at /snap/code/68/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:88:8146
+    at Array.forEach (<anonymous>)
+    at u.dispose (/snap/code/68/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:88:8094)
+    at b.terminate (/snap/code/68/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:93:682)
+    at h (/snap/code/68/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:103:31703)
+    at Socket.<anonymous> (/snap/code/68/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:103:29468)
+    at Socket.emit (events.js:327:22)
+    at Socket.EventEmitter.emit (domain.js:467:12)
+    at Pipe.<anonymous> (net.js:673:12)
+[2021-07-14 04:59:16.344] [exthost] [error] Activating extension mtxr.sqltools-driver-mysql failed due to an error:
+[2021-07-14 04:59:16.344] [exthost] [error] Canceled: Canceled
+    at Object.i [as canceled] (/snap/code/68/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:5:1157)
+    at /snap/code/68/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:88:8146
+    at Array.forEach (<anonymous>)
+    at u.dispose (/snap/code/68/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:88:8094)
+    at b.terminate (/snap/code/68/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:93:682)
+    at h (/snap/code/68/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:103:31703)
+    at Socket.<anonymous> (/snap/code/68/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:103:29468)
+    at Socket.emit (events.js:327:22)
+    at Socket.EventEmitter.emit (domain.js:467:12)
+    at Pipe.<anonymous> (net.js:673:12)
+[2021-07-14 04:59:16.344] [exthost] [error] Activating extension waderyan.gitblame failed due to an error:
+[2021-07-14 04:59:16.344] [exthost] [error] Canceled: Canceled
+    at Object.i [as canceled] (/snap/code/68/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:5:1157)
+    at /snap/code/68/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:88:8146
+    at Array.forEach (<anonymous>)
+    at u.dispose (/snap/code/68/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:88:8094)
+    at b.terminate (/snap/code/68/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:93:682)
+    at h (/snap/code/68/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:103:31703)
+    at Socket.<anonymous> (/snap/code/68/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:103:29468)
+    at Socket.emit (events.js:327:22)
+    at Socket.EventEmitter.emit (domain.js:467:12)
+    at Pipe.<anonymous> (net.js:673:12)
+[2021-07-14 04:59:16.346] [exthost] [error] Activating extension vscode.emmet failed due to an error:
+[2021-07-14 04:59:16.346] [exthost] [error] Canceled: Canceled
+    at Object.i [as canceled] (/snap/code/68/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:5:1157)
+    at /snap/code/68/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:88:8146
+    at Array.forEach (<anonymous>)
+    at u.dispose (/snap/code/68/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:88:8094)
+    at b.terminate (/snap/code/68/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:93:682)
+    at h (/snap/code/68/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:103:31703)
+    at Socket.<anonymous> (/snap/code/68/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:103:29468)
+    at Socket.emit (events.js:327:22)
+    at Socket.EventEmitter.emit (domain.js:467:12)
+    at Pipe.<anonymous> (net.js:673:12)
+[2021-07-14 04:59:16.347] [exthost] [error] Activating extension vscode.merge-conflict failed due to an error:
+[2021-07-14 04:59:16.347] [exthost] [error] Canceled: Canceled
+    at Object.i [as canceled] (/snap/code/68/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:5:1157)
+    at /snap/code/68/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:88:8146
+    at Array.forEach (<anonymous>)
+    at u.dispose (/snap/code/68/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:88:8094)
+    at b.terminate (/snap/code/68/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:93:682)
+    at h (/snap/code/68/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:103:31703)
+    at Socket.<anonymous> (/snap/code/68/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:103:29468)
+    at Socket.emit (events.js:327:22)
+    at Socket.EventEmitter.emit (domain.js:467:12)
+    at Pipe.<anonymous> (net.js:673:12)
+[2021-07-14 04:59:16.347] [exthost] [error] Activating extension vscode.testing-editor-contributions failed due to an error:
+[2021-07-14 04:59:16.347] [exthost] [error] Canceled: Canceled
+    at Object.i [as canceled] (/snap/code/68/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:5:1157)
+    at /snap/code/68/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:88:8146
+    at Array.forEach (<anonymous>)
+    at u.dispose (/snap/code/68/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:88:8094)
+    at b.terminate (/snap/code/68/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:93:682)
+    at h (/snap/code/68/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:103:31703)
+    at Socket.<anonymous> (/snap/code/68/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:103:29468)
+    at Socket.emit (events.js:327:22)
+    at Socket.EventEmitter.emit (domain.js:467:12)
+    at Pipe.<anonymous> (net.js:673:12)
+[2021-07-14 04:59:16.347] [exthost] [error] Activating extension akiramiyakoda.cppincludeguard failed due to an error:
+[2021-07-14 04:59:16.347] [exthost] [error] Canceled: Canceled
+    at Object.i [as canceled] (/snap/code/68/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:5:1157)
+    at /snap/code/68/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:88:8146
+    at Array.forEach (<anonymous>)
+    at u.dispose (/snap/code/68/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:88:8094)
+    at b.terminate (/snap/code/68/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:93:682)
+    at h (/snap/code/68/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:103:31703)
+    at Socket.<anonymous> (/snap/code/68/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:103:29468)
+    at Socket.emit (events.js:327:22)
+    at Socket.EventEmitter.emit (domain.js:467:12)
+    at Pipe.<anonymous> (net.js:673:12)
+[2021-07-14 04:59:16.348] [exthost] [error] Activating extension CoenraadS.bracket-pair-colorizer-2 failed due to an error:
+[2021-07-14 04:59:16.348] [exthost] [error] Canceled: Canceled
+    at Object.i [as canceled] (/snap/code/68/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:5:1157)
+    at /snap/code/68/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:88:8146
+    at Array.forEach (<anonymous>)
+    at u.dispose (/snap/code/68/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:88:8094)
+    at b.terminate (/snap/code/68/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:93:682)
+    at h (/snap/code/68/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:103:31703)
+    at Socket.<anonymous> (/snap/code/68/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:103:29468)
+    at Socket.emit (events.js:327:22)
+    at Socket.EventEmitter.emit (domain.js:467:12)
+    at Pipe.<anonymous> (net.js:673:12)
+[2021-07-14 04:59:16.348] [exthost] [error] Activating extension dbaeumer.vscode-eslint failed due to an error:
+[2021-07-14 04:59:16.348] [exthost] [error] Canceled: Canceled
+    at Object.i [as canceled] (/snap/code/68/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:5:1157)
+    at /snap/code/68/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:88:8146
+    at Array.forEach (<anonymous>)
+    at u.dispose (/snap/code/68/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:88:8094)
+    at b.terminate (/snap/code/68/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:93:682)
+    at h (/snap/code/68/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:103:31703)
+    at Socket.<anonymous> (/snap/code/68/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:103:29468)
+    at Socket.emit (events.js:327:22)
+    at Socket.EventEmitter.emit (domain.js:467:12)
+    at Pipe.<anonymous> (net.js:673:12)
+[2021-07-14 04:59:16.348] [exthost] [error] Activating extension eamodio.gitlens failed due to an error:
+[2021-07-14 04:59:16.348] [exthost] [error] Canceled: Canceled
+    at Object.i [as canceled] (/snap/code/68/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:5:1157)
+    at /snap/code/68/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:88:8146
+    at Array.forEach (<anonymous>)
+    at u.dispose (/snap/code/68/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:88:8094)
+    at b.terminate (/snap/code/68/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:93:682)
+    at h (/snap/code/68/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:103:31703)
+    at Socket.<anonymous> (/snap/code/68/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:103:29468)
+    at Socket.emit (events.js:327:22)
+    at Socket.EventEmitter.emit (domain.js:467:12)
+    at Pipe.<anonymous> (net.js:673:12)
+[2021-07-14 04:59:16.349] [exthost] [error] Activating extension esbenp.prettier-vscode failed due to an error:
+[2021-07-14 04:59:16.349] [exthost] [error] Canceled: Canceled
+    at Object.i [as canceled] (/snap/code/68/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:5:1157)
+    at /snap/code/68/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:88:8146
+    at Array.forEach (<anonymous>)
+    at u.dispose (/snap/code/68/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:88:8094)
+    at b.terminate (/snap/code/68/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:93:682)
+    at h (/snap/code/68/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:103:31703)
+    at Socket.<anonymous> (/snap/code/68/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:103:29468)
+    at Socket.emit (events.js:327:22)
+    at Socket.EventEmitter.emit (domain.js:467:12)
+    at Pipe.<anonymous> (net.js:673:12)
+[2021-07-14 04:59:16.349] [exthost] [error] Activating extension formulahendry.code-runner failed due to an error:
+[2021-07-14 04:59:16.349] [exthost] [error] Canceled: Canceled
+    at Object.i [as canceled] (/snap/code/68/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:5:1157)
+    at /snap/code/68/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:88:8146
+    at Array.forEach (<anonymous>)
+    at u.dispose (/snap/code/68/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:88:8094)
+    at b.terminate (/snap/code/68/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:93:682)
+    at h (/snap/code/68/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:103:31703)
+    at Socket.<anonymous> (/snap/code/68/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:103:29468)
+    at Socket.emit (events.js:327:22)
+    at Socket.EventEmitter.emit (domain.js:467:12)
+    at Pipe.<anonymous> (net.js:673:12)
+[2021-07-14 04:59:16.349] [exthost] [error] Activating extension Gruntfuggly.todo-tree failed due to an error:
+[2021-07-14 04:59:16.349] [exthost] [error] Canceled: Canceled
+    at Object.i [as canceled] (/snap/code/68/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:5:1157)
+    at /snap/code/68/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:88:8146
+    at Array.forEach (<anonymous>)
+    at u.dispose (/snap/code/68/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:88:8094)
+    at b.terminate (/snap/code/68/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:93:682)
+    at h (/snap/code/68/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:103:31703)
+    at Socket.<anonymous> (/snap/code/68/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:103:29468)
+    at Socket.emit (events.js:327:22)
+    at Socket.EventEmitter.emit (domain.js:467:12)
+    at Pipe.<anonymous> (net.js:673:12)
+[2021-07-14 04:59:16.349] [exthost] [error] Activating extension ms-vscode-remote.remote-containers failed due to an error:
+[2021-07-14 04:59:16.349] [exthost] [error] Canceled: Canceled
+    at Object.i [as canceled] (/snap/code/68/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:5:1157)
+    at /snap/code/68/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:88:8146
+    at Array.forEach (<anonymous>)
+    at u.dispose (/snap/code/68/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:88:8094)
+    at b.terminate (/snap/code/68/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:93:682)
+    at h (/snap/code/68/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:103:31703)
+    at Socket.<anonymous> (/snap/code/68/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:103:29468)
+    at Socket.emit (events.js:327:22)
+    at Socket.EventEmitter.emit (domain.js:467:12)
+    at Pipe.<anonymous> (net.js:673:12)
+[2021-07-14 04:59:16.350] [exthost] [error] Activating extension ms-vscode-remote.remote-wsl failed due to an error:
+[2021-07-14 04:59:16.350] [exthost] [error] Canceled: Canceled
+    at Object.i [as canceled] (/snap/code/68/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:5:1157)
+    at /snap/code/68/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:88:8146
+    at Array.forEach (<anonymous>)
+    at u.dispose (/snap/code/68/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:88:8094)
+    at b.terminate (/snap/code/68/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:93:682)
+    at h (/snap/code/68/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:103:31703)
+    at Socket.<anonymous> (/snap/code/68/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:103:29468)
+    at Socket.emit (events.js:327:22)
+    at Socket.EventEmitter.emit (domain.js:467:12)
+    at Pipe.<anonymous> (net.js:673:12)
+[2021-07-14 04:59:16.350] [exthost] [error] Activating extension ryu1kn.partial-diff failed due to an error:
+[2021-07-14 04:59:16.350] [exthost] [error] Canceled: Canceled
+    at Object.i [as canceled] (/snap/code/68/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:5:1157)
+    at /snap/code/68/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:88:8146
+    at Array.forEach (<anonymous>)
+    at u.dispose (/snap/code/68/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:88:8094)
+    at b.terminate (/snap/code/68/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:93:682)
+    at h (/snap/code/68/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:103:31703)
+    at Socket.<anonymous> (/snap/code/68/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:103:29468)
+    at Socket.emit (events.js:327:22)
+    at Socket.EventEmitter.emit (domain.js:467:12)
+    at Pipe.<anonymous> (net.js:673:12)
+[2021-07-14 04:59:17.814] [exthost] [error] Activating extension ms-vsliveshare.vsliveshare failed due to an error:
+[2021-07-14 04:59:17.814] [exthost] [error] Canceled: Canceled
+    at Object.i [as canceled] (/snap/code/68/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:5:1157)
+    at u._remoteCall (/snap/code/68/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:88:12817)
+    at Proxy._.<computed>.D.charCodeAt._.<computed> (/snap/code/68/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:88:9349)
+    at S._doExecuteCommand (/snap/code/68/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:84:120028)
+    at S.executeCommand (/snap/code/68/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:84:119578)
+    at Object.executeCommand (/snap/code/68/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:93:21674)
+    at Object.initAsync (/root/.vscode/extensions/ms-vsliveshare.vsliveshare-1.0.4531/src/config.ts:298:27)
+    at activate (/root/.vscode/extensions/ms-vsliveshare.vsliveshare-1.0.4531/src/extension.ts:214:5)
+[2021-07-14 04:59:17.915] [exthost] [info] exiting with code 0

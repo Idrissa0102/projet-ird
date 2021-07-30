@@ -1,0 +1,90 @@
+{% extends "base.html.twig" %}
+
+{% block title %}Résultats {{ parent() }}{% endblock %}
+
+
+{% block body %}
+
+<main id="main">
+<!-- ======= Breadcrumbs ======= -->
+    <section class="breadcrumbs">
+      <div class="container">
+
+        
+        <h2>Recherche par Type de Documents: </h2>
+
+      </div>
+      
+    </section><!-- End Breadcrumbs -->
+      <div class="container ">
+        <div class="row">
+            <div class="col-md-4 "><br><br>
+                {% include "document/filterType.html.twig" %}
+            </div>
+            <div class="col-md-8">
+                <div class="grid">
+                     <section id="blog" class="blog">
+             <div class="container" data-aos="fade-up">
+
+            <div class="row">
+
+          <div class="col-lg-11 entries">
+
+
+          {% for document in listDocuments %}
+
+            <article class="entry">
+
+              <h2 class="entry-title">
+                <a href="{{ path('document_controllerview_document', {'id': document.id}) }}"> {{document.titre}} </a>
+              </h2>
+
+              <div class="entry-meta">
+                <ul>
+                  <li class="d-flex align-items-center"><i class="bi bi-person"></i> <a href="blog-single.html"> {{document.author.prenom}} {{document.author.nom}} </a></li>
+                  <li class="d-flex align-items-center"><i class="bi bi-clock"></i> <a href="blog-single.html"><time
+                        datetime="2020-01-01"> Le {{ document.datePublication|date('d/m/Y') }}  </time></a></li>
+                </ul>
+              </div>
+
+              <div class="entry-content">
+                <p>
+                  {{document.resume | slice(0, 200)}}....
+                </p>
+                <div class="read-more">
+                  <a href="{{ path('document_controllerview_document', {'id': document.id}) }}">Voir plus</a>
+                </div>
+              </div>
+
+            </article><!-- End blog entry -->
+            {% endfor %}
+
+            <div class="blog-pagination">
+            {#{% for p in nbpages %}
+              <ul class="justify-content-center">
+
+                <li{% if p== page %} class=" active" {% endif %}>
+                <a  href="{{ path('document', {'page': p}) }}">{{p}}</a>
+                </li>
+              </ul>
+              {% endfor %}#}
+            </div>
+
+          </div><!-- End blog entries list -->
+          </section>
+
+                </div>
+            </div> 
+        </div>
+    </div>
+    </main><!-- End #main -->
+
+
+  
+
+
+
+
+
+
+{% endblock %}

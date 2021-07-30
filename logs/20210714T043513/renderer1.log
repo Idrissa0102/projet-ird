@@ -1,0 +1,12 @@
+[2021-07-14 04:35:44.878] [renderer1] [error] Could not find category with ID: ms-vscode.cpptools#cppWelcome: Error: Could not find category with ID: ms-vscode.cpptools#cppWelcome
+    at vscode-file://vscode-app/snap/code/68/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:2178:47322
+    at l.fire (vscode-file://vscode-app/snap/code/68/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:60:1726)
+    at F.progressStep (vscode-file://vscode-app/snap/code/68/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:1869:53728)
+    at F.registerDoneListeners (vscode-file://vscode-app/snap/code/68/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:1869:52146)
+    at vscode-file://vscode-app/snap/code/68/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:1869:54689
+    at Array.forEach (<anonymous>)
+    at F.registerWalkthrough (vscode-file://vscode-app/snap/code/68/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:1869:54539)
+    at vscode-file://vscode-app/snap/code/68/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:1869:49423
+    at async Promise.all (index 0)
+    at async F.registerExtensionWalkthroughContributions (vscode-file://vscode-app/snap/code/68/usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.js:1869:47339)
+[2021-07-14 04:35:52.639] [renderer1] [warning] UNRESPONSIVE extension host, 'Glavin001.unibeautify-vscode' took 96% of 5089.721ms, saved PROFILE here: 'file:///tmp/exthost-346899.cpuprofile' [{"id":"gc","total":22081,"percentage":0},{"id":"GitHub.vscode-pull-request-github","total":100473,"percentage":2},{"id":"Glavin001.unibeautify-vscode","total":4900899,"percentage":96},{"id":"program","total":11,"percentage":0},{"id":"self","total":65991,"percentage":1}]

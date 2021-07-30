@@ -1,5 +1,15 @@
 {
+<<<<<<< HEAD
     "liveshare.allowGuestDebugControl": true,
     "liveshare.allowGuestTaskControl": true,
     "liveshare.connectionMode": "direct"
+=======
+    "editor.defaultFormatter": "HookyQR.beautify",
+    "editor.inlineSuggest.enabled": true,
+    "twig-language.bracePadding": true,
+    "twig-language.correct": true,
+    "twig-language.cssInsertLines": true,
+    "twig-language.forceIndent": true,
+    "twig-language-2.correct": true
+>>>>>>> 49b15f92204f8196dbc5427eb958738ba83ec87d
 }
