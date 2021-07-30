@@ -6,10 +6,12 @@ use App\Repository\DocumentRepository;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
 use Cocur\Slugify\Slugify;
 /**
  * @ORM\Entity(repositoryClass=DocumentRepository::class)
  * @ORM\HasLifecycleCallbacks()
+ * @UniqueEntity(fields={"titre"}, message="Un document avec ce titre a déjà été publié")
  */
 class Document
 {

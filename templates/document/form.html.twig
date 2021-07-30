@@ -29,7 +29,7 @@
                   <div class="accordion-body">
                     <div>
                       
-                            {{ form_label(form.fichier, "Veuillez choisir le fichier à déposer", {'label_attr': {'class': 'form-label'}}) }} 
+                            {{ form_label(form.fichier, "Veuillez choisir le fichier à déposer", {'label_attr': {'class': 'form-label'}}) }} {{ form_errors(form.fichier) }}
                             {{ form_widget(form.fichier, {'attr': {'class': 'form-control form-control-lg'}}) }}
 
                       
