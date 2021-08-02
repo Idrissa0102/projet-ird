@@ -1,0 +1,112 @@
+    {% extends 'base.html.twig' %}
+
+    {% block title %}Mes Documents !{% endblock %}
+
+    {% block style %}
+     <link href="{{asset('css/datatables.css')}}" rel="stylesheet">
+
+    <style>
+        #id1 {
+        width: 85%;
+        background: rgb(231, 235, 235);
+        border-radius: 6px;
+        padding: 20px 60px 30px 40px;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+        margin-left: auto;
+        margin-right: auto;
+        }
+    </style>
+
+    {% endblock %}
+
+    {% block body %}
+
+        <!-- ======= Breadcrumbs ======= -->
+        <section class="breadcrumbs">
+            <div class="container">
+
+            <ol>
+                <li><a href="index.html">Accueil</a></li>
+
+            </ol>
+            <h2>Mes publications</h2>
+
+            </div>
+        </section><!-- End Breadcrumbs -->
+
+
+
+
+<section class="Form my-4 mx-5">
+    <div id="id1" class="container">
+      <div class="container-fluid">
+
+        <!-- Page Heading 
+        <h1 class="h3 mb-2 text-gray-800">Mes posts</h1>
+         DataTales Example -->
+        <div class="card shadow mb-4">
+          <div class="card-header py-3">
+            <h6 class="m-0 font-weight-bold text-primary">Mes Documents Publiés</h6>
+          </div>
+          <div class="card-body">
+            <div class="table-responsive">
+
+              <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                <thead>
+                  <tr>
+                    <th>Titre</th>
+                    <th>Auteur(s)</th>
+                    <th>Descriptif</th>
+                    <th>Type</th>
+                    <th>Date</th>
+                    <th>Actions</th>
+                  </tr>
+                </thead>
+                <tfoot>
+                  <tr>
+                    <th>Titre</th>
+                    <th>Auteur(s)</th>
+                    <th>Descriptif</th>
+                    <th>Type</th>
+                    <th>Date</th>
+                    <th>Actions</th>
+                  </tr>
+                </tfoot>
+                <tbody>
+
+                {% for document in user.documents %}
+
+
+                  <tr>
+                    <td> {{document.titre}} </td>
+                    <td> {{document.auteurAjoute}} </td>
+                    <td> {{document.resume}} </td>
+                    <td> {{document.typeDocument}} </td>
+                    <td>{{ document.datePublication|date('d/m/Y') }}</td>
+                    <td>
+
+                      <div class="">
+                        <a href="{{ path('document_controlleredit_document', {'id': document.id}) }}"><i class="fa fa-pencil-square-o"> 📝</i></a>
+                        <a href="{{ path('document_controllerdelete_document', {'id': document.id}) }}" target="_black"><i class="fa fa-trash"></i></a>
+                      </div>
+                    </td>
+                  </tr>
+
+                  {% endfor %}
+                  
+                  </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  {% block js %}
+  <script src="{{asset('/js/datables.js')}}"></script>
+  <script src="{{asset('/js/datatables-demo.js')}}"></script>
+  {% endblock %}
+
+    {% endblock %}

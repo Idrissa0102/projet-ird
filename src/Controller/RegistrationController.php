@@ -14,6 +14,7 @@ use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\Security\Core\Encoder\UserPasswordEncoderInterface;
 use SymfonyCasts\Bundle\VerifyEmail\Exception\VerifyEmailExceptionInterface;
 use Cocur\Slugify\Slugify;
+use App\Form\UserEditType;
 class RegistrationController extends AbstractController
 {
     private $emailVerifier;
@@ -89,7 +90,7 @@ class RegistrationController extends AbstractController
     }
 
     /**
- 	* @Route("/show/{slug}", name="app_show")
+ 	* @Route("/show", name="app_show")
      */
     public function show(User $user){
 
@@ -100,4 +101,35 @@ class RegistrationController extends AbstractController
         ]);
 
     }
+
+    /**
+     * @Route("/useredit/{id}", name="register_edit", requirements={"id" = "\d+"})
+     */
+
+    public function edit($id, Request $request){
+
+        $em = $this->getDoctrine()->getManager();
+
+        // On récupère l'annonce $id
+        $user = $em->getRepository(User::class)->find($id);
+
+        $form = $this->get('form.factory')->create(UserEditType::class, $user);
+
+        
+          if ($request->isMethod('POST') && $form->handleRequest($request)->isValid()) {//Requête soumis en POST 
+            # code...création et gestion de formulaire
+            $em->flush();
+
+            
+
+            #Redirection vers la page de visualisation de cette annonce
+            return $this->redirectToRoute('document_controllerdocument_index');
+        }
+        
+    
+        return $this->render('security/edit.html.twig', array(
+          'user' => $user, 'registrationForm'=>$form->createView()
+          ));
+
+     }
 }

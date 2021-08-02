@@ -35,6 +35,8 @@ class DocumentController extends AbstractController
      */
     public function index($page,  DocumentRepository $repository, Request $request): Response
     {
+
+        $user = $this->getUser();
         $document = new Document();
         $nbrparpages = 3;
         $data = new SearchData();
@@ -59,7 +61,9 @@ class DocumentController extends AbstractController
             'nbpages'=>$nbpages, 
             'page'=>$page, 
             'document'=>$document ,
-            'form' => $form->createView()
+            'form' => $form->createView(),
+            'user' => $user
+        
         ]);
     }
 
