@@ -3,6 +3,12 @@
     "license": "proprietary",
     "minimum-stability": "stable",
     "prefer-stable": true,
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/Idrissa0102/projet-ird"
+        }
+    ],
     "require": {
         "php": ">=7.2.5",
         "ext-ctype": "*",
@@ -107,6 +113,11 @@
         "symfony": {
             "allow-contrib": false,
             "require": "5.3.*"
+        },
+        "heroku": {
+            "framework": "slim",
+            "document-root": "public",
+            "index-document": "index.php"
         }
     }
 }
