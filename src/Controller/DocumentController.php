@@ -25,13 +25,13 @@ use Doctrine\DBAL\Types\Type;
 use App\Repository\DocumentRepository;
 
 /**
-     * @Route("/document", name="document_controller")
+     * @Route("/", name="document_controller")
      */
 
 class DocumentController extends AbstractController
 {
     /**
-     * @Route("/index/{page}", name="document_index", methods={"GET"},requirements={"page" = "\d+"}, defaults={"page"= 1})
+     * @Route("/{page}", name="document_index", methods={"GET"},requirements={"page" = "\d+"}, defaults={"page"= 1})
      */
     public function index($page,  DocumentRepository $repository, Request $request): Response
     {
@@ -65,7 +65,7 @@ class DocumentController extends AbstractController
 
 
     /**
-     * @Route("/show/", name="document_show", methods={"GET"}, requirements={"page" = "\d+"}, defaults={"page"= 1})
+     * @Route("/show", name="document_show", methods={"GET"}, requirements={"page" = "\d+"}, defaults={"page"= 1})
      */
     public function showAll($page , DocumentRepository $repository, Request $request): Response
     {

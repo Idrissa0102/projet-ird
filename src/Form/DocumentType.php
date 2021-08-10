@@ -29,7 +29,7 @@ class DocumentType extends AbstractType
         $builder
             ->add('titre', TextType::class)
             ->add('resume', TextareaType::class )
-            ->add('doi', TextType::class)
+            ->add('doi', TextType::class, ['required' => false])
             ->add('dateProduction', DateType::class, [
                 'widget'=>'single_text'
             ])
@@ -39,17 +39,17 @@ class DocumentType extends AbstractType
                 
             ))
             
-            ->add('commentaire', TextareaType::class)
-            ->add('collaboration', TextType::class)
+            ->add('commentaire', TextareaType::class, ['required' => false])
+            ->add('collaboration', TextType::class, ['required' => false])
             
             
-            ->add('refInterne', TextType::class)
+            ->add('refInterne', TextType::class, ['required' => false])
             
-            ->add('financement', TextType::class)
+            ->add('financement', TextType::class, ['required' => false])
             ->add('auteurAjoute', TextType::class)
-            ->add('affiliation', TextType::class)
-            ->add('participants', TextType::class)
-            ->add('fichier', FichierType::class)
+            ->add('affiliation', TextType::class, ['required' => false])
+            ->add('participants', TextType::class, ['required' => false])
+            ->add('fichier', FichierType::class, ['required' => false])
             ->add('typeDocument', EntityType::class, array(
                 'class' => 'App:TypeDocument',
                 'choice_label'=>'nom'
