@@ -6,7 +6,7 @@
     "repositories": [
         {
             "type": "vcs",
-            "url": "https://github.com/Idrissa0102/projet-ird"
+            "url": "https://github.com/dsow09/ird-project"
         }
     ],
     "require": {
