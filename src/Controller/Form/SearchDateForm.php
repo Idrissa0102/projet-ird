@@ -1,7 +1,7 @@
 <?php
-namespace App\Form;
+namespace Controller\Form;
 
-use App\Data\SearchDate;
+use Controller\Data\SearchDate;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\FormBuilderInterface;

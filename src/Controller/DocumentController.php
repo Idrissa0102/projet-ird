@@ -2,25 +2,25 @@
 
 namespace App\Controller;
 
-use App\Data\SearchData;
-use App\Data\SearchDate;
-use App\Data\SearchDomaine;
-use App\Data\SearchType;
+use Controller\Data\SearchData;
+use Controller\Data\SearchDate;
+use Controller\Data\SearchDomaine;
+use Controller\Data\SearchType;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\HttpFoundation\Request;
 use Cocur\Slugify\Slugify;
 use App\Entity\Document;
-use App\Form\DocumentType;
-use App\Form\DocumentEditType;
+use Controller\Form\DocumentType;
+use Controller\Form\DocumentEditType;
 use App\Entity\Domaine;
 use App\Entity\Fichier;
 
-use App\Form\SearchDateForm;
-use App\Form\SearchDomaineForm;
-use App\Form\SearchForm;
-use App\Form\SearchTypeForm;
+use Controller\Form\SearchDateForm;
+use Controller\Form\SearchDomaineForm;
+use Controller\Form\SearchForm;
+use Controller\Form\SearchTypeForm;
 use Doctrine\DBAL\Types\Type;
 use App\Repository\DocumentRepository;
 

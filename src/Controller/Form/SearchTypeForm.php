@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Form;
+namespace Controller\Form;
 
-use App\Data\SearchType;
+use Controller\Data\SearchType;
 use App\Entity\TypeDocument;
 use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 use Symfony\Component\Form\AbstractType;

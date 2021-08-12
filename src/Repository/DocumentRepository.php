@@ -2,10 +2,10 @@
 
 namespace App\Repository;
 
-use App\Data\SearchData;
-use App\Data\SearchDate;
-use App\Data\SearchDomaine;
-use App\Data\SearchType;
+use Controller\Data\SearchData;
+use Controller\Data\SearchDate;
+use Controller\Data\SearchDomaine;
+use Controller\Data\SearchType;
 use App\Entity\Document;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Doctrine\Persistence\ManagerRegistry;
