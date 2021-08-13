@@ -1,7 +1,5 @@
 <?php
-
-namespace Controller\Data;
-
+namespace App\Controller\Data;
 class SearchDomaine
 {
     /**
@@ -13,5 +11,4 @@ class SearchDomaine
      */
     public $documents = [];
 }
-
 ?>

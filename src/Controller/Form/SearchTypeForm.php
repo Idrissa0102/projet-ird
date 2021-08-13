@@ -1,14 +1,12 @@
 <?php
+namespace App\Controller\Form;
 
-namespace Controller\Form;
-
-use Controller\Data\SearchType;
+use App\Controller\Data\SearchType;
 use App\Entity\TypeDocument;
 use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
-
 class SearchTypeForm extends AbstractType
 {
     public function buildForm(FormBuilderInterface $builder, array $options)

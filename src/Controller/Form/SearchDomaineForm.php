@@ -1,15 +1,13 @@
 <?php
+namespace App\Controller\Form;
 
-namespace Controller\Form;
-
-use Controller\Data\SearchDomaine;
+use App\Controller\Data\SearchDomaine;
 use App\Entity\Domaine;
 use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
-
 class SearchDomaineForm extends AbstractType
 {
 
@@ -48,5 +46,4 @@ class SearchDomaineForm extends AbstractType
     }
 
 }
-
 ?>

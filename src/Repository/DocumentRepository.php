@@ -1,17 +1,14 @@
 <?php
-
 namespace App\Repository;
 
-use Controller\Data\SearchData;
-use Controller\Data\SearchDate;
-use Controller\Data\SearchDomaine;
-use Controller\Data\SearchType;
+use App\Controller\Data\SearchData;
+use App\Controller\Data\SearchDate;
+use App\Controller\Data\SearchDomaine;
+use App\Controller\Data\SearchType;
 use App\Entity\Document;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Doctrine\Persistence\ManagerRegistry;
 use Doctrine\ORM\Tools\Pagination\Paginator;
-
-
 /**
  * @method Document|null find($id, $lockMode = null, $lockVersion = null)
  * @method Document|null findOneBy(array $criteria, array $orderBy = null)
@@ -160,6 +157,5 @@ class DocumentRepository extends ServiceEntityRepository
         return $query->getQuery()->getResult();
     
     }
-
-
 }
+?>

@@ -1,12 +1,11 @@
 <?php
-namespace Controller\Form;
+namespace App\Controller\Form;
 
-use Controller\Data\SearchDate;
+use App\Controller\Data\SearchDate;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
-
 class SearchDateForm extends AbstractType
 {
     public function buildForm(FormBuilderInterface $builder, array $options)
@@ -36,5 +35,4 @@ class SearchDateForm extends AbstractType
     }
 
 }
-
 ?>

@@ -1,7 +1,5 @@
 <?php
-
-    namespace Controller\Data;
-
+namespace App\Controller\Data;
     class SearchData
     {
         /**

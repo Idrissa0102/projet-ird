@@ -1,11 +1,10 @@
 <?php
-
 namespace App\Controller;
 
-use Controller\Data\SearchData;
-use Controller\Data\SearchDate;
-use Controller\Data\SearchDomaine;
-use Controller\Data\SearchType;
+use App\Controller\Data\SearchData;
+use App\Controller\Data\SearchDate;
+use App\Controller\Data\SearchDomaine;
+use App\Controller\Data\SearchType;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
@@ -17,10 +16,10 @@ use Controller\Form\DocumentEditType;
 use App\Entity\Domaine;
 use App\Entity\Fichier;
 
-use Controller\Form\SearchDateForm;
-use Controller\Form\SearchDomaineForm;
-use Controller\Form\SearchForm;
-use Controller\Form\SearchTypeForm;
+use App\Controller\Form\SearchDateForm;
+use App\Controller\Form\SearchDomaineForm;
+use App\Controller\Form\SearchForm;
+use App\Controller\Form\SearchTypeForm;
 use Doctrine\DBAL\Types\Type;
 use App\Repository\DocumentRepository;
 
@@ -290,7 +289,5 @@ class DocumentController extends AbstractController
 
     }
 
-
-    
-
 }
+?>
