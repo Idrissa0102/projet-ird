@@ -6,5 +6,6 @@ class SearchType
      * @var array
      */
     public $typeDocuments = [];
+
 }
 ?>
