@@ -131,12 +131,12 @@
                         {% if app.user %}
                             <li class="dropdown"><a href="#"><span>Espace-Chercheur</span> <i class="bi bi-chevron-down"></i></a>
                             <ul>
-                                <li><a href="{{ path('register_edit', {'id': user.id}) }}">Modifier mes informations</a></li>
+                                <li><a href="{{ path('register_edit', {'id': app.user.id}) }}">Modifier mes informations</a></li>
                                 <li><a href=" {{path('document_controlleradd_document')}} ">Publier un Document</a></li>
                                 <li><a href="{{ path('mydocs') }}">Consulter mes Documents</a></li>
                             </ul>
                         </li>
-                            <li><a class="nav-link scrollto" href=" {{path('app_logout')}} ">Se Déconnecter</a></>
+                            <li><a class="nav-link scrollto" href=" {{path('app_logout')}} ">Se Déconnecter</a><li/>
                         {% else %}
                             <li><a class="getstarted scrollto" href=" {{path('app_login')}} ">Se Connecter</a></li>
                         {% endif %}

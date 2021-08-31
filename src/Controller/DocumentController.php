@@ -11,8 +11,8 @@ use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\HttpFoundation\Request;
 use Cocur\Slugify\Slugify;
 use App\Entity\Document;
-use Controller\Form\DocumentType;
-use Controller\Form\DocumentEditType;
+use App\Form\DocumentType;
+use App\Form\DocumentEditType;
 use App\Entity\Domaine;
 use App\Entity\Fichier;
 
@@ -20,6 +20,7 @@ use App\Controller\Form\SearchDateForm;
 use App\Controller\Form\SearchDomaineForm;
 use App\Controller\Form\SearchForm;
 use App\Controller\Form\SearchTypeForm;
+
 use Doctrine\DBAL\Types\Type;
 use App\Repository\DocumentRepository;
 
