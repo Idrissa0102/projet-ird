@@ -25,10 +25,7 @@
         <section class="breadcrumbs">
             <div class="container">
 
-            <ol>
-                <li><a href="index.html">Accueil</a></li>
-
-            </ol>
+          
             <h2>Mes publications</h2>
 
             </div>
@@ -37,15 +34,15 @@
 
 
 
-<section class="Form my-4 mx-5">
+<section class="Form my-3 mx-9">
     <div id="id1" class="container">
       <div class="container-fluid">
 
         <!-- Page Heading 
         <h1 class="h3 mb-2 text-gray-800">Mes posts</h1>
          DataTales Example -->
-        <div class="card shadow mb-4">
-          <div class="card-header py-3">
+        <div class="card shadow mb-5">
+          <div class="card-header py-4">
             <h6 class="m-0 font-weight-bold text-primary">Mes Documents Publiés</h6>
           </div>
           <div class="card-body">
@@ -87,14 +84,13 @@
 
                       <div class="">
                         <a href="{{ path('document_controlleredit_document', {'id': document.id}) }}"><i class="fa fa-pencil-square-o"> 📝</i></a>
-                        <a href="{{ path('document_controllerdelete_document', {'id': document.id}) }}" target="_black"><i class="fa fa-trash"></i></a>
+                        <a href="{{ path('document_controllerdelete_document', {'id': document.id}) }}"><i class="fa fa-trash"></i></a>
                       </div>
                     </td>
                   </tr>
-
+                    
                   {% endfor %}
                   
-                  </tbody>
               </table>
             </div>
           </div>

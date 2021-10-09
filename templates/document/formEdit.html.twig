@@ -7,7 +7,6 @@
 
         {{form_start(form, {'attr': {'class': 'form-horizontal'}})}} {# Les erreurs générales du formulaire. #} {{ form_errors(form) }} {# Génération du label + error + widget pour un champ. #} {# Génération manuelle et éclatée : #}
 
-      <form action="" class="row g-3 ">
         <!--<section class="py-5">
           <div class="container px-5 my-4">-->
         <div class="text-center mb-5">
@@ -169,11 +168,13 @@
                 </div>
               </div>
             </div>
+                  <button class="btn btn-primary w-100" type="submit">Mettre à Jour</button>
+
           </div>
+          
         </div>
         <!--</div>
         </section>-->
-      </form>
       
       {{ form_end(form) }}
     </div>

@@ -1,0 +1,83 @@
+{% extends "base.html.twig" %}
+
+{% block title %}Visualiser un docum€nt - {{ parent() }}{% endblock %}
+
+
+{% block body %}
+<main id="main">
+<!-- ======= Breadcrumbs ======= -->
+    <section class="breadcrumbs">
+      <div class="container">
+
+        <h2>Titre du document : {{document.titre}} </h2>
+
+      </div>
+    </section><!-- End Breadcrumbs -->
+
+
+<!-- ======= Blog Single Section ======= -->
+    <section id="blog" class="blog">
+      <div class="container" data-aos="fade-up">
+
+        <div class="row">
+
+          <div class="col-lg-10 entries">
+
+            <article class="entry entry-single">
+            <div >
+              </div>
+
+
+              <h2 class="entry-title">
+             Résumé du document
+              </h2>
+
+              <div class="entry-meta">
+                <ul>
+                  <li class="d-flex align-items-center"><i class="bi bi-person"></i> <a href="blog-single.html"> {{document.author.prenom}} {{document.author.nom}}</a></li>
+                  <li class="d-flex align-items-center"><i class="bi bi-clock"></i> <a href="blog-single.html"><time datetime="2020-01-01">Le {{ document.datePublication|date('d/m/Y') }}</time></a></li>
+                  
+                </ul>
+                
+            
+              <div class="container px-6 my-3">
+                  <div class="row gx-3">
+                      <div class="col-xl-10">
+                      {{ form_start(form) }}
+                          <!-- FAQ Accordion 1-->
+                          <div class="accordion mb-5" id="accordionExample">
+                              <div class="accordion-item">
+                                  <h3 class="accordion-header" id="headingOne"><button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">Auteur (s) : </button></h3>
+                                  <div class="accordion-collapse collapse show" id="collapseOne" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                                      <div class="accordion-body">
+                                          <strong> {{document.auteurAjoute}} </strong>
+                                          
+                                      </div>
+                                  </div>
+                              </div>
+                              <div class="accordion-item">
+                                  <h3 class="accordion-header" id="headingTwo"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">Descriptif : </button></h3>
+                                  <div class="accordion-collapse collapse" id="collapseTwo" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                                      <div class="accordion-body">
+                                          {{document.resume}}
+                                      </div>
+                                  </div>
+                              </div>
+                              <div class="accordion-item">
+                                  <h3 class="accordion-header" id="headingThree"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">Commentaire</button></h3>
+                                  <div class="accordion-collapse collapse" id="collapseThree" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                                      <div class="accordion-body">
+                                          {{document.commentaire}}
+                                      </div>
+                                  </div>
+                              </div>
+
+                          </div>
+                          <button class="btn btn-danger w-100" type="submit">Supprimer le document</button>
+                          {{ form_end(form) }}
+                      </div>
+              </div>
+             
+        </main><!-- End #main -->
+
+{% endblock %}

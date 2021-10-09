@@ -20,7 +20,8 @@ use App\Controller\Form\SearchDateForm;
 use App\Controller\Form\SearchDomaineForm;
 use App\Controller\Form\SearchForm;
 use App\Controller\Form\SearchTypeForm;
-
+use App\Entity\User;
+use App\Form\RegistrationFormType;
 use Doctrine\DBAL\Types\Type;
 use App\Repository\DocumentRepository;
 
@@ -176,15 +177,39 @@ class DocumentController extends AbstractController
 
     }
 
+     /**
+	 * @Route("/userEdit/{id}", name="useredit", requirements={"id" = "\d+"})
+	*/
+    public function userEdit($id, Request $request){
+
+        $em = $this->getDoctrine()->getManager();
+        $document = $em->getRepository(Document::class)->find($id);
+
+        $form = $this->get('form.factory')->create(DocumentEditType::class, $document);
+
+        if ($request->isMethod('POST') && $form->handleRequest($request)->isValid()) {//Requête soumis en POST 
+            # code...création et gestion de formulaire
+            $em->flush();
+
+            return $this->redirectToRoute('document_controllerdocument_index');
+        }
+        return $this->render('security/edit.html.twig', array(
+            'annonce' => $document, 'form'=>$form->createView()
+        ));
+
+    }
+
+     
+
     /**
-	 * @Route("/delete", name="delete_document",  requirements={"id" = "\d+"})
+	 * @Route("/delete/{id}", name="delete_document",  requirements={"id" = "\d+"})
 	*/
 
-    public function delete($id, Request $request){
+    public function delete($id, Request $request, Document $document){
 
         $em = $this->getDoctrine()->getManager();
 
-		    
+		
 		$document = $em->getRepository(Document::class)->find($id);
 
         $form = $this->get('form.factory')->create();
@@ -193,12 +218,13 @@ class DocumentController extends AbstractController
              $em->remove($document);
              $em->flush();
 
-    
-             return $this->redirectToRoute('document_controllerview_document');
+             return $this->redirectToRoute('mydocs');
         }
 
         return $this->render('document/delete.html.twig', array(
-			'annonce' => $document, 'form'=>$form->createView(),
+			//'annonce' => $documents, 
+            'document'=>$document,
+            'form'=>$form->createView(),
 		));
 
 

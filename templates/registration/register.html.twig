@@ -45,7 +45,7 @@
                 <div class="content">
                     
     {{ form_start(registrationForm) }}
-                        <form action="">
+                        
                         <div class="user-details">
     
                 
@@ -87,23 +87,19 @@
        
         </div>
 
-        <div class="input-box">
-        {{ form_label(registrationForm.passwordConfirm, "Mot de passe : ", {'label_attr': {'class': 'details'}})}}
-        {{ form_widget(registrationForm.passwordConfirm, {'attr': {'class': 'form-control'}}) }}
        
-        </div>
 
         
         
 
         </div>
 
-        <button type="submit" class="btn">S'inscrire</button>
+        <button type="submit" class="btn btn-success w-100">S'inscrire</button>
         
 
         {{ form_row(registrationForm._token) }}
         {{ form_end(registrationForm) }}
-            </form>
+           
             </div>
         </div>
         </div>

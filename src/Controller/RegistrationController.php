@@ -54,7 +54,7 @@ class RegistrationController extends AbstractController
                 (new TemplatedEmail())
                     ->from(new Address('irdespdataportal@gmail.com', 'Data Portal Mail Bot'))
                     ->to($user->getEmail())
-                    ->subject("Confirmation d'Email")
+                    ->subject("Confirmation de votre Email")
                     ->htmlTemplate('registration/confirmation_email.html.twig')
             );
             // do anything else you need here, like send an email
@@ -90,9 +90,9 @@ class RegistrationController extends AbstractController
     }
 
     /**
- 	* @Route("/show", name="app_show")
+ 	* @Route("/showUser", name="app_show")
      */
-    public function show(User $user){
+    public function showUser(User $user){
 
        
 
@@ -103,30 +103,22 @@ class RegistrationController extends AbstractController
     }
 
     /**
-     * @Route("/useredit/{id}", name="register_edit", requirements={"id" = "\d+"})
+     * @Route("/editUser/{id}", name="register_edit", requirements={"id" = "\d+"})
      */
 
-    public function edit($id, Request $request){
+    public function editUser($id, Request $request){
 
         $em = $this->getDoctrine()->getManager();
-
         // On récupère l'annonce $id
         $user = $em->getRepository(User::class)->find($id);
 
         $form = $this->get('form.factory')->create(UserEditType::class, $user);
-
-        
           if ($request->isMethod('POST') && $form->handleRequest($request)->isValid()) {//Requête soumis en POST 
             # code...création et gestion de formulaire
             $em->flush();
-
-            
-
             #Redirection vers la page de visualisation de cette annonce
             return $this->redirectToRoute('document_controllerdocument_index');
         }
-        
-    
         return $this->render('security/edit.html.twig', array(
           'user' => $user, 'registrationForm'=>$form->createView()
           ));
